@@ -1,0 +1,25 @@
+{
+  "entry_year": 2027,
+  "qualification": "IB Diploma",
+  "statements": {
+    "main": {
+      "course": "Philosophy and Economics",
+      "subjects": ["philosophy", "economics"],
+      "strictest_lens": "LSE",
+      "choices": [
+        { "slot": 1, "university": "LSE", "programme": "BSc Philosophy and Economics", "priority": true, "source_ids": ["lse-ps", "lse-phil-econ", "lse-phil-econ-structure"] },
+        { "slot": 2, "university": "Edinburgh", "programme": "MA (Hons) Philosophy and Economics", "source_ids": ["ed-what-you-need", "ed-how-select", "ed-unsuccessful-ps", "ed-competition", "ed-phil-econ"] },
+        { "slot": 3, "university": "TODO", "programme": "TODO", "note": "Not supplied by the applicant. Do not guess; fit across choices is only assessed for named choices." },
+        { "slot": 4, "university": "TODO", "programme": "TODO", "note": "Not supplied by the applicant. Do not guess; fit across choices is only assessed for named choices." }
+      ]
+    },
+    "durham": {
+      "course": "Economics",
+      "subjects": ["economics"],
+      "substitute": true,
+      "choices": [
+        { "slot": 5, "university": "Durham", "programme": "Economics (URL says L100; page reportedly shows L130 BSc, unresolved)", "source_ids": ["durham-ps", "durham-substitute", "durham-conf-2026", "durham-conf-2026-slides", "durham-unsuccessful", "durham-econ"] }
+      ]
+    }
+  }
+}

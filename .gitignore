@@ -1,0 +1,4 @@
+node_modules/
+viewer/node_modules/
+viewer/dist/
+guidance/sources.next.json

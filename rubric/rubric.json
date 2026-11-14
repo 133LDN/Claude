@@ -1,0 +1,54 @@
+{
+  "scale": "0-10 per criterion. 10 minus evidence-backed deductions, then moderation. 9-10 means nothing material to fix. No default mid-point: a criterion with no deductible problem scores 10.",
+  "severity_points": { "minor": 1, "moderate": 2, "major": 3 },
+  "severity_meaning": {
+    "minor": "A selector might notice; unlikely to change a decision alone.",
+    "moderate": "A selector would mark the statement down on this.",
+    "major": "A published criterion is clearly not met; could decide the outcome."
+  },
+  "criteria": [
+    {
+      "id": "academic_focus",
+      "name": "Academic focus and proportion",
+      "main": { "claims": ["C-003", "C-007", "C-024"], "rule": "Share of characters in sentences about the subjects, reading or study. LSE: at least 80% (C-003)." },
+      "durham": { "claims": ["C-007", "C-021"], "rule": "No published percentage for Durham; only a clearly non-academic statement is penalised." }
+    },
+    {
+      "id": "critical_engagement",
+      "name": "Critical engagement and own views",
+      "main": { "claims": ["C-004", "C-005", "C-016", "C-017"], "rule": "Sentences giving the applicant's own view with a reason, or a stated objection. Named reading with nothing learned is penalised (C-016)." },
+      "durham": { "claims": ["C-005", "C-016", "C-017", "C-021"], "rule": "As main, but views must concern economics." }
+    },
+    {
+      "id": "subject_balance",
+      "name": "Balance and link between the two subjects",
+      "main": { "claims": ["C-006", "C-023"], "rule": "Equal weight to philosophy and economics (C-006) and at least one sentence connecting them, as PH311 does (C-023)." },
+      "durham": { "name": "Fit with Economics", "claims": ["C-007", "C-020", "C-022"], "rule": "The substitute replaces the main statement for an Economics degree, so its academic content must be about economics." }
+    },
+    {
+      "id": "degree_fit",
+      "name": "Fit with the degree as taught and across choices",
+      "main": { "claims": ["C-023", "C-025", "C-007", "C-008"], "rule": "Touches the strands the named programmes teach: economic theory, quantitative methods, logic/argument, ethics or value, philosophy of economics/science. TODO choices are not assessed." },
+      "durham": { "claims": ["C-022", "C-007"], "rule": "Touches micro/macro theory, data and quantitative methods, applied policy." }
+    },
+    {
+      "id": "question_content",
+      "name": "Right content in each of the 3 questions, no repetition",
+      "main": { "claims": ["C-028", "C-009", "C-027", "C-011", "C-012", "C-010"], "rule": "Q1 motivation and subject knowledge with no career plans; Q2 recent study, not grades; Q3 reflected activities; no repeated material." },
+      "durham": { "claims": ["C-028", "C-027", "C-011", "C-012", "C-010"], "rule": "As main; careers in Q1 is advisory only (no tier 1 ban for Durham)." }
+    },
+    {
+      "id": "writing_space",
+      "name": "Writing and use of space",
+      "main": { "claims": ["C-013", "C-014", "C-015", "C-001", "C-002"], "rule": "AI-sounding or stock phrasing, list-like writing, length limits." },
+      "durham": { "claims": ["C-013", "C-014", "C-015", "C-020", "C-002"], "rule": "As main." }
+    }
+  ],
+  "checks": [
+    { "id": "total_chars", "name": "4000 characters total", "claims": ["C-001"] },
+    { "id": "min_per_answer", "name": "350 minimum per answer", "claims": ["C-002"] },
+    { "id": "no_university", "name": "No university named", "claims": ["C-008"] },
+    { "id": "no_career_q1", "name": "No career plans in Q1", "claims": ["C-009"], "durham_advisory": true },
+    { "id": "generic_phrasing", "name": "Generic or AI-sounding phrasing (quoted)", "claims": ["C-013", "C-014"], "note": "The phrase list is this tool's heuristic. The tier 1 basis is that AI-written text risks rejection and readers can often spot it; a match is not proof of AI use." }
+  ]
+}

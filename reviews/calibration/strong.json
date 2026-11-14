@@ -1,0 +1,438 @@
+{
+  "id": "calibration-strong",
+  "type": "main",
+  "created_at": "2026-11-14T00:00:00.000Z",
+  "engine_version": "1.0.0",
+  "draft_path": "fixtures/strong.txt",
+  "disclaimer": "These scores are this tool's reading of published admissions criteria. They are not a prediction of offers.",
+  "statement": "Philosophy and Economics (main UCAS statement)",
+  "char_counts": {
+    "q1": 1189,
+    "q2": 1119,
+    "q3": 680,
+    "total": 2988
+  },
+  "academic_share": 0.966,
+  "checks": [
+    {
+      "id": "total_chars",
+      "name": "4000 characters total",
+      "pass": true,
+      "detail": "2988 / 4000 characters (including spaces)",
+      "claim_ids": [
+        "C-001"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-substitute"
+      ]
+    },
+    {
+      "id": "min_per_answer",
+      "name": "350 minimum per answer",
+      "pass": true,
+      "detail": "Q1 1189, Q2 1119, Q3 680",
+      "claim_ids": [
+        "C-002"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-ps"
+      ]
+    },
+    {
+      "id": "no_university",
+      "name": "No university named",
+      "pass": true,
+      "detail": "none found",
+      "quotes": [],
+      "claim_ids": [
+        "C-008"
+      ],
+      "tier1_ids": [
+        "ucas-one-statement",
+        "ucas-multiple-courses"
+      ]
+    },
+    {
+      "id": "no_career_q1",
+      "name": "No career plans in Q1",
+      "pass": true,
+      "advisory": false,
+      "detail": "none found",
+      "quotes": [],
+      "claim_ids": [
+        "C-009"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ]
+    },
+    {
+      "id": "generic_phrasing",
+      "name": "Generic or AI-sounding phrasing (quoted)",
+      "pass": true,
+      "detail": "none found",
+      "quotes": [],
+      "note": "Phrase list is a heuristic. A match is not proof of AI use; it is phrasing selectors read as generic.",
+      "claim_ids": [
+        "C-013",
+        "C-014"
+      ],
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need",
+        "durham-conf-2026"
+      ]
+    }
+  ],
+  "scores": {
+    "academic_focus": 10,
+    "critical_engagement": 10,
+    "subject_balance": 10,
+    "degree_fit": 10,
+    "question_content": 10,
+    "writing_space": 10
+  },
+  "average": 10,
+  "criteria": [
+    {
+      "id": "academic_focus",
+      "name": "Academic focus and proportion",
+      "claim_ids": [
+        "C-003",
+        "C-007",
+        "C-024"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition"
+      ]
+    },
+    {
+      "id": "critical_engagement",
+      "name": "Critical engagement and own views",
+      "claim_ids": [
+        "C-004",
+        "C-005",
+        "C-016",
+        "C-017"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "durham-unsuccessful",
+        "durham-ps",
+        "durham-conf-2026-slides"
+      ]
+    },
+    {
+      "id": "subject_balance",
+      "name": "Balance and link between the two subjects",
+      "claim_ids": [
+        "C-006",
+        "C-023"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-multiple-courses",
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ]
+    },
+    {
+      "id": "degree_fit",
+      "name": "Fit with the degree as taught and across choices",
+      "claim_ids": [
+        "C-023",
+        "C-025",
+        "C-007",
+        "C-008"
+      ],
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ",
+        "ed-phil-econ",
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition",
+        "ucas-one-statement",
+        "ucas-multiple-courses"
+      ]
+    },
+    {
+      "id": "question_content",
+      "name": "Right content in each of the 3 questions, no repetition",
+      "claim_ids": [
+        "C-028",
+        "C-009",
+        "C-027",
+        "C-011",
+        "C-012",
+        "C-010"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "ed-competition",
+        "lse-ps"
+      ]
+    },
+    {
+      "id": "writing_space",
+      "name": "Writing and use of space",
+      "claim_ids": [
+        "C-013",
+        "C-014",
+        "C-015",
+        "C-001",
+        "C-002"
+      ],
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need",
+        "durham-conf-2026",
+        "durham-conf-2026-slides",
+        "ucas-3q",
+        "durham-substitute",
+        "durham-ps"
+      ]
+    }
+  ],
+  "deductions": [],
+  "moderation": [
+    {
+      "criterion": "academic_focus",
+      "before": 10,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: academic share 97% (LSE guidance 80%); Q1 non-academic share 0%."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "No deductions to remove. Probe: academic share 97% (LSE guidance 80%); Q1 non-academic share 0%."
+      },
+      "adjustments": [],
+      "after": 10
+    },
+    {
+      "criterion": "critical_engagement",
+      "before": 10,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: 10 evaluative sentence(s) (philosophy 6, economics 8); 0 named reading(s) with nothing learned; own position stated: yes."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "No deductions to remove. Probe: 10 evaluative sentence(s) (philosophy 6, economics 8); 0 named reading(s) with nothing learned; own position stated: yes."
+      },
+      "adjustments": [],
+      "after": 10
+    },
+    {
+      "criterion": "subject_balance",
+      "before": 10,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: philosophy 1836 vs economics 2415 characters of academic content; 8 connecting sentence(s)."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "No deductions to remove. Probe: philosophy 1836 vs economics 2415 characters of academic content; 8 connecting sentence(s)."
+      },
+      "adjustments": [],
+      "after": 10
+    },
+    {
+      "criterion": "degree_fit",
+      "before": 10,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: strands engaged: economic theory, quantitative methods, ethics and value, philosophy of economics or science; missing: logic and argument; 2 TODO choice(s) not assessable."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "No deductions to remove. Probe: strands engaged: economic theory, quantitative methods, ethics and value, philosophy of economics or science; missing: logic and argument; 2 TODO choice(s) not assessable."
+      },
+      "adjustments": [],
+      "after": 10
+    },
+    {
+      "criterion": "question_content",
+      "before": 10,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: Q1 career sentences 0; Q2 grade sentences 0; Q3 reflective sentences 3/4; repeated 5-word sequences 0."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "No deductions to remove. Probe: Q1 career sentences 0; Q2 grade sentences 0; Q3 reflective sentences 3/4; repeated 5-word sequences 0."
+      },
+      "adjustments": [],
+      "after": 10
+    },
+    {
+      "criterion": "writing_space",
+      "before": 10,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: 0 stock phrase(s), 0 connector(s), 0 list-like sentence(s), 2988/4000 characters, shortest answer 680."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "No deductions to remove. Probe: 0 stock phrase(s), 0 connector(s), 0 list-like sentence(s), 2988/4000 characters, shortest answer 680."
+      },
+      "adjustments": [],
+      "after": 10
+    }
+  ],
+  "strengths": [
+    {
+      "text": "Gives a view with a reason.",
+      "quote": "Sen's objection unsettled me because Friedman's test cannot catch it: a model of purely selfish agents can predict prices well and still misdescribe people, and that error matters once the same model is used to judge policy.",
+      "claim_id": "C-005",
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ]
+    },
+    {
+      "text": "Gives a view with a reason.",
+      "quote": "I now think the realism of assumptions matters whenever a model is used to say what people ought to want, not only to forecast what they will do.",
+      "claim_id": "C-005",
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ]
+    },
+    {
+      "text": "Gives a view with a reason.",
+      "quote": "Reading Michael Sandel on markets crowding out civic norms, I was not convinced by most of his examples, since many are anecdotes.",
+      "claim_id": "C-005",
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ]
+    },
+    {
+      "text": "Connects philosophy and economics.",
+      "quote": "Milton Friedman argued in 1953 that an economic theory should be judged by its predictions, not by the realism of its assumptions.",
+      "claim_id": "C-023",
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ]
+    },
+    {
+      "text": "Reflects on what an activity taught you.",
+      "quote": "Writing for readers who disagree with me taught me to state the strongest version of their view first.",
+      "claim_id": "C-012",
+      "tier1_ids": [
+        "ucas-3q"
+      ]
+    },
+    {
+      "text": "About 97% academic content, meeting LSE's 80% guidance.",
+      "quote": null,
+      "claim_id": "C-003",
+      "tier1_ids": [
+        "lse-ps"
+      ]
+    }
+  ],
+  "issues": [],
+  "questions": [],
+  "fact_checks": [
+    {
+      "id": "F1",
+      "quote": "Milton Friedman argued in 1953 that an economic theory should be judged by its predictions, not by the realism of its assumptions.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F2",
+      "quote": "I accepted this until I read Amartya Sen's essay \"Rational Fools\", which argues that the purely economic man is close to being a social moron.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F3",
+      "quote": "Sen's objection unsettled me because Friedman's test cannot catch it: a model of purely selfish agents can predict prices well and still misdescribe people, and that error matters once the same model is used to judge policy.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F4",
+      "quote": "Reading Michael Sandel on markets crowding out civic norms, I was not convinced by most of his examples, since many are anecdotes.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F5",
+      "quote": "However, the Haifa day-care study he discusses, where a fine for late pick-ups increased lateness, persuaded me that his objection deserves testing rather than dismissal.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F6",
+      "quote": "In a class debate on Rawls I defended the veil of ignorance, but writing up the objection that it assumes extreme risk aversion convinced me that the maximin rule needs more defence than Rawls gives it.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F7",
+      "quote": "My essay argued that it can be both, but only if we state in advance which evidence would count against it, a test I took from Popper and found harder to apply to economics than to physics.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    }
+  ],
+  "advice": [
+    {
+      "claim_id": "C-026",
+      "tier": 1,
+      "source_id": "ed-what-you-need",
+      "text": "Edinburgh wants evidence the applicant understands the career implications of the choice.",
+      "status": "confirmed by tier 1",
+      "why": "Edinburgh asks for awareness of career implications; if you include it, it belongs in Q2 or Q3, never Q1.",
+      "score_impact": 0
+    }
+  ],
+  "opinions": [
+    {
+      "text": "Opinion (no published source): 1012 characters unused. Space could carry more evidence of thinking.",
+      "score_impact": 0
+    }
+  ],
+  "limitations": [
+    "2 choice(s) are TODO in config/applicant.json, so fit across choices covers only the named choices. Nothing was guessed."
+  ],
+  "sentence_stats": {
+    "sentences": 19,
+    "critical": 10,
+    "descriptive_reads": 0,
+    "bridges": 8
+  },
+  "change_since_last": {
+    "previous_id": null,
+    "summary": "First review of this statement; nothing to compare."
+  },
+  "calibration_fixture": "strong"
+}

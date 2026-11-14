@@ -1,0 +1,1448 @@
+{
+  "id": "calibration-weak",
+  "type": "main",
+  "created_at": "2026-11-14T00:00:00.000Z",
+  "engine_version": "1.0.0",
+  "draft_path": "fixtures/weak.txt",
+  "disclaimer": "These scores are this tool's reading of published admissions criteria. They are not a prediction of offers.",
+  "statement": "Philosophy and Economics (main UCAS statement)",
+  "char_counts": {
+    "q1": 522,
+    "q2": 472,
+    "q3": 405,
+    "total": 1399
+  },
+  "academic_share": 0.323,
+  "checks": [
+    {
+      "id": "total_chars",
+      "name": "4000 characters total",
+      "pass": true,
+      "detail": "1399 / 4000 characters (including spaces)",
+      "claim_ids": [
+        "C-001"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-substitute"
+      ]
+    },
+    {
+      "id": "min_per_answer",
+      "name": "350 minimum per answer",
+      "pass": true,
+      "detail": "Q1 522, Q2 472, Q3 405",
+      "claim_ids": [
+        "C-002"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-ps"
+      ]
+    },
+    {
+      "id": "no_university",
+      "name": "No university named",
+      "pass": false,
+      "detail": "\"LSE\" in Q1",
+      "quotes": [
+        "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career."
+      ],
+      "claim_ids": [
+        "C-008"
+      ],
+      "tier1_ids": [
+        "ucas-one-statement",
+        "ucas-multiple-courses"
+      ]
+    },
+    {
+      "id": "no_career_q1",
+      "name": "No career plans in Q1",
+      "pass": false,
+      "advisory": false,
+      "detail": "1 career sentence(s) in Q1",
+      "quotes": [
+        "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career."
+      ],
+      "claim_ids": [
+        "C-009"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ]
+    },
+    {
+      "id": "generic_phrasing",
+      "name": "Generic or AI-sounding phrasing (quoted)",
+      "pass": false,
+      "detail": "\"From a young age\", \"I have always been fascinated\", \"deep passion\", \"delve\", \"in today's world\", \"ever-evolving\", \"the complexities of\", \"plays a vital role\", \"crucial for success\", \"honed\", \"invaluable\", \"embark\", \"journey\", \"journey\", \"well-rounded individual\", \"shaped me into\", \"would thrive\", \"My dream\", \"dream career\", \"perfect first step\", \"I believe I am a hard-working\", \"the world of\", \"big questions\", \"Furthermore\", \"Moreover\", \"many skills\"",
+      "quotes": [
+        "From a young age",
+        "I have always been fascinated",
+        "deep passion",
+        "delve",
+        "in today's world",
+        "ever-evolving",
+        "the complexities of",
+        "plays a vital role",
+        "crucial for success",
+        "honed",
+        "invaluable",
+        "embark",
+        "journey",
+        "journey",
+        "well-rounded individual",
+        "shaped me into",
+        "would thrive",
+        "My dream",
+        "dream career",
+        "perfect first step",
+        "I believe I am a hard-working",
+        "the world of",
+        "big questions",
+        "Furthermore",
+        "Moreover",
+        "many skills"
+      ],
+      "note": "Phrase list is a heuristic. A match is not proof of AI use; it is phrasing selectors read as generic.",
+      "claim_ids": [
+        "C-013",
+        "C-014"
+      ],
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need",
+        "durham-conf-2026"
+      ]
+    }
+  ],
+  "scores": {
+    "academic_focus": 5,
+    "critical_engagement": 1,
+    "subject_balance": 5,
+    "degree_fit": 5,
+    "question_content": 1,
+    "writing_space": 4
+  },
+  "average": 3.5,
+  "criteria": [
+    {
+      "id": "academic_focus",
+      "name": "Academic focus and proportion",
+      "claim_ids": [
+        "C-003",
+        "C-007",
+        "C-024"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition"
+      ]
+    },
+    {
+      "id": "critical_engagement",
+      "name": "Critical engagement and own views",
+      "claim_ids": [
+        "C-004",
+        "C-005",
+        "C-016",
+        "C-017"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "durham-unsuccessful",
+        "durham-ps",
+        "durham-conf-2026-slides"
+      ]
+    },
+    {
+      "id": "subject_balance",
+      "name": "Balance and link between the two subjects",
+      "claim_ids": [
+        "C-006",
+        "C-023"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-multiple-courses",
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ]
+    },
+    {
+      "id": "degree_fit",
+      "name": "Fit with the degree as taught and across choices",
+      "claim_ids": [
+        "C-023",
+        "C-025",
+        "C-007",
+        "C-008"
+      ],
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ",
+        "ed-phil-econ",
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition",
+        "ucas-one-statement",
+        "ucas-multiple-courses"
+      ]
+    },
+    {
+      "id": "question_content",
+      "name": "Right content in each of the 3 questions, no repetition",
+      "claim_ids": [
+        "C-028",
+        "C-009",
+        "C-027",
+        "C-011",
+        "C-012",
+        "C-010"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "ed-competition",
+        "lse-ps"
+      ]
+    },
+    {
+      "id": "writing_space",
+      "name": "Writing and use of space",
+      "claim_ids": [
+        "C-013",
+        "C-014",
+        "C-015",
+        "C-001",
+        "C-002"
+      ],
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need",
+        "durham-conf-2026",
+        "durham-conf-2026-slides",
+        "ucas-3q",
+        "durham-substitute",
+        "durham-ps"
+      ]
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "criterion": "academic_focus",
+      "severity": "major",
+      "points": 3,
+      "quote": "I am captain of the rugby team, I play the piano to grade 6, I am a member of the student council and I volunteer at a charity shop on Saturdays.",
+      "anchor": {
+        "line": 8,
+        "col": 0,
+        "length": 145,
+        "offset": 1010
+      },
+      "extra_quotes": [
+        "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career.",
+        "Moreover, they have given me invaluable skills that will help me to embark on my university journey and achieve my dream career in finance.",
+        "My subjects have taught me many skills such as time management, organisation, communication and teamwork."
+      ],
+      "claim_id": "C-003",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "reason": "Only about 32% of the statement is about the subjects; LSE asks for at least 80%.",
+      "selector_care": "A clear miss on a published LSE threshold.",
+      "source": "engine"
+    },
+    {
+      "id": "D2",
+      "criterion": "academic_focus",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career.",
+      "anchor": {
+        "line": 2,
+        "col": 198,
+        "length": 140,
+        "offset": 202
+      },
+      "extra_quotes": [
+        "Moreover, they have given me invaluable skills that will help me to embark on my university journey and achieve my dream career in finance.",
+        "My subjects have taught me many skills such as time management, organisation, communication and teamwork.",
+        "I have always achieved top grades in my exams and I received an award for the highest mark in my year."
+      ],
+      "claim_id": "C-007",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition"
+      ],
+      "reason": "Less than 55% academic content: the case for the programme is thin.",
+      "selector_care": "Edinburgh and LSE both reject statements that do not show subject commitment.",
+      "source": "engine"
+    },
+    {
+      "id": "D3",
+      "criterion": "critical_engagement",
+      "severity": "major",
+      "points": 3,
+      "quote": "Economics plays a vital role in today's world, and I have a deep passion for understanding how the economy works.",
+      "anchor": {
+        "line": 2,
+        "col": 84,
+        "length": 113,
+        "offset": 88
+      },
+      "extra_quotes": [
+        "From a young age I have always been fascinated by the world of economics and money.",
+        "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career."
+      ],
+      "claim_id": "C-005",
+      "tier1_id": "durham-ps",
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ],
+      "reason": "No sentence anywhere gives your own view with a reason or an objection.",
+      "selector_care": "This is the core of what LSE and Durham say they look for.",
+      "source": "engine"
+    },
+    {
+      "id": "D4",
+      "criterion": "critical_engagement",
+      "severity": "major",
+      "points": 3,
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "extra_quotes": [],
+      "claim_id": "C-004",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps",
+        "durham-unsuccessful"
+      ],
+      "reason": "No critical engagement with any idea, text or argument.",
+      "selector_care": "Selectors cannot see how you think.",
+      "source": "engine"
+    },
+    {
+      "id": "D5",
+      "criterion": "critical_engagement",
+      "severity": "major",
+      "points": 3,
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "extra_quotes": [],
+      "claim_id": "C-024",
+      "tier1_id": "ed-competition",
+      "tier1_ids": [
+        "ed-competition",
+        "ed-unsuccessful-ps"
+      ],
+      "reason": "No named text, concept, study or argument anywhere: no evidence of exploring the subject.",
+      "selector_care": "Edinburgh scores knowledge and exploration of the subject.",
+      "source": "engine"
+    },
+    {
+      "id": "D6",
+      "criterion": "subject_balance",
+      "severity": "major",
+      "points": 3,
+      "quote": "Economics plays a vital role in today's world, and I have a deep passion for understanding how the economy works.",
+      "anchor": {
+        "line": 2,
+        "col": 84,
+        "length": 113,
+        "offset": 88
+      },
+      "extra_quotes": [
+        "I believe this course would allow me to delve into the complexities of the ever-evolving global economy.",
+        "From a young age I have always been fascinated by the world of economics and money."
+      ],
+      "claim_id": "C-006",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-multiple-courses"
+      ],
+      "reason": "Philosophy gets about 26% as much space as the other subject.",
+      "selector_care": "LSE: a statement weighted to one side is \"significantly less competitive\".",
+      "source": "engine"
+    },
+    {
+      "id": "D7",
+      "criterion": "subject_balance",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "Philosophy is also interesting because it makes you think about big questions.",
+      "anchor": {
+        "line": 2,
+        "col": 339,
+        "length": 78,
+        "offset": 343
+      },
+      "extra_quotes": [],
+      "claim_id": "C-023",
+      "tier1_id": "lse-phil-econ-structure",
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "reason": "No sentence connects the two subjects; they are discussed separately.",
+      "selector_care": "The LSE degree has a compulsory Philosophy of Economics course (PH311), so the link is part of the degree.",
+      "source": "engine"
+    },
+    {
+      "id": "D8",
+      "criterion": "degree_fit",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "extra_quotes": [],
+      "claim_id": "C-023",
+      "tier1_id": "lse-phil-econ-structure",
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "reason": "Nothing engages with quantitative methods, a compulsory part of the degree as taught.",
+      "selector_care": "Quantitative methods are core in every named programme; selectors check for readiness.",
+      "source": "engine"
+    },
+    {
+      "id": "D9",
+      "criterion": "degree_fit",
+      "severity": "minor",
+      "points": 1,
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "extra_quotes": [],
+      "claim_id": "C-023",
+      "tier1_id": "lse-phil-econ-structure",
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "reason": "Nothing engages with economic theory, which the degree teaches.",
+      "selector_care": "A gap a selector comparing you to the course outline would notice.",
+      "source": "engine"
+    },
+    {
+      "id": "D10",
+      "criterion": "degree_fit",
+      "severity": "minor",
+      "points": 1,
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "extra_quotes": [],
+      "claim_id": "C-023",
+      "tier1_id": "lse-phil-econ-structure",
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "reason": "Nothing engages with logic and argument, which the degree teaches.",
+      "selector_care": "A gap a selector comparing you to the course outline would notice.",
+      "source": "engine"
+    },
+    {
+      "id": "D11",
+      "criterion": "degree_fit",
+      "severity": "minor",
+      "points": 1,
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "extra_quotes": [],
+      "claim_id": "C-023",
+      "tier1_id": "lse-phil-econ-structure",
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "reason": "Nothing engages with ethics and value, which the degree teaches.",
+      "selector_care": "A gap a selector comparing you to the course outline would notice.",
+      "source": "engine"
+    },
+    {
+      "id": "D12",
+      "criterion": "question_content",
+      "severity": "major",
+      "points": 3,
+      "quote": "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career.",
+      "anchor": {
+        "line": 2,
+        "col": 198,
+        "length": 140,
+        "offset": 202
+      },
+      "extra_quotes": [],
+      "claim_id": "C-009",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "reason": "Career plans in Question 1. LSE asks applicants to keep them out of Q1.",
+      "selector_care": "Directly contradicts LSE guidance for the priority choice.",
+      "source": "engine"
+    },
+    {
+      "id": "D13",
+      "criterion": "question_content",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "I am currently studying the IB Diploma and I am predicted 40 points, including a 7 in Economics HL.",
+      "anchor": {
+        "line": 5,
+        "col": 0,
+        "length": 99,
+        "offset": 532
+      },
+      "extra_quotes": [],
+      "claim_id": "C-011",
+      "tier1_id": "ucas-3q",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "reason": "Restates grades or predictions; selectors already see these elsewhere.",
+      "selector_care": "Wastes space UCAS explicitly says not to spend.",
+      "source": "engine"
+    },
+    {
+      "id": "D14",
+      "criterion": "question_content",
+      "severity": "minor",
+      "points": 1,
+      "quote": "I have always achieved top grades in my exams and I received an award for the highest mark in my year.",
+      "anchor": {
+        "line": 5,
+        "col": 100,
+        "length": 102,
+        "offset": 632
+      },
+      "extra_quotes": [],
+      "claim_id": "C-011",
+      "tier1_id": "ucas-3q",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "reason": "Restates grades or predictions; selectors already see these elsewhere.",
+      "selector_care": "Wastes space UCAS explicitly says not to spend.",
+      "source": "engine"
+    },
+    {
+      "id": "D15",
+      "criterion": "question_content",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "I am captain of the rugby team, I play the piano to grade 6, I am a member of the student council and I volunteer at a charity shop on Saturdays.",
+      "anchor": {
+        "line": 8,
+        "col": 0,
+        "length": 145,
+        "offset": 1010
+      },
+      "extra_quotes": [],
+      "claim_id": "C-012",
+      "tier1_id": "ucas-3q",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "reason": "Q3 lists activities without reflecting on why any of them is useful for the course.",
+      "selector_care": "UCAS asks for reflection, not a list; Durham notes list-like statements as a concern.",
+      "source": "engine"
+    },
+    {
+      "id": "D16",
+      "criterion": "question_content",
+      "severity": "minor",
+      "points": 1,
+      "quote": "Moreover, they have given me invaluable skills that will help me to embark on my university journey and achieve my dream career in finance.",
+      "anchor": {
+        "line": 8,
+        "col": 266,
+        "length": 139,
+        "offset": 1276
+      },
+      "extra_quotes": [],
+      "claim_id": "C-010",
+      "tier1_id": "ucas-3q",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "reason": "The same career aim is restated in more than one answer.",
+      "selector_care": "Repetition uses space without adding anything.",
+      "source": "engine"
+    },
+    {
+      "id": "D17",
+      "criterion": "writing_space",
+      "severity": "major",
+      "points": 3,
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "extra_quotes": [
+        "Economics plays a vital role in today's world, and I have a deep passion for understanding how the economy works.",
+        "I believe this course would allow me to delve into the complexities of the ever-evolving global economy.",
+        "Furthermore, I have honed my analytical skills, which are crucial for success at university.",
+        "Moreover, they have given me invaluable skills that will help me to embark on my university journey and achieve my dream career in finance.",
+        "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career."
+      ],
+      "claim_id": "C-014",
+      "tier1_id": "durham-conf-2026",
+      "tier1_ids": [
+        "durham-conf-2026"
+      ],
+      "reason": "23 stock or AI-associated phrase(s): \"From a young age\", \"I have always been fascinated\", \"deep passion\", \"delve\", \"in today's world\", \"ever-evolving\", \"the complexities of\", \"plays a vital role\", \"crucial for success\", \"honed\", \"invaluable\", \"embark\", \"journey\", \"journey\", \"well-rounded individual\", \"shaped me into\", \"would thrive\", \"My dream\", \"dream career\", \"perfect first step\", \"I believe I am a hard-working\", \"the world of\", \"big questions\".",
+      "selector_care": "Durham selectors say they can often spot AI-like writing; clusters of stock phrases read that way.",
+      "source": "engine"
+    },
+    {
+      "id": "D18",
+      "criterion": "writing_space",
+      "severity": "minor",
+      "points": 1,
+      "quote": "Furthermore, I have honed my analytical skills, which are crucial for success at university.",
+      "anchor": {
+        "line": 5,
+        "col": 309,
+        "length": 92,
+        "offset": 841
+      },
+      "extra_quotes": [],
+      "claim_id": "C-013",
+      "tier1_id": "ucas-ai",
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need"
+      ],
+      "reason": "Connector padding: \"Furthermore\", \"Moreover\", \"many skills\".",
+      "selector_care": "Minor.",
+      "source": "engine"
+    },
+    {
+      "id": "D19",
+      "criterion": "writing_space",
+      "severity": "minor",
+      "points": 1,
+      "quote": "My subjects have taught me many skills such as time management, organisation, communication and teamwork.",
+      "anchor": {
+        "line": 5,
+        "col": 203,
+        "length": 105,
+        "offset": 735
+      },
+      "extra_quotes": [],
+      "claim_id": "C-015",
+      "tier1_id": "durham-conf-2026",
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "reason": "A list of items with nothing said about any of them.",
+      "selector_care": "Durham selectors named list-like writing as a growing problem.",
+      "source": "engine"
+    },
+    {
+      "id": "D20",
+      "criterion": "writing_space",
+      "severity": "minor",
+      "points": 1,
+      "quote": "I am captain of the rugby team, I play the piano to grade 6, I am a member of the student council and I volunteer at a charity shop on Saturdays.",
+      "anchor": {
+        "line": 8,
+        "col": 0,
+        "length": 145,
+        "offset": 1010
+      },
+      "extra_quotes": [],
+      "claim_id": "C-015",
+      "tier1_id": "durham-conf-2026",
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "reason": "A list of items with nothing said about any of them.",
+      "selector_care": "Durham selectors named list-like writing as a growing problem.",
+      "source": "engine"
+    }
+  ],
+  "moderation": [
+    {
+      "criterion": "academic_focus",
+      "before": 5,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 2 sourced deduction(s); no further sourced problem found. Probe: academic share 32% (LSE guidance 80%); Q1 non-academic share 27%."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 2 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: academic share 32% (LSE guidance 80%); Q1 non-academic share 27%."
+      },
+      "adjustments": [],
+      "after": 5
+    },
+    {
+      "criterion": "critical_engagement",
+      "before": 1,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 3 sourced deduction(s); no further sourced problem found. Probe: 0 evaluative sentence(s) (philosophy 0, economics 0); 0 named reading(s) with nothing learned; own position stated: no."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 3 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 0 evaluative sentence(s) (philosophy 0, economics 0); 0 named reading(s) with nothing learned; own position stated: no."
+      },
+      "adjustments": [],
+      "after": 1
+    },
+    {
+      "criterion": "subject_balance",
+      "before": 5,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 2 sourced deduction(s); no further sourced problem found. Probe: philosophy 78 vs economics 300 characters of academic content; 0 connecting sentence(s)."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 2 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: philosophy 78 vs economics 300 characters of academic content; 0 connecting sentence(s)."
+      },
+      "adjustments": [],
+      "after": 5
+    },
+    {
+      "criterion": "degree_fit",
+      "before": 5,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 4 sourced deduction(s); no further sourced problem found. Probe: strands engaged: none; missing: economic theory, quantitative methods, logic and argument, ethics and value, philosophy of economics or science; 2 TODO choice(s) not assessable."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 4 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: strands engaged: none; missing: economic theory, quantitative methods, logic and argument, ethics and value, philosophy of economics or science; 2 TODO choice(s) not assessable."
+      },
+      "adjustments": [],
+      "after": 5
+    },
+    {
+      "criterion": "question_content",
+      "before": 1,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 5 sourced deduction(s); no further sourced problem found. Probe: Q1 career sentences 1; Q2 grade sentences 2; Q3 reflective sentences 0/4; repeated 5-word sequences 0."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 5 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: Q1 career sentences 1; Q2 grade sentences 2; Q3 reflective sentences 0/4; repeated 5-word sequences 0."
+      },
+      "adjustments": [],
+      "after": 1
+    },
+    {
+      "criterion": "writing_space",
+      "before": 4,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 4 sourced deduction(s); no further sourced problem found. Probe: 23 stock phrase(s), 3 connector(s), 2 list-like sentence(s), 1399/4000 characters, shortest answer 405."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 4 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 23 stock phrase(s), 3 connector(s), 2 list-like sentence(s), 1399/4000 characters, shortest answer 405."
+      },
+      "adjustments": [],
+      "after": 4
+    }
+  ],
+  "strengths": [],
+  "issues": [
+    {
+      "id": "I-no_university",
+      "importance": "critical",
+      "kind": "check",
+      "title": "Check failed: No university named",
+      "detail": "\"LSE\" in Q1",
+      "quote": "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career.",
+      "anchor": {
+        "line": 2,
+        "col": 198,
+        "length": 140,
+        "offset": 202
+      },
+      "claim_ids": [
+        "C-008"
+      ],
+      "tier1_ids": [
+        "ucas-one-statement",
+        "ucas-multiple-courses"
+      ]
+    },
+    {
+      "id": "I-no_career_q1",
+      "importance": "critical",
+      "kind": "check",
+      "title": "Check failed: No career plans in Q1",
+      "detail": "1 career sentence(s) in Q1",
+      "quote": "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career.",
+      "anchor": {
+        "line": 2,
+        "col": 198,
+        "length": 140,
+        "offset": 202
+      },
+      "claim_ids": [
+        "C-009"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ]
+    },
+    {
+      "id": "I-generic_phrasing",
+      "importance": "critical",
+      "kind": "check",
+      "title": "Check failed: Generic or AI-sounding phrasing (quoted)",
+      "detail": "\"From a young age\", \"I have always been fascinated\", \"deep passion\", \"delve\", \"in today's world\", \"ever-evolving\", \"the complexities of\", \"plays a vital role\", \"crucial for success\", \"honed\", \"invaluable\", \"embark\", \"journey\", \"journey\", \"well-rounded individual\", \"shaped me into\", \"would thrive\", \"My dream\", \"dream career\", \"perfect first step\", \"I believe I am a hard-working\", \"the world of\", \"big questions\", \"Furthermore\", \"Moreover\", \"many skills\"",
+      "quote": "From a young age",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 16,
+        "offset": 4
+      },
+      "claim_ids": [
+        "C-013",
+        "C-014"
+      ],
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need",
+        "durham-conf-2026"
+      ]
+    },
+    {
+      "id": "I-D1",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D1",
+      "criterion": "academic_focus",
+      "title": "Only about 32% of the statement is about the subjects; LSE asks for at least 80%.",
+      "detail": "A clear miss on a published LSE threshold.",
+      "quote": "I am captain of the rugby team, I play the piano to grade 6, I am a member of the student council and I volunteer at a charity shop on Saturdays.",
+      "anchor": {
+        "line": 8,
+        "col": 0,
+        "length": 145,
+        "offset": 1010
+      },
+      "claim_ids": [
+        "C-003"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "question": "Which of the non-academic lines here tells a selector something about how you think about the subjects? If none, what would?",
+      "example": null
+    },
+    {
+      "id": "I-D3",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D3",
+      "criterion": "critical_engagement",
+      "title": "No sentence anywhere gives your own view with a reason or an objection.",
+      "detail": "This is the core of what LSE and Durham say they look for.",
+      "quote": "Economics plays a vital role in today's world, and I have a deep passion for understanding how the economy works.",
+      "anchor": {
+        "line": 2,
+        "col": 84,
+        "length": 113,
+        "offset": 88
+      },
+      "claim_ids": [
+        "C-005"
+      ],
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ],
+      "question": "Where in this answer do you take a side? What is your reason, and what is the best objection to it?",
+      "example": {
+        "label": "not for use",
+        "topic": "marine biology",
+        "text": "Carson's account of DDT in food chains convinced me at first. I now doubt it applies to deep-sea fish, because their diet links are too short for the build-up she describes."
+      }
+    },
+    {
+      "id": "I-D4",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D4",
+      "criterion": "critical_engagement",
+      "title": "No critical engagement with any idea, text or argument.",
+      "detail": "Selectors cannot see how you think.",
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "claim_ids": [
+        "C-004"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "durham-unsuccessful"
+      ],
+      "question": "Pick one idea you mention. What would someone who disagrees say, and why are they wrong or right?",
+      "example": null
+    },
+    {
+      "id": "I-D5",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D5",
+      "criterion": "critical_engagement",
+      "title": "No named text, concept, study or argument anywhere: no evidence of exploring the subject.",
+      "detail": "Edinburgh scores knowledge and exploration of the subject.",
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "claim_ids": [
+        "C-024"
+      ],
+      "tier1_ids": [
+        "ed-competition",
+        "ed-unsuccessful-ps"
+      ],
+      "question": "What one text, study or concept has actually shaped how you see the subject?",
+      "example": null
+    },
+    {
+      "id": "I-D6",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D6",
+      "criterion": "subject_balance",
+      "title": "Philosophy gets about 26% as much space as the other subject.",
+      "detail": "LSE: a statement weighted to one side is \"significantly less competitive\".",
+      "quote": "Economics plays a vital role in today's world, and I have a deep passion for understanding how the economy works.",
+      "anchor": {
+        "line": 2,
+        "col": 84,
+        "length": 113,
+        "offset": 88
+      },
+      "claim_ids": [
+        "C-006"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-multiple-courses"
+      ],
+      "question": "What is the strongest thing you can say about the weaker subject, in your own terms?",
+      "example": null
+    },
+    {
+      "id": "I-D12",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D12",
+      "criterion": "question_content",
+      "title": "Career plans in Question 1. LSE asks applicants to keep them out of Q1.",
+      "detail": "Directly contradicts LSE guidance for the priority choice.",
+      "quote": "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career.",
+      "anchor": {
+        "line": 2,
+        "col": 198,
+        "length": 140,
+        "offset": 202
+      },
+      "claim_ids": [
+        "C-009"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "question": "What in the subject itself drives you, setting aside where it might lead?",
+      "example": null
+    },
+    {
+      "id": "I-D17",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D17",
+      "criterion": "writing_space",
+      "title": "23 stock or AI-associated phrase(s): \"From a young age\", \"I have always been fascinated\", \"deep passion\", \"delve\", \"in today's world\", \"ever-evolving\", \"the complexities of\", \"plays a vital role\", \"crucial for success\", \"honed\", \"invaluable\", \"embark\", \"journey\", \"journey\", \"well-rounded individual\", \"shaped me into\", \"would thrive\", \"My dream\", \"dream career\", \"perfect first step\", \"I believe I am a hard-working\", \"the world of\", \"big questions\".",
+      "detail": "Durham selectors say they can often spot AI-like writing; clusters of stock phrases read that way.",
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "claim_ids": [
+        "C-014"
+      ],
+      "tier1_ids": [
+        "durham-conf-2026"
+      ],
+      "question": "If you said this aloud to a teacher, what would you actually say?",
+      "example": {
+        "label": "not for use",
+        "topic": "cooking",
+        "text": "Compare \"my passion for cooking\" with \"I burned the roux three times before I learned to keep the heat low.\""
+      }
+    },
+    {
+      "id": "I-D2",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D2",
+      "criterion": "academic_focus",
+      "title": "Less than 55% academic content: the case for the programme is thin.",
+      "detail": "Edinburgh and LSE both reject statements that do not show subject commitment.",
+      "quote": "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career.",
+      "anchor": {
+        "line": 2,
+        "col": 198,
+        "length": 140,
+        "offset": 202
+      },
+      "claim_ids": [
+        "C-007"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition"
+      ],
+      "question": "How does this connect to what the degree actually teaches?",
+      "example": null
+    },
+    {
+      "id": "I-D7",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D7",
+      "criterion": "subject_balance",
+      "title": "No sentence connects the two subjects; they are discussed separately.",
+      "detail": "The LSE degree has a compulsory Philosophy of Economics course (PH311), so the link is part of the degree.",
+      "quote": "Philosophy is also interesting because it makes you think about big questions.",
+      "anchor": {
+        "line": 2,
+        "col": 339,
+        "length": 78,
+        "offset": 343
+      },
+      "claim_ids": [
+        "C-023"
+      ],
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "question": "Where does a question in one subject depend on an answer from the other?",
+      "example": null
+    },
+    {
+      "id": "I-D8",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D8",
+      "criterion": "degree_fit",
+      "title": "Nothing engages with quantitative methods, a compulsory part of the degree as taught.",
+      "detail": "Quantitative methods are core in every named programme; selectors check for readiness.",
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "claim_ids": [
+        "C-023"
+      ],
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "question": "Where does a question in one subject depend on an answer from the other?",
+      "example": null
+    },
+    {
+      "id": "I-D13",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D13",
+      "criterion": "question_content",
+      "title": "Restates grades or predictions; selectors already see these elsewhere.",
+      "detail": "Wastes space UCAS explicitly says not to spend.",
+      "quote": "I am currently studying the IB Diploma and I am predicted 40 points, including a 7 in Economics HL.",
+      "anchor": {
+        "line": 5,
+        "col": 0,
+        "length": 99,
+        "offset": 532
+      },
+      "claim_ids": [
+        "C-011"
+      ],
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "question": "What did you learn in that subject that your grade does not show?",
+      "example": null
+    },
+    {
+      "id": "I-D15",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D15",
+      "criterion": "question_content",
+      "title": "Q3 lists activities without reflecting on why any of them is useful for the course.",
+      "detail": "UCAS asks for reflection, not a list; Durham notes list-like statements as a concern.",
+      "quote": "I am captain of the rugby team, I play the piano to grade 6, I am a member of the student council and I volunteer at a charity shop on Saturdays.",
+      "anchor": {
+        "line": 8,
+        "col": 0,
+        "length": 145,
+        "offset": 1010
+      },
+      "claim_ids": [
+        "C-012"
+      ],
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "question": "What did this activity change in how you think about the course?",
+      "example": {
+        "label": "not for use",
+        "topic": "music",
+        "text": "Accompanying a choir taught me to listen to the weakest voice first, which is now how I check a chord before I play it."
+      }
+    },
+    {
+      "id": "I-D9",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D9",
+      "criterion": "degree_fit",
+      "title": "Nothing engages with economic theory, which the degree teaches.",
+      "detail": "A gap a selector comparing you to the course outline would notice.",
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "claim_ids": [
+        "C-023"
+      ],
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "question": "Where does a question in one subject depend on an answer from the other?",
+      "example": null
+    },
+    {
+      "id": "I-D10",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D10",
+      "criterion": "degree_fit",
+      "title": "Nothing engages with logic and argument, which the degree teaches.",
+      "detail": "A gap a selector comparing you to the course outline would notice.",
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "claim_ids": [
+        "C-023"
+      ],
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "question": "Where does a question in one subject depend on an answer from the other?",
+      "example": null
+    },
+    {
+      "id": "I-D11",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D11",
+      "criterion": "degree_fit",
+      "title": "Nothing engages with ethics and value, which the degree teaches.",
+      "detail": "A gap a selector comparing you to the course outline would notice.",
+      "quote": "From a young age I have always been fascinated by the world of economics and money.",
+      "anchor": {
+        "line": 2,
+        "col": 0,
+        "length": 83,
+        "offset": 4
+      },
+      "claim_ids": [
+        "C-023"
+      ],
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "question": "Where does a question in one subject depend on an answer from the other?",
+      "example": null
+    },
+    {
+      "id": "I-D14",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D14",
+      "criterion": "question_content",
+      "title": "Restates grades or predictions; selectors already see these elsewhere.",
+      "detail": "Wastes space UCAS explicitly says not to spend.",
+      "quote": "I have always achieved top grades in my exams and I received an award for the highest mark in my year.",
+      "anchor": {
+        "line": 5,
+        "col": 100,
+        "length": 102,
+        "offset": 632
+      },
+      "claim_ids": [
+        "C-011"
+      ],
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "question": "What did you learn in that subject that your grade does not show?",
+      "example": null
+    },
+    {
+      "id": "I-D16",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D16",
+      "criterion": "question_content",
+      "title": "The same career aim is restated in more than one answer.",
+      "detail": "Repetition uses space without adding anything.",
+      "quote": "Moreover, they have given me invaluable skills that will help me to embark on my university journey and achieve my dream career in finance.",
+      "anchor": {
+        "line": 8,
+        "col": 266,
+        "length": 139,
+        "offset": 1276
+      },
+      "claim_ids": [
+        "C-010"
+      ],
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "question": "What new information could this space carry instead?",
+      "example": null
+    },
+    {
+      "id": "I-D18",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D18",
+      "criterion": "writing_space",
+      "title": "Connector padding: \"Furthermore\", \"Moreover\", \"many skills\".",
+      "detail": "Minor.",
+      "quote": "Furthermore, I have honed my analytical skills, which are crucial for success at university.",
+      "anchor": {
+        "line": 5,
+        "col": 309,
+        "length": 92,
+        "offset": 841
+      },
+      "claim_ids": [
+        "C-013"
+      ],
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need"
+      ],
+      "question": "Do these connectors add logic, or just signal it?",
+      "example": null
+    },
+    {
+      "id": "I-D19",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D19",
+      "criterion": "writing_space",
+      "title": "A list of items with nothing said about any of them.",
+      "detail": "Durham selectors named list-like writing as a growing problem.",
+      "quote": "My subjects have taught me many skills such as time management, organisation, communication and teamwork.",
+      "anchor": {
+        "line": 5,
+        "col": 203,
+        "length": 105,
+        "offset": 735
+      },
+      "claim_ids": [
+        "C-015"
+      ],
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "question": "Which one item on this list matters most, and why?",
+      "example": {
+        "label": "not for use",
+        "topic": "astronomy",
+        "text": "Instead of naming five observing nights, describe the one night the star chart was wrong and what you did about it."
+      }
+    },
+    {
+      "id": "I-D20",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D20",
+      "criterion": "writing_space",
+      "title": "A list of items with nothing said about any of them.",
+      "detail": "Durham selectors named list-like writing as a growing problem.",
+      "quote": "I am captain of the rugby team, I play the piano to grade 6, I am a member of the student council and I volunteer at a charity shop on Saturdays.",
+      "anchor": {
+        "line": 8,
+        "col": 0,
+        "length": 145,
+        "offset": 1010
+      },
+      "claim_ids": [
+        "C-015"
+      ],
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "question": "Which one item on this list matters most, and why?",
+      "example": {
+        "label": "not for use",
+        "topic": "astronomy",
+        "text": "Instead of naming five observing nights, describe the one night the star chart was wrong and what you did about it."
+      }
+    }
+  ],
+  "questions": [
+    "Which of the non-academic lines here tells a selector something about how you think about the subjects? If none, what would?",
+    "Where in this answer do you take a side? What is your reason, and what is the best objection to it?",
+    "Pick one idea you mention. What would someone who disagrees say, and why are they wrong or right?",
+    "What one text, study or concept has actually shaped how you see the subject?",
+    "What is the strongest thing you can say about the weaker subject, in your own terms?",
+    "What in the subject itself drives you, setting aside where it might lead?",
+    "If you said this aloud to a teacher, what would you actually say?",
+    "How does this connect to what the degree actually teaches?",
+    "Where does a question in one subject depend on an answer from the other?",
+    "What did you learn in that subject that your grade does not show?",
+    "What did this activity change in how you think about the course?",
+    "What new information could this space carry instead?",
+    "Do these connectors add logic, or just signal it?",
+    "Which one item on this list matters most, and why?"
+  ],
+  "fact_checks": [],
+  "advice": [
+    {
+      "claim_id": "A-002",
+      "tier": 3,
+      "source_id": "t3-uniguide-examples",
+      "text": "Deeper reflection on fewer experiences adds more impact than many brief mentions.",
+      "status": "not officially confirmed",
+      "why": "Q3 covers several activities briefly.",
+      "score_impact": 0
+    },
+    {
+      "claim_id": "A-003",
+      "tier": 3,
+      "source_id": "t3-uniguide-examples",
+      "text": "Philosophy and economics statements need a specific concept or text to show real engagement.",
+      "status": "not officially confirmed",
+      "why": "No named text or concept anywhere.",
+      "score_impact": 0
+    },
+    {
+      "claim_id": "C-026",
+      "tier": 1,
+      "source_id": "ed-what-you-need",
+      "text": "Edinburgh wants evidence the applicant understands the career implications of the choice.",
+      "status": "confirmed by tier 1",
+      "why": "Edinburgh asks for awareness of career implications; if you include it, it belongs in Q2 or Q3, never Q1.",
+      "score_impact": 0
+    }
+  ],
+  "opinions": [
+    {
+      "text": "Opinion (no published source): 2601 characters unused. Space could carry more evidence of thinking.",
+      "score_impact": 0
+    }
+  ],
+  "limitations": [
+    "2 choice(s) are TODO in config/applicant.json, so fit across choices covers only the named choices. Nothing was guessed."
+  ],
+  "sentence_stats": {
+    "sentences": 14,
+    "critical": 0,
+    "descriptive_reads": 0,
+    "bridges": 0
+  },
+  "change_since_last": {
+    "previous_id": null,
+    "summary": "First review of this statement; nothing to compare."
+  },
+  "calibration_fixture": "weak"
+}

@@ -1,0 +1,439 @@
+{
+  "note": "Cross-check log. Every claim that may influence the rubric or advice is listed with its origin tier and a label: confirmed (found in a stored tier 1 extract, ids given), unconfirmed (not found in tier 1; usable as advice only, never moves a score), contradicted (tier 1 says otherwise; dropped and kept here as a log). Where tier 1 sources disagree, both are cited and 'governs' says which statement each one controls.",
+  "claims": [
+    {
+      "id": "C-001",
+      "text": "Total statement limit is 4000 characters including spaces.",
+      "origin": "ucas-3q",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-substitute"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-002",
+      "text": "Each of the three answers needs at least 350 characters.",
+      "origin": "ucas-3q",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-ps"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-003",
+      "text": "At least 80% of the statement should emphasise interest in the programme (LSE).",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "use": "rubric",
+      "disagreement": {
+        "with": [
+          "lse-ps-old"
+        ],
+        "detail": "Older LSE material gave 75% / 'no more than 20% extra-curricular'.",
+        "governs": "lse-ps governs the 2027-entry main statement; lse-ps-old governed pre-2026 single-essay statements."
+      }
+    },
+    {
+      "id": "C-004",
+      "text": "Selectors look for evidence of critical engagement with the subject.",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps",
+        "durham-unsuccessful"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-005",
+      "text": "Selectors want the applicant's own views, not a description of what they read.",
+      "origin": "durham-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-006",
+      "text": "Joint degrees: give equal weight to each subject; a statement weighted to one side is significantly less competitive.",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-multiple-courses"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-007",
+      "text": "Academic interests should align with the programme applied for; missing subject commitment can end an application.",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-008",
+      "text": "One statement goes to every choice, so do not name a university or college.",
+      "origin": "ucas-one-statement",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-one-statement",
+        "ucas-multiple-courses"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-009",
+      "text": "Avoid discussing future career plans in Question 1.",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "use": "rubric",
+      "disagreement": {
+        "with": [
+          "ucas-3q",
+          "ed-what-you-need"
+        ],
+        "detail": "UCAS suggests Q1 can cover 'future plans'; Edinburgh asks for evidence of understanding career implications.",
+        "governs": "lse-ps governs Q1 of the main statement (LSE is the strictest lens). ed-what-you-need is satisfied by brief career material in Q2/Q3. For the Durham substitute statement no tier 1 source bans careers in Q1, so the check is advisory there."
+      }
+    },
+    {
+      "id": "C-010",
+      "text": "Each answer should add value; do not repeat information across questions.",
+      "origin": "ucas-3q",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-011",
+      "text": "Do not spend Q2 restating grades; universities see them elsewhere.",
+      "origin": "ucas-3q",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-012",
+      "text": "Q3 activities should be reflected on: why each is useful.",
+      "origin": "ucas-3q",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-013",
+      "text": "AI-written statements risk rejection, withdrawn offers or a fraud finding; the applicant declares the statement is their own.",
+      "origin": "ucas-ai",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need"
+      ],
+      "use": "rubric",
+      "disagreement": {
+        "with": [
+          "ucas-builder-old"
+        ],
+        "detail": "Older UCAS page says not to use AI at all; the current guide allows ideas/structure/proofreading.",
+        "governs": "ucas-ai and lse-ps govern permitted uses for 2027 entry."
+      }
+    },
+    {
+      "id": "C-014",
+      "text": "Readers can often spot AI-generated statements even though software cannot reliably detect them.",
+      "origin": "durham-conf-2026",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-conf-2026"
+      ],
+      "use": "rubric",
+      "disagreement": {
+        "with": [
+          "ucas-ai"
+        ],
+        "detail": "UCAS says heavily AI-assisted wording becomes more detectable through similarity software.",
+        "governs": "Both apply to every statement; neither changes scoring, both support flagging AI-sounding phrasing."
+      }
+    },
+    {
+      "id": "C-015",
+      "text": "Selectors dislike list-like statements that describe what was studied rather than what was learned.",
+      "origin": "durham-conf-2026",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-016",
+      "text": "Reading counts only when the applicant says what they learnt, observed or found.",
+      "origin": "durham-unsuccessful",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-unsuccessful"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-017",
+      "text": "Correct use of subject terminology is a strength selectors look for.",
+      "origin": "durham-conf-2026-slides",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-conf-2026-slides"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-018",
+      "text": "Statements are similarity-checked; 10%+ similarity triggers human review and copied text can withdraw the application.",
+      "origin": "ucas-similarity",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-similarity"
+      ],
+      "use": "rubric",
+      "disagreement": {
+        "with": [],
+        "detail": "An older UCAS page reported by search gives 30%; its URL was not captured.",
+        "governs": "ucas-similarity (applicant guide) is treated as governing."
+      }
+    },
+    {
+      "id": "C-019",
+      "text": "Writing only the 350-character minimum for Q3 is acceptable (LSE).",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-020",
+      "text": "Durham substitute statement: same 4000-character limit, plain text, read instead of the UCAS statement.",
+      "origin": "durham-substitute",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-substitute"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-021",
+      "text": "In Social Sciences, Durham selectors value independent thought and engagement with reading.",
+      "origin": "durham-conf-2026",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-022",
+      "text": "Durham Economics is taught with core micro, macro, data analysis and mathematical/statistical tools, ending in a dissertation.",
+      "origin": "durham-econ",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-econ"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-023",
+      "text": "LSE Philosophy and Economics is taught with micro/macro, econometrics, logic or maths, PH103 and compulsory PH311 Philosophy of Economics.",
+      "origin": "lse-phil-econ-structure",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-024",
+      "text": "Edinburgh scores statements for motivation, knowledge and exploration of the subject.",
+      "origin": "ed-competition",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ed-competition",
+        "ed-unsuccessful-ps"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-025",
+      "text": "Edinburgh Philosophy and Economics year 1 covers logic, morality and value, history of philosophy, philosophy of science and Economics 1A/1B.",
+      "origin": "ed-phil-econ",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ed-phil-econ"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-026",
+      "text": "Edinburgh wants evidence the applicant understands the career implications of the choice.",
+      "origin": "ed-what-you-need",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ed-what-you-need",
+        "ed-unsuccessful-ps"
+      ],
+      "use": "advice",
+      "disagreement": {
+        "with": [
+          "lse-ps"
+        ],
+        "detail": "See C-009.",
+        "governs": "Satisfiable in Q2/Q3 of the main statement; never in Q1."
+      }
+    },
+    {
+      "id": "C-027",
+      "text": "Q2 should focus on the most recent and relevant study and the skills it gave.",
+      "origin": "ucas-3q",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-028",
+      "text": "Q1 should show motivation and knowledge of the subject, backed by research.",
+      "origin": "ucas-3q",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-3q",
+        "ed-competition"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "A-001",
+      "text": "Reflection is rewarded over description in the 2026 format.",
+      "origin": "t3-uniguide-examples",
+      "origin_tier": 3,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-ps"
+      ],
+      "use": "advice",
+      "note": "Confirmed by tier 1 (C-005, C-015); scoring uses the tier 1 claims, not this one."
+    },
+    {
+      "id": "A-002",
+      "text": "Deeper reflection on fewer experiences adds more impact than many brief mentions.",
+      "origin": "t3-uniguide-examples",
+      "origin_tier": 3,
+      "label": "unconfirmed",
+      "tier1_ids": [],
+      "use": "advice",
+      "note": "Tier 3, not officially confirmed. Zero score impact."
+    },
+    {
+      "id": "A-003",
+      "text": "Philosophy and economics statements need a specific concept or text to show real engagement.",
+      "origin": "t3-uniguide-examples",
+      "origin_tier": 3,
+      "label": "unconfirmed",
+      "tier1_ids": [],
+      "use": "advice",
+      "note": "Tier 3, not officially confirmed. durham-ps suggests books or articles as prompts but does not require them. Zero score impact."
+    },
+    {
+      "id": "A-004",
+      "text": "The 80% must be spent in Questions 1 and 2; Q3 does not count toward it.",
+      "origin": "t3-lse-blog-2022",
+      "origin_tier": 3,
+      "label": "contradicted",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "use": "dropped",
+      "note": "lse-ps applies the 80% to the whole statement and says Q3 can 'expand on critical reflections' and hold super-curricular activity, so academic Q3 content counts. Dropped."
+    },
+    {
+      "id": "A-005",
+      "text": "Aim for around 500 words.",
+      "origin": "t3-tutoring-500-words",
+      "origin_tier": 3,
+      "label": "unconfirmed",
+      "tier1_ids": [],
+      "use": "advice",
+      "note": "Tier 3, not officially confirmed. The tier 1 limit is in characters (C-001), not words. Zero score impact."
+    },
+    {
+      "id": "A-006",
+      "text": "Do not let AI write the statement.",
+      "origin": "t3-lse-blog-2026",
+      "origin_tier": 3,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-ai"
+      ],
+      "use": "advice",
+      "note": "Confirmed by C-013."
+    }
+  ]
+}

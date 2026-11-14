@@ -1,0 +1,857 @@
+{
+  "id": "calibration-middling",
+  "type": "main",
+  "created_at": "2026-11-14T00:00:00.000Z",
+  "engine_version": "1.0.0",
+  "draft_path": "fixtures/middling.txt",
+  "disclaimer": "These scores are this tool's reading of published admissions criteria. They are not a prediction of offers.",
+  "statement": "Philosophy and Economics (main UCAS statement)",
+  "char_counts": {
+    "q1": 965,
+    "q2": 763,
+    "q3": 478,
+    "total": 2206
+  },
+  "academic_share": 0.709,
+  "checks": [
+    {
+      "id": "total_chars",
+      "name": "4000 characters total",
+      "pass": true,
+      "detail": "2206 / 4000 characters (including spaces)",
+      "claim_ids": [
+        "C-001"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-substitute"
+      ]
+    },
+    {
+      "id": "min_per_answer",
+      "name": "350 minimum per answer",
+      "pass": true,
+      "detail": "Q1 965, Q2 763, Q3 478",
+      "claim_ids": [
+        "C-002"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-ps"
+      ]
+    },
+    {
+      "id": "no_university",
+      "name": "No university named",
+      "pass": true,
+      "detail": "none found",
+      "quotes": [],
+      "claim_ids": [
+        "C-008"
+      ],
+      "tier1_ids": [
+        "ucas-one-statement",
+        "ucas-multiple-courses"
+      ]
+    },
+    {
+      "id": "no_career_q1",
+      "name": "No career plans in Q1",
+      "pass": true,
+      "advisory": false,
+      "detail": "none found",
+      "quotes": [],
+      "claim_ids": [
+        "C-009"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ]
+    },
+    {
+      "id": "generic_phrasing",
+      "name": "Generic or AI-sounding phrasing (quoted)",
+      "pass": true,
+      "detail": "\"very interesting\", \"teamwork, leadership and communication\"",
+      "quotes": [
+        "very interesting",
+        "teamwork, leadership and communication"
+      ],
+      "note": "Phrase list is a heuristic. A match is not proof of AI use; it is phrasing selectors read as generic.",
+      "claim_ids": [
+        "C-013",
+        "C-014"
+      ],
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need",
+        "durham-conf-2026"
+      ]
+    }
+  ],
+  "scores": {
+    "academic_focus": 8,
+    "critical_engagement": 5,
+    "subject_balance": 7,
+    "degree_fit": 10,
+    "question_content": 6,
+    "writing_space": 8
+  },
+  "average": 7.33,
+  "criteria": [
+    {
+      "id": "academic_focus",
+      "name": "Academic focus and proportion",
+      "claim_ids": [
+        "C-003",
+        "C-007",
+        "C-024"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition"
+      ]
+    },
+    {
+      "id": "critical_engagement",
+      "name": "Critical engagement and own views",
+      "claim_ids": [
+        "C-004",
+        "C-005",
+        "C-016",
+        "C-017"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "durham-unsuccessful",
+        "durham-ps",
+        "durham-conf-2026-slides"
+      ]
+    },
+    {
+      "id": "subject_balance",
+      "name": "Balance and link between the two subjects",
+      "claim_ids": [
+        "C-006",
+        "C-023"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-multiple-courses",
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ]
+    },
+    {
+      "id": "degree_fit",
+      "name": "Fit with the degree as taught and across choices",
+      "claim_ids": [
+        "C-023",
+        "C-025",
+        "C-007",
+        "C-008"
+      ],
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ",
+        "ed-phil-econ",
+        "lse-ps",
+        "ed-unsuccessful-ps",
+        "ed-competition",
+        "ucas-one-statement",
+        "ucas-multiple-courses"
+      ]
+    },
+    {
+      "id": "question_content",
+      "name": "Right content in each of the 3 questions, no repetition",
+      "claim_ids": [
+        "C-028",
+        "C-009",
+        "C-027",
+        "C-011",
+        "C-012",
+        "C-010"
+      ],
+      "tier1_ids": [
+        "ucas-3q",
+        "ed-competition",
+        "lse-ps"
+      ]
+    },
+    {
+      "id": "writing_space",
+      "name": "Writing and use of space",
+      "claim_ids": [
+        "C-013",
+        "C-014",
+        "C-015",
+        "C-001",
+        "C-002"
+      ],
+      "tier1_ids": [
+        "ucas-ai",
+        "lse-ps",
+        "ed-what-you-need",
+        "durham-conf-2026",
+        "durham-conf-2026-slides",
+        "ucas-3q",
+        "durham-substitute",
+        "durham-ps"
+      ]
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "criterion": "academic_focus",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "Last summer I did work experience at an accountancy firm, where I shadowed staff, attended meetings and helped with spreadsheets.",
+      "anchor": {
+        "line": 8,
+        "col": 229,
+        "length": 129,
+        "offset": 1973
+      },
+      "extra_quotes": [
+        "Outside of school I am a member of the debating society, the football team and the school orchestra, where I play the violin.",
+        "These activities have helped me develop teamwork, leadership and communication skills which will help me at university."
+      ],
+      "claim_id": "C-003",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "reason": "About 71% of the statement is about the subjects; LSE asks for at least 80%.",
+      "selector_care": "LSE states the 80% figure explicitly, so a selector will notice a shortfall.",
+      "source": "engine"
+    },
+    {
+      "id": "D2",
+      "criterion": "critical_engagement",
+      "severity": "major",
+      "points": 3,
+      "quote": "I have also been reading The Economist every week, which has helped me keep up with topics like inflation, interest rates and the cost of living crisis.",
+      "anchor": {
+        "line": 2,
+        "col": 495,
+        "length": 152,
+        "offset": 499
+      },
+      "extra_quotes": [
+        "For my internal assessments I wrote commentaries on news articles about tariffs, subsidies and price controls, which helped me apply theory to real situations.",
+        "My Extended Essay is about the effect of the sugar tax on soft drink consumption in the UK, and it has taught me how to research and use data."
+      ],
+      "claim_id": "C-005",
+      "tier1_id": "durham-ps",
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ],
+      "reason": "Only one sentence gives a view with a reason (Q1). The rest describes.",
+      "selector_care": "A single view across a whole statement reads as thin engagement.",
+      "source": "engine"
+    },
+    {
+      "id": "D3",
+      "criterion": "critical_engagement",
+      "severity": "minor",
+      "points": 1,
+      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
+      "anchor": {
+        "line": 2,
+        "col": 123,
+        "length": 176,
+        "offset": 127
+      },
+      "extra_quotes": [],
+      "claim_id": "C-016",
+      "tier1_id": "durham-unsuccessful",
+      "tier1_ids": [
+        "durham-unsuccessful"
+      ],
+      "reason": "Names a reading but says nothing about what you learnt, doubted or concluded from it.",
+      "selector_care": "Durham says reading counts only when you say what you learnt.",
+      "source": "engine"
+    },
+    {
+      "id": "D4",
+      "criterion": "critical_engagement",
+      "severity": "minor",
+      "points": 1,
+      "quote": "I then read Thinking, Fast and Slow by Daniel Kahneman, which was about the two systems of thinking and how people make mistakes.",
+      "anchor": {
+        "line": 2,
+        "col": 300,
+        "length": 129,
+        "offset": 304
+      },
+      "extra_quotes": [],
+      "claim_id": "C-016",
+      "tier1_id": "durham-unsuccessful",
+      "tier1_ids": [
+        "durham-unsuccessful"
+      ],
+      "reason": "Names a reading but says nothing about what you learnt, doubted or concluded from it.",
+      "selector_care": "Durham says reading counts only when you say what you learnt.",
+      "source": "engine"
+    },
+    {
+      "id": "D5",
+      "criterion": "subject_balance",
+      "severity": "major",
+      "points": 3,
+      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
+      "anchor": {
+        "line": 2,
+        "col": 123,
+        "length": 176,
+        "offset": 127
+      },
+      "extra_quotes": [
+        "For my internal assessments I wrote commentaries on news articles about tariffs, subsidies and price controls, which helped me apply theory to real situations.",
+        "I have also been reading The Economist every week, which has helped me keep up with topics like inflation, interest rates and the cost of living crisis."
+      ],
+      "claim_id": "C-006",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-multiple-courses"
+      ],
+      "reason": "Philosophy gets about 29% as much space as the other subject.",
+      "selector_care": "LSE: a statement weighted to one side is \"significantly less competitive\".",
+      "source": "engine"
+    },
+    {
+      "id": "D6",
+      "criterion": "question_content",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "I am predicted a 7 in Economics and a 6 in Mathematics, and I achieved high marks in my mock exams.",
+      "anchor": {
+        "line": 5,
+        "col": 282,
+        "length": 99,
+        "offset": 1257
+      },
+      "extra_quotes": [],
+      "claim_id": "C-011",
+      "tier1_id": "ucas-3q",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "reason": "Restates grades or predictions; selectors already see these elsewhere.",
+      "selector_care": "Wastes space UCAS explicitly says not to spend.",
+      "source": "engine"
+    },
+    {
+      "id": "D7",
+      "criterion": "question_content",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "Last summer I did work experience at an accountancy firm, where I shadowed staff, attended meetings and helped with spreadsheets.",
+      "anchor": {
+        "line": 8,
+        "col": 229,
+        "length": 129,
+        "offset": 1973
+      },
+      "extra_quotes": [],
+      "claim_id": "C-012",
+      "tier1_id": "ucas-3q",
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "reason": "Q3 lists activities without reflecting on why any of them is useful for the course.",
+      "selector_care": "UCAS asks for reflection, not a list; Durham notes list-like statements as a concern.",
+      "source": "engine"
+    },
+    {
+      "id": "D8",
+      "criterion": "writing_space",
+      "severity": "minor",
+      "points": 1,
+      "quote": "For my internal assessments I wrote commentaries on news articles about tariffs, subsidies and price controls, which helped me apply theory to real situations.",
+      "anchor": {
+        "line": 5,
+        "col": 122,
+        "length": 159,
+        "offset": 1097
+      },
+      "extra_quotes": [],
+      "claim_id": "C-015",
+      "tier1_id": "durham-conf-2026",
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "reason": "A list of items with nothing said about any of them.",
+      "selector_care": "Durham selectors named list-like writing as a growing problem.",
+      "source": "engine"
+    },
+    {
+      "id": "D9",
+      "criterion": "writing_space",
+      "severity": "minor",
+      "points": 1,
+      "quote": "Outside of school I am a member of the debating society, the football team and the school orchestra, where I play the violin.",
+      "anchor": {
+        "line": 8,
+        "col": 0,
+        "length": 125,
+        "offset": 1744
+      },
+      "extra_quotes": [],
+      "claim_id": "C-015",
+      "tier1_id": "durham-conf-2026",
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "reason": "A list of items with nothing said about any of them.",
+      "selector_care": "Durham selectors named list-like writing as a growing problem.",
+      "source": "engine"
+    }
+  ],
+  "moderation": [
+    {
+      "criterion": "academic_focus",
+      "before": 8,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 1 sourced deduction(s); no further sourced problem found. Probe: academic share 71% (LSE guidance 80%); Q1 non-academic share 7%."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 1 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: academic share 71% (LSE guidance 80%); Q1 non-academic share 7%."
+      },
+      "adjustments": [],
+      "after": 8
+    },
+    {
+      "criterion": "critical_engagement",
+      "before": 5,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 3 sourced deduction(s); no further sourced problem found. Probe: 1 evaluative sentence(s) (philosophy 1, economics 1); 2 named reading(s) with nothing learned; own position stated: yes."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 3 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 1 evaluative sentence(s) (philosophy 1, economics 1); 2 named reading(s) with nothing learned; own position stated: yes."
+      },
+      "adjustments": [],
+      "after": 5
+    },
+    {
+      "criterion": "subject_balance",
+      "before": 7,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 1 sourced deduction(s); no further sourced problem found. Probe: philosophy 447 vs economics 1554 characters of academic content; 1 connecting sentence(s)."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 1 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: philosophy 447 vs economics 1554 characters of academic content; 1 connecting sentence(s)."
+      },
+      "adjustments": [],
+      "after": 7
+    },
+    {
+      "criterion": "degree_fit",
+      "before": 10,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: strands engaged: economic theory, quantitative methods, ethics and value, philosophy of economics or science; missing: logic and argument; 2 TODO choice(s) not assessable."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "No deductions to remove. Probe: strands engaged: economic theory, quantitative methods, ethics and value, philosophy of economics or science; missing: logic and argument; 2 TODO choice(s) not assessable."
+      },
+      "adjustments": [],
+      "after": 10
+    },
+    {
+      "criterion": "question_content",
+      "before": 6,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 2 sourced deduction(s); no further sourced problem found. Probe: Q1 career sentences 0; Q2 grade sentences 1; Q3 reflective sentences 0/4; repeated 5-word sequences 0."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 2 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: Q1 career sentences 0; Q2 grade sentences 1; Q3 reflective sentences 0/4; repeated 5-word sequences 0."
+      },
+      "adjustments": [],
+      "after": 6
+    },
+    {
+      "criterion": "writing_space",
+      "before": 8,
+      "too_high": {
+        "answer": "no",
+        "reasoning": "Score already reflects 2 sourced deduction(s); no further sourced problem found. Probe: 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
+      },
+      "too_low": {
+        "answer": "no",
+        "reasoning": "Each of 2 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
+      },
+      "adjustments": [],
+      "after": 8
+    }
+  ],
+  "strengths": [
+    {
+      "text": "Gives a view with a reason.",
+      "quote": "In philosophy I have read some of Mill's Utilitarianism, and I think the idea of the greatest happiness for the greatest number is a useful way of thinking about government policy because it focuses on outcomes.",
+      "claim_id": "C-005",
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ]
+    },
+    {
+      "text": "Connects philosophy and economics.",
+      "quote": "In philosophy I have read some of Mill's Utilitarianism, and I think the idea of the greatest happiness for the greatest number is a useful way of thinking about government policy because it focuses on outcomes.",
+      "claim_id": "C-023",
+      "tier1_ids": [
+        "lse-phil-econ-structure",
+        "lse-phil-econ"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-D2",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D2",
+      "criterion": "critical_engagement",
+      "title": "Only one sentence gives a view with a reason (Q1). The rest describes.",
+      "detail": "A single view across a whole statement reads as thin engagement.",
+      "quote": "I have also been reading The Economist every week, which has helped me keep up with topics like inflation, interest rates and the cost of living crisis.",
+      "anchor": {
+        "line": 2,
+        "col": 495,
+        "length": 152,
+        "offset": 499
+      },
+      "claim_ids": [
+        "C-005"
+      ],
+      "tier1_ids": [
+        "durham-ps",
+        "durham-unsuccessful",
+        "durham-conf-2026-slides"
+      ],
+      "question": "Where in this answer do you take a side? What is your reason, and what is the best objection to it?",
+      "example": {
+        "label": "not for use",
+        "topic": "marine biology",
+        "text": "Carson's account of DDT in food chains convinced me at first. I now doubt it applies to deep-sea fish, because their diet links are too short for the build-up she describes."
+      }
+    },
+    {
+      "id": "I-D5",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D5",
+      "criterion": "subject_balance",
+      "title": "Philosophy gets about 29% as much space as the other subject.",
+      "detail": "LSE: a statement weighted to one side is \"significantly less competitive\".",
+      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
+      "anchor": {
+        "line": 2,
+        "col": 123,
+        "length": 176,
+        "offset": 127
+      },
+      "claim_ids": [
+        "C-006"
+      ],
+      "tier1_ids": [
+        "lse-ps",
+        "ucas-multiple-courses"
+      ],
+      "question": "What is the strongest thing you can say about the weaker subject, in your own terms?",
+      "example": null
+    },
+    {
+      "id": "I-D1",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D1",
+      "criterion": "academic_focus",
+      "title": "About 71% of the statement is about the subjects; LSE asks for at least 80%.",
+      "detail": "LSE states the 80% figure explicitly, so a selector will notice a shortfall.",
+      "quote": "Last summer I did work experience at an accountancy firm, where I shadowed staff, attended meetings and helped with spreadsheets.",
+      "anchor": {
+        "line": 8,
+        "col": 229,
+        "length": 129,
+        "offset": 1973
+      },
+      "claim_ids": [
+        "C-003"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "question": "Which of the non-academic lines here tells a selector something about how you think about the subjects? If none, what would?",
+      "example": null
+    },
+    {
+      "id": "I-D6",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D6",
+      "criterion": "question_content",
+      "title": "Restates grades or predictions; selectors already see these elsewhere.",
+      "detail": "Wastes space UCAS explicitly says not to spend.",
+      "quote": "I am predicted a 7 in Economics and a 6 in Mathematics, and I achieved high marks in my mock exams.",
+      "anchor": {
+        "line": 5,
+        "col": 282,
+        "length": 99,
+        "offset": 1257
+      },
+      "claim_ids": [
+        "C-011"
+      ],
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "question": "What did you learn in that subject that your grade does not show?",
+      "example": null
+    },
+    {
+      "id": "I-D7",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D7",
+      "criterion": "question_content",
+      "title": "Q3 lists activities without reflecting on why any of them is useful for the course.",
+      "detail": "UCAS asks for reflection, not a list; Durham notes list-like statements as a concern.",
+      "quote": "Last summer I did work experience at an accountancy firm, where I shadowed staff, attended meetings and helped with spreadsheets.",
+      "anchor": {
+        "line": 8,
+        "col": 229,
+        "length": 129,
+        "offset": 1973
+      },
+      "claim_ids": [
+        "C-012"
+      ],
+      "tier1_ids": [
+        "ucas-3q"
+      ],
+      "question": "What did this activity change in how you think about the course?",
+      "example": {
+        "label": "not for use",
+        "topic": "music",
+        "text": "Accompanying a choir taught me to listen to the weakest voice first, which is now how I check a chord before I play it."
+      }
+    },
+    {
+      "id": "I-D3",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D3",
+      "criterion": "critical_engagement",
+      "title": "Names a reading but says nothing about what you learnt, doubted or concluded from it.",
+      "detail": "Durham says reading counts only when you say what you learnt.",
+      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
+      "anchor": {
+        "line": 2,
+        "col": 123,
+        "length": 176,
+        "offset": 127
+      },
+      "claim_ids": [
+        "C-016"
+      ],
+      "tier1_ids": [
+        "durham-unsuccessful"
+      ],
+      "question": "What did this reading change in your thinking? Is there a claim in it you doubt?",
+      "example": {
+        "label": "not for use",
+        "topic": "architecture",
+        "text": "Reading Jacobs on city streets made me notice that the busiest pavements near my home are the ones with the most doorways."
+      }
+    },
+    {
+      "id": "I-D4",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D4",
+      "criterion": "critical_engagement",
+      "title": "Names a reading but says nothing about what you learnt, doubted or concluded from it.",
+      "detail": "Durham says reading counts only when you say what you learnt.",
+      "quote": "I then read Thinking, Fast and Slow by Daniel Kahneman, which was about the two systems of thinking and how people make mistakes.",
+      "anchor": {
+        "line": 2,
+        "col": 300,
+        "length": 129,
+        "offset": 304
+      },
+      "claim_ids": [
+        "C-016"
+      ],
+      "tier1_ids": [
+        "durham-unsuccessful"
+      ],
+      "question": "What did this reading change in your thinking? Is there a claim in it you doubt?",
+      "example": {
+        "label": "not for use",
+        "topic": "architecture",
+        "text": "Reading Jacobs on city streets made me notice that the busiest pavements near my home are the ones with the most doorways."
+      }
+    },
+    {
+      "id": "I-D8",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D8",
+      "criterion": "writing_space",
+      "title": "A list of items with nothing said about any of them.",
+      "detail": "Durham selectors named list-like writing as a growing problem.",
+      "quote": "For my internal assessments I wrote commentaries on news articles about tariffs, subsidies and price controls, which helped me apply theory to real situations.",
+      "anchor": {
+        "line": 5,
+        "col": 122,
+        "length": 159,
+        "offset": 1097
+      },
+      "claim_ids": [
+        "C-015"
+      ],
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "question": "Which one item on this list matters most, and why?",
+      "example": {
+        "label": "not for use",
+        "topic": "astronomy",
+        "text": "Instead of naming five observing nights, describe the one night the star chart was wrong and what you did about it."
+      }
+    },
+    {
+      "id": "I-D9",
+      "importance": "low",
+      "kind": "deduction",
+      "deduction_id": "D9",
+      "criterion": "writing_space",
+      "title": "A list of items with nothing said about any of them.",
+      "detail": "Durham selectors named list-like writing as a growing problem.",
+      "quote": "Outside of school I am a member of the debating society, the football team and the school orchestra, where I play the violin.",
+      "anchor": {
+        "line": 8,
+        "col": 0,
+        "length": 125,
+        "offset": 1744
+      },
+      "claim_ids": [
+        "C-015"
+      ],
+      "tier1_ids": [
+        "durham-conf-2026",
+        "durham-conf-2026-slides"
+      ],
+      "question": "Which one item on this list matters most, and why?",
+      "example": {
+        "label": "not for use",
+        "topic": "astronomy",
+        "text": "Instead of naming five observing nights, describe the one night the star chart was wrong and what you did about it."
+      }
+    }
+  ],
+  "questions": [
+    "Where in this answer do you take a side? What is your reason, and what is the best objection to it?",
+    "What is the strongest thing you can say about the weaker subject, in your own terms?",
+    "Which of the non-academic lines here tells a selector something about how you think about the subjects? If none, what would?",
+    "What did you learn in that subject that your grade does not show?",
+    "What did this activity change in how you think about the course?",
+    "What did this reading change in your thinking? Is there a claim in it you doubt?",
+    "Which one item on this list matters most, and why?"
+  ],
+  "fact_checks": [
+    {
+      "id": "F1",
+      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F2",
+      "quote": "I then read Thinking, Fast and Slow by Daniel Kahneman, which was about the two systems of thinking and how people make mistakes.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F3",
+      "quote": "I have also been reading The Economist every week, which has helped me keep up with topics like inflation, interest rates and the cost of living crisis.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    },
+    {
+      "id": "F4",
+      "quote": "In philosophy I have read some of Mill's Utilitarianism, and I think the idea of the greatest happiness for the greatest number is a useful way of thinking about government policy because it focuses on outcomes.",
+      "status": "unverified",
+      "verdict": null,
+      "source_url": null,
+      "note": "Check this claim about a text, author or idea against a reliable source before relying on it. Run by the /review-ps step \"fact-check\"."
+    }
+  ],
+  "advice": [
+    {
+      "claim_id": "A-002",
+      "tier": 3,
+      "source_id": "t3-uniguide-examples",
+      "text": "Deeper reflection on fewer experiences adds more impact than many brief mentions.",
+      "status": "not officially confirmed",
+      "why": "Q3 covers several activities briefly.",
+      "score_impact": 0
+    },
+    {
+      "claim_id": "C-026",
+      "tier": 1,
+      "source_id": "ed-what-you-need",
+      "text": "Edinburgh wants evidence the applicant understands the career implications of the choice.",
+      "status": "confirmed by tier 1",
+      "why": "Edinburgh asks for awareness of career implications; if you include it, it belongs in Q2 or Q3, never Q1.",
+      "score_impact": 0
+    }
+  ],
+  "opinions": [
+    {
+      "text": "Opinion (no published source): 1794 characters unused. Space could carry more evidence of thinking.",
+      "score_impact": 0
+    }
+  ],
+  "limitations": [
+    "2 choice(s) are TODO in config/applicant.json, so fit across choices covers only the named choices. Nothing was guessed."
+  ],
+  "sentence_stats": {
+    "sentences": 17,
+    "critical": 1,
+    "descriptive_reads": 2,
+    "bridges": 1
+  },
+  "change_since_last": {
+    "previous_id": null,
+    "summary": "First review of this statement; nothing to compare."
+  },
+  "calibration_fixture": "middling"
+}

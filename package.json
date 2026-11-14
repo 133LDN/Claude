@@ -1,0 +1,16 @@
+{
+  "name": "ucas-ps-tutor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node scripts/verify.mjs",
+    "calibrate": "node scripts/calibrate.mjs",
+    "review": "node src/cli/review.mjs",
+    "factcheck": "node src/cli/factcheck.mjs",
+    "refresh-guidance": "node scripts/refresh-guidance.mjs",
+    "viewer:data": "node scripts/build-viewer-data.mjs",
+    "viewer": "node scripts/build-viewer-data.mjs && npm --prefix viewer run dev",
+    "build": "node scripts/build-viewer-data.mjs && npm --prefix viewer run build",
+    "postinstall": "npm --prefix viewer install"
+  }
+}
