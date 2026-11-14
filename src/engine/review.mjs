@@ -329,6 +329,8 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
   // ----- tier 2/3 advice (zero impact) -----
   const adv = (claimId, why) => { const c = ctx.claims.get(claimId); if (c && c.use === 'advice') notes.advice.push({ claim_id: claimId, tier: c.origin_tier, source_id: c.origin, text: c.text, status: c.label === 'confirmed' ? 'confirmed by tier 1' : 'not officially confirmed', why, score_impact: 0 }); };
   adv('A-007', 'Context: format for your entry year.');
+  adv('A-009', 'Context for every score: published guidance may not match how statements are actually used.');
+  if (isMain) adv('A-008', 'Context for the Edinburgh choice: its statement weighting is not public.');
   if (isMain) adv('C-026', 'Edinburgh asks for awareness of career implications; if you include it, it belongs in Q2 or Q3, never Q1.');
 
   // ----- fact-check queue (zero impact until checked) -----

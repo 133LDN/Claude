@@ -36,7 +36,7 @@ UCAS requires the applicant to declare the statement is their own and not produc
 - `guidance/sources.json`: every source with id, tier, URL, capture date, notes and short extracts. Missing pages are marked `missing` with a reason.
 - `guidance/claims.json`: cross-check log. Labels: `confirmed` (found in tier 1), `unconfirmed` (advice only), `contradicted` (dropped, logged). When tier 1 sources disagree, both are kept and `governs` says which statement each controls.
 - Fetched once. Reuse it, and never answer guidance questions from memory. Refetch only through `/refresh-guidance`, which shows a diff before anything is replaced.
-- Captured 2026-11-14 by full page/PDF fetch. Page text snapshots are in `guidance/pages/`, and every extract is verbatim and checked against them. Superseded stores are kept in `guidance/history/`. One tier 3 page is missing (bot check) and no tier 2 source has been found yet.
+- Captured 2026-11-14 by full page/PDF fetch. Page text snapshots are in `guidance/pages/`, and every extract is verbatim and checked against them. Superseded stores are kept in `guidance/history/`. One tier 3 page is missing (bot check). Tier 2: an FOI decision on Edinburgh, a HEPI research article, and a college adviser guide.
 
 ## Layout
 

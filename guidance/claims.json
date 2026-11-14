@@ -502,6 +502,38 @@
       "tier1_ids": [],
       "use": "advice",
       "note": "Tier 3, not officially confirmed. UCAS's guidance URL says '2026 entry onwards', but no tier 1 extract states it for 2027. Zero score impact."
+    },
+    {
+      "id": "A-008",
+      "text": "How much the statement counts varies by programme and is not published: for Edinburgh Law 2024/25, non-contextual applicants were differentiated by qualifications alone, and the scoring detail was withheld under FOI.",
+      "origin": "t2-foi-scot-295-2024",
+      "origin_tier": 2,
+      "label": "unconfirmed",
+      "tier1_ids": [],
+      "use": "advice",
+      "note": "Tier 2 (FOI decision), not officially confirmed for Philosophy and Economics. Does not contradict ed-competition ('for most programmes, we score personal statements'): Law may be an exception. Zero score impact."
+    },
+    {
+      "id": "A-009",
+      "text": "Published university guidance on personal statements often lacks transparency, and stated use can differ from actual practice.",
+      "origin": "t2-hepi-traffic-light",
+      "origin_tier": 2,
+      "label": "unconfirmed",
+      "tier1_ids": [],
+      "use": "advice",
+      "note": "Tier 2 (named researchers; preprint). Not officially confirmed. It is the reason every score here is framed as a reading of published criteria. Zero score impact."
+    },
+    {
+      "id": "A-010",
+      "text": "Check spelling, grammar and punctuation before submitting.",
+      "origin": "t2-stanmore-guidance",
+      "origin_tier": 2,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "use": "advice",
+      "note": "Confirmed by tier 1 (C-030). The engine does not spell-check; /review-ps flags errors it sees as issues citing C-030."
     }
   ]
 }

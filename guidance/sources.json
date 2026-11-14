@@ -1,7 +1,7 @@
 {
   "store_version": 1,
   "captured": "2026-11-14",
-  "capture_method_note": "Captured 2026-11-14 by full page/PDF fetch after the network was opened. Every extract is verbatim and was checked by script against the fetched text (saved under guidance/pages/<id>.txt); extracts joined with ' … ' are in-order fragments from multi-column PDFs. The earlier search-extract capture contained errors that this fetch exposed and removed (see notes on ucas-builder-old, lse-ps-old, durham-conf-2026, t3-tutoring-500-words). One tier 3 page is missing (bot check).",
+  "capture_method_note": "Captured 2026-11-14 by full page/PDF fetch after the network was opened. Every extract is verbatim and was checked by script against the fetched text (saved under guidance/pages/<id>.txt); extracts joined with ' … ' are in-order fragments from multi-column PDFs. The earlier search-extract capture contained errors that this fetch exposed and removed (see notes on ucas-builder-old, lse-ps-old, durham-conf-2026, t3-tutoring-500-words). One tier 3 page is missing (bot check). Three tier 2 sources added the same day by full fetch.",
   "sources": [
     {
       "id": "ucas-3q",
@@ -426,15 +426,58 @@
       "page_snapshot": "guidance/pages/ed-phil-econ.txt"
     },
     {
-      "id": "t2-none-found",
+      "id": "t2-foi-scot-295-2024",
       "tier": 2,
       "required": false,
-      "status": "missing",
-      "missing_reason": "No tier 2 source (named admissions staff at other institutions, FOI reply, school adviser) was found in this capture. The named Durham staff are tier 1 because they speak for a target university. Add tier 2 sources via /refresh-guidance.",
-      "title": "Tier 2 placeholder",
-      "url": null,
+      "url": "https://www.foi.scot/decision-2952024",
+      "title": "Decision Notice 295/2024: University scoring mechanism (Scottish Information Commissioner, FOI decision on University of Edinburgh)",
+      "governs": "Context for the Edinburgh choice; not Philosophy and Economics specific",
+      "notes": "Full page fetched. FOI decision. Edinburgh Law 2024/25: non-contextual applicants were differentiated by qualifications only; scoring detail withheld and the withholding upheld. Shows statement weight varies by programme and is not published.",
+      "extracts": [
+        "The Applicant asked the Authority for the criteria used to determine the offer of a place for non-contextual students.",
+        "The Commissioner investigated and found that the Authority was correct to withhold the information.",
+        "It informed him that the criteria used to differentiate between such students was based exclusively on qualifications",
+        "It noted that it had already told the Applicant that offers were made to the highest-qualified applicants"
+      ],
+      "status": "stored",
+      "fetch_method": "full_fetch",
       "date_captured": "2026-11-14",
-      "extracts": []
+      "page_snapshot": "guidance/pages/t2-foi-scot-295-2024.txt"
+    },
+    {
+      "id": "t2-hepi-traffic-light",
+      "tier": 2,
+      "required": false,
+      "url": "https://www.hepi.ac.uk/2024/11/13/enhancing-transparency-in-ucas-personal-statement-guidance-a-traffic-light-approach/",
+      "title": "Enhancing transparency in UCAS personal statement guidance: a traffic light approach (HEPI, Fryer, Jones and Zhang, 2024)",
+      "governs": "General caveat on how far published guidance reflects practice",
+      "notes": "Full page fetched. Named education researchers (Manchester, Durham); based on a preprint not yet peer-reviewed.",
+      "extracts": [
+        "Our recent paper found that university guidance regarding the UCAS personal statement lacks transparency.",
+        "There is a mismatch between how universities claim they use the UCAS personal statement on their websites and how they actually use it in practice.",
+        "Most universities say little or nothing about how the personal statement is incorporated into admissions processes and the specific competencies that it is used to assess."
+      ],
+      "status": "stored",
+      "fetch_method": "full_fetch",
+      "date_captured": "2026-11-14",
+      "page_snapshot": "guidance/pages/t2-hepi-traffic-light.txt"
+    },
+    {
+      "id": "t2-stanmore-guidance",
+      "tier": 2,
+      "required": false,
+      "url": "https://stanmore.ac.uk/wp-content/uploads/2025/07/Personal-Statement-Guidance-2026.pdf",
+      "title": "UCAS Personal Statement Guidance - 2026 (Stanmore College, school/college adviser guidance)",
+      "governs": "General adviser guidance; largely restates UCAS",
+      "notes": "Full PDF fetched. School adviser material; mostly mirrors ucas-3q.",
+      "extracts": [
+        "Check your spelling, grammar and punctuation (again!)",
+        "Remember the limit is 4,000 characters total which is about 47 lines"
+      ],
+      "status": "stored",
+      "fetch_method": "full_fetch",
+      "date_captured": "2026-11-14",
+      "page_snapshot": "guidance/pages/t2-stanmore-guidance.txt"
     },
     {
       "id": "t3-lse-blog-2022",

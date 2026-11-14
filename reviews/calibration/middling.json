@@ -890,6 +890,24 @@
       "score_impact": 0
     },
     {
+      "claim_id": "A-009",
+      "tier": 2,
+      "source_id": "t2-hepi-traffic-light",
+      "text": "Published university guidance on personal statements often lacks transparency, and stated use can differ from actual practice.",
+      "status": "not officially confirmed",
+      "why": "Context for every score: published guidance may not match how statements are actually used.",
+      "score_impact": 0
+    },
+    {
+      "claim_id": "A-008",
+      "tier": 2,
+      "source_id": "t2-foi-scot-295-2024",
+      "text": "How much the statement counts varies by programme and is not published: for Edinburgh Law 2024/25, non-contextual applicants were differentiated by qualifications alone, and the scoring detail was withheld under FOI.",
+      "status": "not officially confirmed",
+      "why": "Context for the Edinburgh choice: its statement weighting is not public.",
+      "score_impact": 0
+    },
+    {
       "claim_id": "C-026",
       "tier": 1,
       "source_id": "ed-what-you-need",
