@@ -12,7 +12,6 @@ const withDraft = (r) => {
 const user = listReviews('reviews').map((x) => withDraft(x.data)).sort((a, b) => (a.created_at || '').localeCompare(b.created_at || ''));
 const calibration = listReviews('reviews/calibration').map((x) => withDraft(x.data));
 const data = {
-  generated_at: new Date().toISOString(),
   config: ctx.config,
   rubric: ctx.rubric,
   sources: ctx.raw.sources,

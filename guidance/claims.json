@@ -165,6 +165,7 @@
       "label": "confirmed",
       "tier1_ids": [
         "ucas-ai",
+        "ucas-declaration",
         "lse-ps",
         "ed-what-you-need"
       ],
@@ -240,9 +241,11 @@
       ],
       "use": "rubric",
       "disagreement": {
-        "with": [],
-        "detail": "An older UCAS page reported by search gives 30%; its URL was not captured.",
-        "governs": "ucas-similarity (applicant guide) is treated as governing."
+        "with": [
+          "ucas-builder-old"
+        ],
+        "detail": "The older UCAS builder page says similarity greater than 30% is flagged.",
+        "governs": "ucas-similarity (applicant guide, 10%) is treated as governing; the builder figure is older."
       }
     },
     {

@@ -112,6 +112,7 @@
       ],
       "tier1_ids": [
         "ucas-ai",
+        "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
         "durham-conf-2026"
@@ -221,6 +222,7 @@
       ],
       "tier1_ids": [
         "ucas-ai",
+        "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
         "durham-conf-2026",
@@ -655,6 +657,7 @@
       "tier1_id": "ucas-ai",
       "tier1_ids": [
         "ucas-ai",
+        "ucas-declaration",
         "lse-ps",
         "ed-what-you-need"
       ],
@@ -857,6 +860,7 @@
       ],
       "tier1_ids": [
         "ucas-ai",
+        "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
         "durham-conf-2026"
@@ -1314,6 +1318,7 @@
       ],
       "tier1_ids": [
         "ucas-ai",
+        "ucas-declaration",
         "lse-ps",
         "ed-what-you-need"
       ],

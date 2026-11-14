@@ -46,12 +46,17 @@
       "id": "ucas-declaration",
       "tier": 1,
       "required": true,
-      "status": "missing",
-      "missing_reason": "No standalone UCAS declaration page was located by search, and direct fetch of ucas.com is blocked by this session's network policy. The declaration wording itself is captured in ucas-ai (first extract).",
-      "title": "UCAS application declaration",
-      "url": null,
+      "status": "stored",
+      "fetch_method": "web_search_extract",
+      "title": "UCAS Undergraduate declaration",
+      "url": "https://www.ucas.com/about-us/policies/privacy-policies-and-declarations/ucas-undergraduate-declaration",
       "date_captured": "2026-11-14",
-      "extracts": []
+      "governs": "All UCAS statements",
+      "notes": "Located on a second search. The search result blends this page with the AI guide, so which sentence comes from which page is not certain. The 'declare ... including artificial intelligence software' wording is also on ucas-ai.",
+      "extracts": [
+        "you now have to declare that your personal statement hasn't been copied or provided from another source, including artificial intelligence software",
+        "If UCAS reasonably thinks material may have come from another source, including AI software, it may notify your school or college and the universities you applied to ... whose decision it will be to take what action they consider appropriate (search summary; page attribution uncertain)"
+      ]
     },
     {
       "id": "ucas-similarity",
@@ -63,7 +68,7 @@
       "url": "https://www.ucas.com/sites/default/files/similarity-detection-applicant-guide.pdf",
       "date_captured": "2026-11-14",
       "governs": "All UCAS statements",
-      "notes": "10% threshold for human review. A separate, older UCAS page gives 30% (not stored as its own record because its URL was not returned). Both figures noted, the applicant guide is treated as governing.",
+      "notes": "10% threshold for human review. The older builder page (ucas-builder-old) gives 30%. Both kept; the applicant guide is treated as governing.",
       "extracts": [
         "Any statements showing a level of similarity of 10% or more are reviewed by members of the UCAS Similarity Detection Service Team.",
         "If Copycatch finds two sentences in different statements which have exactly the same words, it is very likely that one is a copy of the other",
@@ -111,9 +116,10 @@
       "url": "https://www.ucas.com/applying/applying-to-university/writing-personal-statement/personal-statement-builder",
       "date_captured": "2026-11-14",
       "governs": "Older guidance; kept because it disagrees with ucas-ai on AI use",
-      "notes": "Stricter than ucas-ai. Kept per the rule that disagreeing tier 1 sources are both retained.",
+      "notes": "Stricter than ucas-ai. Kept per the rule that disagreeing tier 1 sources are both retained. Also the source of the 30% similarity figure that disagrees with ucas-similarity (10%).",
       "extracts": [
-        "Don't use artificial intelligence software or writing service providers."
+        "Don't use artificial intelligence software or writing service providers.",
+        "Any similarity greater than 30% will be flagged and we'll inform the universities and colleges to which you have applied."
       ]
     },
     {
