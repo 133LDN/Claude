@@ -8,7 +8,7 @@ import { loadContext, ROOT, listReviews } from '../src/engine/context.mjs';
 import { splitSentences } from '../src/engine/review.mjs';
 import { EXAMPLES } from '../src/engine/examples.mjs';
 import { PHIL, ECON } from '../src/engine/lexicon.mjs';
-import { runCalibration, THRESHOLDS } from './calibrate.mjs';
+import { runCalibration, runRealOutcomes, THRESHOLDS } from './calibrate.mjs';
 
 const REQUIRED_TIER1 = [
   'ucas-3q', 'ucas-ai', 'ucas-declaration', 'ucas-similarity',
@@ -177,8 +177,20 @@ const reviews = [...listReviews('reviews'), ...listReviews('reviews/calibration'
   report(8, 'No example over 2 sentences', p, [`${all.length} example(s) checked (library + reviews)`]);
 }
 
+// 9 ------------------------------------------------------------------
+// Real statements with known outcomes. With none present it is NOT RUN, which is not a pass.
+{
+  const real = runRealOutcomes();
+  const judged = real.filter((x) => x.status === 'pass' || x.status === 'fail');
+  const info = real.map((x) => `${x.name}: ${x.status}${x.average != null ? ` (avg ${x.average}, ${x.outcome} from ${(x.universities || []).join(', ')})` : ''}${x.reason ? ` - ${x.reason}` : ''}`);
+  if (!judged.length) {
+    console.log(`\n[NOT RUN] 9. Real-outcome calibration (no consented real statements with an offer from the priority choice; add them under fixtures/real/)`);
+    for (const i of info) console.log(`       ${i}`);
+  } else report(9, 'Real-outcome calibration: offers from the priority choice score in the strong band', real.filter((x) => x.status === 'fail').map((x) => `${x.name}: avg ${x.average} < ${THRESHOLDS.strongMin}; fix the reviewer`), info);
+}
+
 const failed = results.filter((r) => !r.pass).map((r) => r.n);
-console.log(`\n${failed.length ? 'FAILED checks: ' + failed.join(', ') : 'ALL 8 CHECKS PASS'}`);
+console.log(`\n${failed.length ? 'FAILED checks: ' + failed.join(', ') : `ALL ${results.length} CHECKS PASS`}`);
 console.log(`Fixture averages: weak ${averages.weak}, middling ${averages.middling}, strong ${averages.strong}`);
 console.log('Viewer (read-only): run `npm run viewer`, then open http://localhost:5173/');
 process.exit(failed.length ? 1 : 0);

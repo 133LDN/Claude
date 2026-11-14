@@ -133,9 +133,10 @@
           "C-029",
           "C-030",
           "C-031",
-          "C-033"
+          "C-033",
+          "C-034"
         ],
-        "rule": "AI-sounding or stock phrasing, list-like writing, length limits. LSE expects the space to be fully used (C-029)."
+        "rule": "AI-sounding or stock phrasing, list-like writing, length limits. LSE expects the space to be fully used (C-029). Style faults are capped when the statement shows concrete work (C-034)."
       },
       "durham": {
         "claims": [
@@ -144,7 +145,8 @@
           "C-015",
           "C-020",
           "C-002",
-          "C-033"
+          "C-033",
+          "C-034"
         ],
         "rule": "As main."
       }

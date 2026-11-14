@@ -111,3 +111,7 @@ export const NAMED_WORK_OR_AUTHOR = /(?:"[^"]{3,80}"|\b(?:Friedman|Sen|Sandel|Ra
 
 // Names of IB subjects; three or more in one sentence reads as a list of qualifications (C-031).
 export const IB_SUBJECTS = /\b(?:History|English|Economics|Mathematics|Maths|Physics|Chemistry|Biology|Philosophy|Geography|French|Spanish|German|Italian|Mandarin|Business(?: and Management)?|Psychology|Computer Science|Literature|Global Politics|Visual Arts|Music)\b/g;
+
+// Concrete work: the applicant did something specific (built, measured, estimated, wrote, tested ...).
+// Used to stop style deductions outweighing substance (C-034).
+export const CONCRETE = /\b(?:built|build|measured|tested|coded|programmed|designed|estimated|reproduced|calculated|derived|simulated|modelled|modeled|collected|surveyed|interviewed|analysed|analyzed|compared|tuned|prototyp|debugg|soldered|wrote (?:a|an|my|up)|ran (?:a|an|my)|my extended essay|my essay argued|completed an? (?:online )?course|problem sets?)\b/i;

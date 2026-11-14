@@ -9,6 +9,7 @@ import { EXAMPLES } from './examples.mjs';
 
 export const ENGINE_VERSION = '1.0.0';
 const SEV = { minor: 1, moderate: 2, major: 3 };
+const STYLE_CLAIMS = new Set(['C-013', 'C-014', 'C-015', 'C-033']);
 
 // ---------- parsing ----------
 const HEADER = /^\s*(?:#+\s*)?(?:\*\*)?\s*(?:Q(?:uestion)?\s*([123])|([123])\s*[.)])\s*(?:\*\*)?\s*[:.\-–—]?\s*(.*)$/i;
@@ -80,7 +81,8 @@ function features(text, q, idx, all) {
   if (career || grades) academic = false;
   if (SKILLS_ONLY.test(text) && !subject) academic = false;
   const named = L.NAMED_WORK_OR_AUTHOR.test(text) || /\bThe Economist\b/.test(text);
-  return { text, q, idx, phil, econ, philHits, econHits, lead, subject, extra, career, grades, reflection, learned, ownView, objection, reason, critical, study, academic, named, chars: charCount(text) };
+  const concrete = L.CONCRETE.test(text) && (/\d/.test(text) || /\b(?:I|my)\b/i.test(text));
+  return { text, q, idx, phil, econ, philHits, econHits, lead, subject, extra, career, grades, reflection, learned, ownView, objection, reason, critical, study, academic, named, concrete, chars: charCount(text) };
 }
 
 
@@ -307,12 +309,13 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
 
   // ----- 6 writing and space -----
   if (hard.length) {
-    const sev = hard.length >= 6 ? 'major' : hard.length >= 3 ? 'moderate' : 'minor';
+    // sized so that phrasing alone cannot sink a statement with real substance (C-034); major only for saturation
+    const sev = hard.length >= 8 ? 'major' : hard.length >= 4 ? 'moderate' : 'minor';
     const sentencesWith = [...new Set(hard.map((g) => g.sentence).filter(Boolean))];
     ded('writing_space', sev, sentencesWith[0], 'C-014', `${hard.length} stock or AI-associated phrase(s): ${hard.map((g) => `"${g.quote}"`).join(', ')}.`, hard.length >= 3 ? 'Durham selectors say they can often spot AI-like writing; clusters of stock phrases read that way.' : 'Noticeable, unlikely to decide anything alone.', sentencesWith.slice(1, 6));
   }
   if (soft.length >= 3) ded('writing_space', 'minor', soft[0].sentence, 'C-013', `Connector padding: ${soft.map((g) => `"${g.quote}"`).join(', ')}.`, 'Minor.');
-  const lists = F.filter((f) => isList(f.text) && !f.reason && !f.critical && !f.learned);
+  const lists = F.filter((f) => isList(f.text) && !f.reason && !f.critical && !f.learned && !f.concrete);
   lists.slice(0, 2).forEach((f) => ded('writing_space', 'minor', f.text, 'C-015', 'A list of items with nothing said about any of them.', 'Durham selectors named list-like writing as a growing problem.'));
   if (isMain && counts.total <= 4000) {
     const unused = 4000 - counts.total;
@@ -348,7 +351,7 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
     subject_balance: isMain ? `philosophy ${pChars} vs economics ${eChars} characters of academic content; ${F.filter((f) => f.bridge).length} connecting sentence(s)` : `economics ${eChars} of ${acad.reduce((a, f) => a + f.chars, 0)} academic characters; ${crit.filter((f) => f.econ).length} evaluative economics sentence(s)`,
     degree_fit: `strands engaged: ${Object.keys(hits).filter((k) => hits[k]).join(', ') || 'none'}; missing: ${missingStrands.join(', ') || 'none'}; ${todo} TODO choice(s) not assessable`,
     question_content: `Q1 career sentences ${careerQ1.length}; Q2 grade sentences ${F.filter((f) => f.q === 'q2' && f.grades).length}; Q3 reflective sentences ${q3.filter((f) => f.learned || (f.reflection && f.subject)).length}/${q3.length}; repeated 5-word sequences ${repeated.length}`,
-    writing_space: `${hard.length} stock phrase(s), ${soft.length} connector(s), ${lists.length} list-like sentence(s), ${counts.total}/4000 characters, shortest answer ${Math.min(counts.q1, counts.q2, counts.q3)}`
+    writing_space: `${F.filter((f) => f.concrete).length} concrete-work sentence(s), ${hard.length} stock phrase(s), ${soft.length} connector(s), ${lists.length} list-like sentence(s), ${counts.total}/4000 characters, shortest answer ${Math.min(counts.q1, counts.q2, counts.q3)}`
   };
   const moderation = moderate({ F, deductions, criteria, ctx, type, share, crit, text, ded, hard, soft, probes });
   const scores = {};
@@ -414,6 +417,21 @@ function moderate({ F, deductions, criteria, type, share, crit, text, ded, probe
       for (const d of mine()) {
         const f = F.find((x) => d.quote && x.text.startsWith(d.quote.slice(0, 40)));
         if (f && f.subject && (f.learned || f.reflection) && d.severity !== 'minor') { d.points -= 1; d.adjusted = `Quoted line links an activity to the subject; reduced by 1.`; adj.push({ action: 'reduce', deduction_id: d.id, points: +1, reason: d.adjusted }); }
+      }
+    }
+    // 3) substance over style (C-034): concrete work caps the combined cost of style faults
+    if (c.id === 'writing_space') {
+      const concreteN = F.filter((f) => f.concrete).length;
+      const cap = concreteN >= 3 ? 2 : concreteN >= 1 ? 3 : Infinity;
+      const style = mine().filter((d) => STYLE_CLAIMS.has(d.claim_id)).sort((a, b) => a.points - b.points);
+      let total = style.reduce((a, d) => a + d.points, 0);
+      for (const d of style.slice().reverse()) {
+        if (total <= cap) break;
+        const cut = Math.min(d.points, total - cap);
+        d.points -= cut; total -= cut;
+        if (d.points === 0) { d.refunded = true; d.refund_reason = `Style cap (C-034): ${concreteN} sentences show concrete work; style faults may cost at most ${cap} point(s) in total.`; }
+        else d.adjusted = `Reduced by ${cut} under the style cap (C-034).`;
+        adj.push({ action: d.points === 0 ? 'refund' : 'reduce', deduction_id: d.id, points: +cut, reason: `Style cap (C-034): ${concreteN} sentence(s) show concrete work, so phrasing and list faults together may cost at most ${cap} point(s); cut ${cut} from ${d.id}.` });
       }
     }
     const lowAdj = adj.filter((a) => a.points > 0).length;

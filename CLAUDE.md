@@ -30,6 +30,9 @@ UCAS requires the applicant to declare the statement is their own and not produc
 - Every review ends with moderation: for each score, "too high?" and "too low?", both answered and recorded, then adjusted.
 - Fact-check every claim the applicant makes about books, authors, studies and ideas (queue: `fact_checks` in the review). Use a reliable source, record the URL with `src/cli/factcheck.mjs`. A wrong claim costs 1 point under critical engagement (C-017) and is shown to the applicant.
 - Viewer and chat must state: scores are this tool's reading of published criteria, not an offer prediction.
+- **Substance over style (C-034).** Concrete work (built, measured, estimated, tested, wrote) is what selectors ask for. When a statement shows it, style faults (stock phrasing, list-like writing) are capped at 2-3 points in total, and a sentence with concrete detail is never called an empty list. Lesson from a real case: an engineering statement with clear style faults but strong concrete work won Cambridge and Imperial offers. This tool had scored its writing 6/10; it now scores 8/10.
+- **Rank issues with humility.** Lead with missing substance (no views, no evidence, wrong course fit), not phrasing. Never present a style fault as the most serious issue when the statement shows real work.
+- **Real outcomes outrank synthetic fixtures.** `fixtures/real/` holds consented real statements with known outcomes (text git-ignored). Verify check 9 requires an offer from the priority choice to score in the strong band; if it does not, the reviewer is wrong.
 
 ## Guidance store
 

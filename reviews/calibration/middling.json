@@ -203,7 +203,8 @@
         "C-029",
         "C-030",
         "C-031",
-        "C-033"
+        "C-033",
+        "C-034"
       ],
       "tier1_ids": [
         "ucas-ai",
@@ -532,11 +533,11 @@
       "before": 5,
       "too_high": {
         "answer": "no",
-        "reasoning": "Score already reflects 3 sourced deduction(s); no further sourced problem found. Probe: 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
+        "reasoning": "Score already reflects 3 sourced deduction(s); no further sourced problem found. Probe: 1 concrete-work sentence(s), 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
       },
       "too_low": {
         "answer": "no",
-        "reasoning": "Each of 3 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
+        "reasoning": "Each of 3 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 1 concrete-work sentence(s), 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
       },
       "adjustments": [],
       "after": 5

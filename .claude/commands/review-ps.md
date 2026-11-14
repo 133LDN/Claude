@@ -26,5 +26,6 @@ Steps:
    - Fact-check results.
    - Tier 2/3 advice, marked with its tier and "not officially confirmed".
    - Change since the last draft.
+   - When ranking issues, put missing substance first and phrasing last. If the draft shows concrete work, say so plainly before any style point (C-034).
 6. **Never** rewrite a sentence, draft a paragraph, or suggest an experience. Examples: at most 2 sentences, a different topic, labelled "not for use".
 7. Run `npm run verify` and report any FAIL.

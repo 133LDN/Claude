@@ -534,6 +534,19 @@
       ],
       "use": "advice",
       "note": "Confirmed by tier 1 (C-030). The engine does not spell-check; /review-ps flags errors it sees as issues citing C-030."
+    },
+    {
+      "id": "C-034",
+      "text": "Selectors want specific examples and evidence: reflection on experiences and academic ideas actually encountered.",
+      "origin": "durham-conf-2026-slides",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-conf-2026-slides",
+        "lse-ps"
+      ],
+      "use": "rubric",
+      "note": "Basis for the substance-over-style cap in moderation: when a statement shows concrete work, style deductions (C-013, C-014, C-015, C-033) are capped. Added after a real outcome: an engineering statement with clear style faults but strong concrete work received Cambridge and Imperial offers (anecdotal, one case)."
     }
   ]
 }

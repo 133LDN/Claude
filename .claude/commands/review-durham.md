@@ -17,5 +17,6 @@ Steps:
 4. **Do not change scores by hand**, except with a quoted line and a confirmed tier 1 claim.
 5. **Report** in the same order as /review-ps: disclaimer, counts and checks, scores with evidence, moderation, issues, strengths, fact-checks, tier 2/3 advice marked "not officially confirmed", and change since the last Durham draft.
 6. Also note material that only suits Philosophy. The substitute exists because the Durham course differs from the main statement.
+   - When ranking issues, put missing substance first and phrasing last. If the draft shows concrete work, say so plainly before any style point (C-034).
 7. **Never** rewrite, draft or invent. Examples: at most 2 sentences, a different topic, labelled "not for use".
 8. Run `npm run verify` and report any FAIL.

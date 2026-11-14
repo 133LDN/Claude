@@ -28,6 +28,24 @@ export function runCalibration({ write = true } = {}) {
   return { reviews: out, averages: { weak, middling, strong }, holds };
 }
 
+// Real statements with known outcomes (fixtures/real). See fixtures/real/README.md.
+export function runRealOutcomes() {
+  const ctx = loadContext();
+  const dir = path.join(ROOT, 'fixtures/real');
+  if (!fs.existsSync(dir)) return [];
+  const priority = { main: 'LSE', durham: 'Durham' };
+  return fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => {
+    const meta = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    const name = f.replace(/\.json$/, '');
+    const txt = path.join(dir, name + '.txt');
+    if (meta.consent !== true) return { name, status: 'skipped', reason: 'no consent recorded' };
+    if (!fs.existsSync(txt)) return { name, status: 'skipped', reason: 'statement text not present on this machine (it is git-ignored)' };
+    const r = review({ text: fs.readFileSync(txt, 'utf8'), type: meta.type, ctx, draftPath: `fixtures/real/${name}.txt`, id: `real-${name}`, createdAt: '2026-11-14T00:00:00.000Z' });
+    const judged = meta.outcome === 'offer' && (meta.universities || []).includes(priority[meta.type]);
+    return { name, status: judged ? (r.average >= THRESHOLDS.strongMin ? 'pass' : 'fail') : 'reported', average: r.average, outcome: meta.outcome, universities: meta.universities, scores: r.scores };
+  });
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const { reviews, averages, holds } = runCalibration();
   for (const [k, r] of Object.entries(reviews)) {
@@ -37,4 +55,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     for (const c of r.checks) if (!c.pass) console.log(`   FAIL check ${c.id}: ${c.detail}`);
   }
   console.log('\nAverages', averages, 'holds:', holds);
+  for (const x of runRealOutcomes()) console.log('real:', JSON.stringify(x));
 }
