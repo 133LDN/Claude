@@ -47,11 +47,14 @@
       "detail": "none found",
       "quotes": [],
       "claim_ids": [
-        "C-008"
+        "C-008",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-one-statement",
-        "ucas-multiple-courses"
+        "ucas-multiple-courses",
+        "lse-ps",
+        "durham-ps"
       ]
     },
     {
@@ -77,14 +80,16 @@
       "note": "Phrase list is a heuristic. A match is not proof of AI use; it is phrasing selectors read as generic.",
       "claim_ids": [
         "C-013",
-        "C-014"
+        "C-014",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-ai",
         "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
-        "durham-conf-2026"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ]
     }
   ],
@@ -94,9 +99,9 @@
     "subject_balance": 10,
     "degree_fit": 10,
     "question_content": 10,
-    "writing_space": 10
+    "writing_space": 8
   },
-  "average": 10,
+  "average": 9.67,
   "criteria": [
     {
       "id": "academic_focus",
@@ -108,6 +113,7 @@
       ],
       "tier1_ids": [
         "lse-ps",
+        "lse-ps-old",
         "ed-unsuccessful-ps",
         "ed-competition"
       ]
@@ -171,12 +177,15 @@
         "C-027",
         "C-011",
         "C-012",
-        "C-010"
+        "C-010",
+        "C-032",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-3q",
         "ed-competition",
-        "lse-ps"
+        "lse-ps",
+        "durham-ps"
       ]
     },
     {
@@ -187,22 +196,49 @@
         "C-014",
         "C-015",
         "C-001",
-        "C-002"
+        "C-002",
+        "C-029",
+        "C-030",
+        "C-031",
+        "C-033"
       ],
       "tier1_ids": [
         "ucas-ai",
         "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
-        "durham-conf-2026",
         "durham-conf-2026-slides",
+        "durham-conf-2026",
+        "durham-ps",
         "ucas-3q",
-        "durham-substitute",
-        "durham-ps"
+        "durham-substitute"
       ]
     }
   ],
-  "deductions": [],
+  "deductions": [
+    {
+      "id": "D1",
+      "criterion": "writing_space",
+      "severity": "moderate",
+      "points": 2,
+      "quote": "Working weekends in a café showed me that the owner sets prices by habit rather than marginal cost, which made me more sceptical of textbook pricing models and more curious about behavioural economics.",
+      "anchor": {
+        "line": 8,
+        "col": 479,
+        "length": 201,
+        "offset": 2803
+      },
+      "extra_quotes": [],
+      "claim_id": "C-029",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "reason": "1012 of 4000 characters unused. LSE says it expects applicants to fully use the space.",
+      "selector_care": "A quarter or more of the space is empty: a selector sees less evidence than competitors give.",
+      "source": "engine"
+    }
+  ],
   "moderation": [
     {
       "criterion": "academic_focus",
@@ -276,17 +312,17 @@
     },
     {
       "criterion": "writing_space",
-      "before": 10,
+      "before": 8,
       "too_high": {
         "answer": "no",
-        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: 0 stock phrase(s), 0 connector(s), 0 list-like sentence(s), 2988/4000 characters, shortest answer 680."
+        "reasoning": "Score already reflects 1 sourced deduction(s); no further sourced problem found. Probe: 0 stock phrase(s), 0 connector(s), 0 list-like sentence(s), 2988/4000 characters, shortest answer 680."
       },
       "too_low": {
         "answer": "no",
-        "reasoning": "No deductions to remove. Probe: 0 stock phrase(s), 0 connector(s), 0 list-like sentence(s), 2988/4000 characters, shortest answer 680."
+        "reasoning": "Each of 1 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 0 stock phrase(s), 0 connector(s), 0 list-like sentence(s), 2988/4000 characters, shortest answer 680."
       },
       "adjustments": [],
-      "after": 10
+      "after": 8
     }
   ],
   "strengths": [
@@ -296,8 +332,7 @@
       "claim_id": "C-005",
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ]
     },
     {
@@ -306,8 +341,7 @@
       "claim_id": "C-005",
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ]
     },
     {
@@ -316,8 +350,7 @@
       "claim_id": "C-005",
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ]
     },
     {
@@ -342,12 +375,40 @@
       "quote": null,
       "claim_id": "C-003",
       "tier1_ids": [
-        "lse-ps"
+        "lse-ps",
+        "lse-ps-old"
       ]
     }
   ],
-  "issues": [],
-  "questions": [],
+  "issues": [
+    {
+      "id": "I-D1",
+      "importance": "medium",
+      "kind": "deduction",
+      "deduction_id": "D1",
+      "criterion": "writing_space",
+      "title": "1012 of 4000 characters unused. LSE says it expects applicants to fully use the space.",
+      "detail": "A quarter or more of the space is empty: a selector sees less evidence than competitors give.",
+      "quote": "Working weekends in a café showed me that the owner sets prices by habit rather than marginal cost, which made me more sceptical of textbook pricing models and more curious about behavioural economics.",
+      "anchor": {
+        "line": 8,
+        "col": 479,
+        "length": 201,
+        "offset": 2803
+      },
+      "claim_ids": [
+        "C-029"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "question": "What evidence of your thinking is missing that the unused space could hold?",
+      "example": null
+    }
+  ],
+  "questions": [
+    "What evidence of your thinking is missing that the unused space could hold?"
+  ],
   "fact_checks": [
     {
       "id": "F1",
@@ -408,6 +469,15 @@
   ],
   "advice": [
     {
+      "claim_id": "A-007",
+      "tier": 3,
+      "source_id": "t3-tutoring-500-words",
+      "text": "The three-question format is unchanged for 2027 entry.",
+      "status": "not officially confirmed",
+      "why": "Context: format for your entry year.",
+      "score_impact": 0
+    },
+    {
       "claim_id": "C-026",
       "tier": 1,
       "source_id": "ed-what-you-need",
@@ -417,12 +487,7 @@
       "score_impact": 0
     }
   ],
-  "opinions": [
-    {
-      "text": "Opinion (no published source): 1012 characters unused. Space could carry more evidence of thinking.",
-      "score_impact": 0
-    }
-  ],
+  "opinions": [],
   "limitations": [
     "2 choice(s) are TODO in config/applicant.json, so fit across choices covers only the named choices. Nothing was guessed."
   ],

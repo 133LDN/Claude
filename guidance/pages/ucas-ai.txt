@@ -1,0 +1,187 @@
+A guide to using AI and ChatGPT with your personal statement | UCAS
+
+ Skip navigation
+
+What's on this page?
+
+What is AI and ChatGPT?
+
+Is using AI to help with my personal statement 'cheating'?
+
+The university and college view
+
+Tips for using AI and ChatGPT with your personal statement
+
+Other AI tools you could explore
+
+Try our personal statement builder
+
+ What is AI and ChatGPT?
+
+AI, or Artificial Intelligence, refers to computer systems or machines that can perform tasks that have typically required human thought. Effectively this means they simulate human intelligence.
+This has led to the development of online tools like ChatGPT that can answer questions by using vast databases of information and generate human-like text on almost any topic.
+Why is everyone talking about it?
+You might have seen a lot about ChatGPT online and in the news because it is a game-changer in terms of how we can generate ideas, written text and offer solutions to problems or tasks we have to carry out.
+It launched in November 2022 and currently has over 800 million weekly active users (as of August 2025). There has also been a lot of discussion within schools, universities and colleges about how students are using it to help with their work and assessments.
+
+ Is using AI to help with my personal statement 'cheating'?
+
+As you can imagine, we have had a lot of questions from people applying for university or college about whether using tools like ChatGPT to help with your UCAS personal statement is considered 'cheating'.
+Generating (and then copying, pasting and submitting) all or a large part of your personal statement from an AI tool such as ChatGPT, and presenting it as your own words, could be considered cheating by universities and colleges and could affect your chances of an offer. 
+When you complete your application, you now have to declare that your personal statement hasn't been copied or provided from another source, including artificial intelligence software.
+As part of our responsibility to applicants and universities and colleges, the UCAS Verification Team run checks to detect fraudulent applications and patterns of similarity in personal statements. Read our guide to fraud and verification and similarity.
+If UCAS software detects elements of a personal statement that are similar to others, the universities or colleges it is intended for may be notified.
+In addition to reviewing personal statements, providers and UCAS may take the necessary steps to check that the information in your application is accurate and complete, from qualifications to your work experience or educational history. That's why it's important all the information you provide on your application, not just your personal statement, is true and accurate to the best of your knowledge.
+Do your research
+We'd advise researching what individual universities and colleges recommend you include in your personal statement, and whether they have specific guidance around using AI tools like ChatGPT.
+
+ Using AI tools can harm your chances of receiving an offer
+
+ Take care to weigh up how much you are relying on AI tools to generate your personal statement. Anything not in your words could get flagged as fraud by UCAS, and could in turn mean you don't receive any offers or have offers withdrawn.
+
+ Be honest and consider your future options
+
+ If you need to rely on AI tools to write your personal statement for you, take some time to consider if the course is right for you. You should be truthful in your personal statement; any information you mention may need to be discussed or evidenced.
+
+The personal statement is exactly that; personal. It should describe your ambitions, skills and the experiences that make you suitable for the course you're applying for in your own words. A lot of students we speak to say the process of writing it helps confirm that they're applying for the right course.
+If your personal statement doesn't appear genuine, it could affect your chances of being offered a place. AI is good but it can't replicate your personal thoughts and feelings and convey your own skills and experiences. A bland AI-generated personal statement is not what universities and colleges are looking for.
+However, universities and colleges do understand that AI tools can be useful to applicants writing personal statements if used in the correct way. We have outlined some useful tips on using such tools below.
+
+Courtney quote
+
+ The university and college view
+
+We have spoken to schools, universities, colleges and careers advisers, and pretty much everyone agrees that using tools like ChatGPT can be helpful to applicants writing their personal statement if the right guidance is followed.
+They realise that AI tools are already reshaping the way we work and research and are about to become integral to studying and the way we work in many careers, particularly creative fields.
+
+Elliott quote
+
+ The university view
+
+ "We think AI and tools like ChatGPT can potentially be beneficial for students applying for university if used in the correct way."
+
+ Elliot Newstead, Associate Director of Future Students at University of Leicester
+
+ The UCAS view
+
+ The personal statement is exactly that; personal. It is a chance to showcase your passion and research, and explain why you want to study this course.
+
+ Courteney Sheppard, Head of Customer Contact at UCAS
+
+ Tips for using AI and ChatGPT with your personal statement
+
+Although using AI and ChatGPT to write your personal statement for you could be considered cheating, there are ways you could use AI to help you make a start, structure, and then check your final work.
+
+It's important to remember that while ChatGPT can generate text, it's not a substitute for your own thoughts and experiences. It's called a personal statement for a reason and universities want to hear from you, not an AI bot.
+
+You could use ChatGPT as a tool to help inspire, clarify and articulate your own ideas, rather than asking it to write your entire personal statement for you.
+
+Here are a few ways you could use AI to assist you:
+
+ 1
+
+ Brainstorm some ideas
+
+You could use ChatGPT to give you ideas about topics that are relevant to your chosen subject, which you can then relate to your own experiences and opinions. Or you could ask it to list skills that are relevant to the course you're applying for, allowing you to think about your own talents and how to convey them.
+
+ 2
+
+ Help with structure
+
+You may want to ask ChatGPT to suggest ways of structuring your personal statement answers, ensuring that you're evidencing your skills in a clear way. Our personal statement builder does something very similar.
+
+ 3
+
+ Use it for checking readability
+
+ChatGPT can be used to check your personal statement draft for readability. It may suggest ways to rephrase sentences to make them more concise, while maintaining their meaning.
+
+ Other AI tools you could explore
+
+If you're interested in using AI tools – aside from ChatGPT – to help start off your research, planning, or editing and refining for your personal statement, here's a few you could look into:
+
+Grammarly: This free tool can help you with drafting your personal statement from your existing notes, checking for grammar and spelling, and suggested rewrites for tone and clarity. You could use this tool once you have a draft to check for any spelling or grammar errors.
+
+Microsoft Word Editor: If you're drafting your personal statement in Microsoft Word and have a Microsoft 365 account, the built in AI editor can help with not only spelling and grammar suggestions, but can also give you ideas for clarity, conciseness, formality, and vocabulary ideas. This tool can help you as you draft, making sure what you're writing is clear and concise.
+
+Microsoft Copilot: You can use Microsoft Copilot in Word to help you make sense of your drafts and ideas. It can create a first draft of a paragraph from a few bullet points from your notes, or summarise your first draft if you're over the character count. 
+
+Google Docs NotebookLM: NotebookLM relies on what you feed into it, so will be best used if you have a draft already and want a second opinion, or could help you understand new avenues you could research for examples to include.
+
+Gemini: You may have seen Gemini-generated answers when you've used Google, so you'll know that Gemini is a handy first step for answers to questions. Why not try asking it things like, 'Can you recommend podcasts for chemistry students' or 'What skills do you need to be a nurse'. This will then give you a jumping off point to pursue your research in more detail.
+
+How is your data used?
+
+Apps like ChatGPT that generate text according to a question or prompt are backed by a Large Language Model (LLM), so when using something other than ChatGPT, for example, look into which model it uses. This could be OpenAI (which powers ChatGPT), Claude, Google, Meta, or Microsoft. It's important to read the terms and conditions/privacy policies to understand how the data you input is used, and how you can opt out from this if you choose. OpenAI states on its website that your data can be used to further train the model:
+
+"When you share your content with us, it helps our models become more accurate and better at solving your specific problems and it also helps improve their general capabilities and safety. We don’t use your content to market our services or create advertising profiles of you—we use it to make our models more helpful. ChatGPT, for instance, improves by further training on the conversations people have with it, unless you opt out."
+
+This means that the more people use tools like ChatGPT to write personal statements, rather than as a research, structuring, and ideas tool, the more the model will use these examples for future personal statements. These will then be more detectable through similarity software. It's not worth the risk, so stick to using AI tools to help prompt your personal statement journey, rather than doing it for you (and more than likely doing it innacurately!).
+
+Dos and don'ts
+
+ Do
+
+Check everything that AI tools suggest, particularly facts.
+
+They do get things wrong!
+
+ Don't
+
+Copy and paste from AI tools and use as final text.
+
+AI can state facts but cannot reflect your own skills, experiences and thoughts in your voice, which is what universities are looking for!
+
+Label
+
+Good and bad examples
+
+A good example
+
+My interest in law began when I read 'Who was Ruth Bader Ginsburg?', a book about the US Supreme Court Justice whose arguments helped persuade governments to change policies on gender equality. The book made me aware of how the law can make a huge different to individuals around the world.
+
+During my work experience placement, shadowing a solicitor, I attended the local Magistrates Court and saw how the process of cross examining witnesses works which was fascinating and something I feel my skills could be suited to. 
+
+A bad example
+
+From a young age, I have been fascinated by the intricate workings of the legal system and its impact on society. This passion for justice and the desire to make a positive difference in people's lives has driven me to pursue a career in law.
+
+Beyond academia, I have engaged in extracurricular activities that have further enhanced my skills and enriched my understanding of law.
+
+Ideas but not personal detail
+While ChatGPT may suggest ideas of what to write about in your personal statement, the very specific reference to the book in the good example above gives a personal flavour to why the applicant wants to study law which an AI tool could not.
+And while ChatGPT might suggest talking about work placements in your personal statement, you have to give specific examples that are personal to you and talk about what you experienced and got out of them.
+The tone also feels genuine and heartfelt and not bland and overly formal as can happen with AI-generated responses.
+Beware of the bland and generic
+In contrast, the bad examples above have been completely generated by ChatGPT.
+They feel very academic and bland. They don't give any real sense of what personally motivates the person to study law other than general statements about wanting "justice" and "making a difference". 
+And finally, while suggesting the person has taken part in activities outside of school, there are no details of how these have enhanced their understanding of and passion for law.
+
+ Try our personal statement builder
+
+The personal statement builder in the UCAS Hub is designed to help you think about what to include in your personal statement, and how to lay it all out. It also counts how many characters you’ve used, so it’s easy to see when you’re close to the 4,000 character limit.
+
+ Personal statement builder
+
+ Try it now
+
+ Advertisements. Why the ads?
+
+Sponsored content
+ UCAS Media Service
+
+ Register for our Open Day - 21 Nov 2026
+
+ Sponsored by
+
+Bristol, UWE.
+
+ What to expect at an open day
+
+ Sponsored by
+
+Nottingham Trent University
+
+ Three reasons you should attend a UCAS exhibition
+
+ UCAS article

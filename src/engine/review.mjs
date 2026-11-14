@@ -180,7 +180,7 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
     const m = f.text.match(u.re);
     if (m) uniHits.push({ name: u.name, match: m[0], quote: verbatim(text, f.text), q: f.q, ambiguous_place: !!u.ambiguousPlace });
   }
-  checks.push({ id: 'no_university', name: 'No university named', pass: uniHits.length === 0, detail: uniHits.length ? uniHits.map((h) => `"${h.match}" in ${h.q.toUpperCase()}${h.ambiguous_place ? ' (could be a place name; check)' : ''}`).join('; ') : 'none found', quotes: uniHits.map((h) => h.quote), claim_ids: ['C-008'], tier1_ids: tier1For('C-008', ctx) });
+  checks.push({ id: 'no_university', name: 'No university named', pass: uniHits.length === 0, detail: uniHits.length ? uniHits.map((h) => `"${h.match}" in ${h.q.toUpperCase()}${h.ambiguous_place ? ' (could be a place name; check)' : ''}`).join('; ') : 'none found', quotes: uniHits.map((h) => h.quote), claim_ids: ['C-008', 'C-031'], tier1_ids: [...new Set([...tier1For('C-008', ctx), ...tier1For('C-031', ctx)])] });
   const careerQ1 = F.filter((f) => f.q === 'q1' && f.career);
   checks.push({ id: 'no_career_q1', name: 'No career plans in Q1', pass: careerQ1.length === 0 || !isMain, advisory: !isMain, detail: careerQ1.length ? `${careerQ1.length} career sentence(s) in Q1${isMain ? '' : ' (advisory for Durham: no tier 1 ban)'}` : 'none found', quotes: careerQ1.map((f) => verbatim(text, f.text)), claim_ids: ['C-009'], tier1_ids: tier1For('C-009', ctx) });
   const generic = [];
@@ -194,7 +194,7 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
   gen.forEach((g) => { g.quote = text.slice(g.at, g.at + g.phrase.length); g.anchor = locate(text, g.quote); g.sentence = verbatim(text, (F.find((f) => f.text.toLowerCase().includes(g.phrase)) || {}).text || '') });
   const hard = gen.filter((g) => g.kind === 'hard');
   const soft = gen.filter((g) => g.kind === 'soft');
-  checks.push({ id: 'generic_phrasing', name: 'Generic or AI-sounding phrasing (quoted)', pass: hard.length === 0 && soft.length < 3, detail: gen.length ? gen.map((g) => `"${g.quote}"`).join(', ') : 'none found', quotes: gen.map((g) => g.quote), note: 'Phrase list is a heuristic. A match is not proof of AI use; it is phrasing selectors read as generic.', claim_ids: ['C-013', 'C-014'], tier1_ids: [...new Set([...tier1For('C-013', ctx), ...tier1For('C-014', ctx)])] });
+  checks.push({ id: 'generic_phrasing', name: 'Generic or AI-sounding phrasing (quoted)', pass: hard.length === 0 && soft.length < 3, detail: gen.length ? gen.map((g) => `"${g.quote}"`).join(', ') : 'none found', quotes: gen.map((g) => g.quote), note: 'Phrase list is a heuristic. A match is not proof of AI use; it is phrasing selectors read as generic.', claim_ids: ['C-013', 'C-014', 'C-031'], tier1_ids: [...new Set([...tier1For('C-013', ctx), ...tier1For('C-014', ctx), ...tier1For('C-031', ctx)])] });
 
   // ----- 1 academic focus -----
   const acadChars = F.filter((f) => f.academic).reduce((a, f) => a + f.chars, 0);
@@ -289,7 +289,10 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
   if (isMain) careerQ1.forEach((f) => ded('question_content', 'major', f.text, 'C-009', 'Career plans in Question 1. LSE asks applicants to keep them out of Q1.', 'Directly contradicts LSE guidance for the priority choice.'));
   if (!F.some((f) => f.q === 'q1' && f.academic)) ded('question_content', 'major', (firstOf('q1') || F[0]).text, 'C-028', 'Q1 never says what in the subject motivates you.', 'Q1 is where selectors look for motivation first.');
   F.filter((f) => f.q === 'q2' && f.grades).slice(0, 2).forEach((f, i) => ded('question_content', i === 0 ? 'moderate' : 'minor', f.text, 'C-011', 'Restates grades or predictions; selectors already see these elsewhere.', 'Wastes space UCAS explicitly says not to spend.'));
-  if (!F.some((f) => f.q === 'q2' && (f.study || f.subject) && f.academic)) { const s = firstOf('q2'); if (s) ded('question_content', 'moderate', s.text, 'C-027', 'Q2 does not discuss what you studied or learned in your courses.', 'Q2 is the only place for recent study.'); }
+  // C-032: there is no wrong question for a piece of information, so only the total absence of study content is penalised
+  if (!F.some((f) => f.study && f.academic)) { const s = firstOf('q2') || F[0]; ded('question_content', 'moderate', s.text, 'C-027', 'Nowhere in the statement do you discuss what you studied or learned in your courses.', 'Every question set includes your recent study; UCAS says it can sit in any answer, but it has to be somewhere.'); }
+  const ibList = F.filter((f) => new Set((f.text.match(L.IB_SUBJECTS) || []).map((x) => x.toLowerCase())).size >= 3 && !f.critical && !f.learned);
+  ibList.slice(0, 1).forEach((f) => ded('question_content', 'minor', f.text, 'C-031', 'Lists IB subjects. LSE calls this wasted space in its worked poor example; selectors already see your qualifications.', 'Small, but it is the exact fault LSE uses as its example.'));
   const q3 = F.filter((f) => f.q === 'q3');
   const q3Extra = q3.filter((f) => f.extra || !f.academic);
   if (q3Extra.length && !q3.some((f) => f.learned || (f.reflection && f.subject))) ded('question_content', 'moderate', longest(q3Extra).text, 'C-012', 'Q3 lists activities without reflecting on why any of them is useful for the course.', 'UCAS asks for reflection, not a list; Durham notes list-like statements as a concern.');
@@ -311,17 +314,21 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
   if (soft.length >= 3) ded('writing_space', 'minor', soft[0].sentence, 'C-013', `Connector padding: ${soft.map((g) => `"${g.quote}"`).join(', ')}.`, 'Minor.');
   const lists = F.filter((f) => isList(f.text) && !f.reason && !f.critical && !f.learned);
   lists.slice(0, 2).forEach((f) => ded('writing_space', 'minor', f.text, 'C-015', 'A list of items with nothing said about any of them.', 'Durham selectors named list-like writing as a growing problem.'));
+  if (isMain && counts.total <= 4000) {
+    const unused = 4000 - counts.total;
+    const sev = unused >= 1600 ? 'major' : unused >= 1000 ? 'moderate' : unused >= 400 ? 'minor' : null;
+    if (sev) ded('writing_space', sev, F[F.length - 1].text, 'C-029', `${unused} of 4000 characters unused. LSE says it expects applicants to fully use the space.`, unused >= 1000 ? 'A quarter or more of the space is empty: a selector sees less evidence than competitors give.' : 'Noticeable against LSE\'s stated expectation, not decisive.');
+  }
   if (counts.total > 4000) ded('writing_space', 'major', F[F.length - 1].text, 'C-001', `${counts.total} characters: over the 4000 limit. UCAS will not accept it.`, 'Cannot be submitted as is.');
   shortQs.forEach((q) => { const s = firstOf(q); if (s) ded('writing_space', 'major', s.text, 'C-002', `${q.toUpperCase()} has ${counts[q]} characters; the minimum is 350.`, 'Cannot be submitted as is.'); });
 
   // ----- opinions (no source, zero impact) -----
-  if (counts.total < 3400) notes.opinions.push({ text: `Opinion (no published source): ${4000 - counts.total} characters unused. Space could carry more evidence of thinking.`, score_impact: 0 });
+  if (!isMain && counts.total < 3400) notes.opinions.push({ text: `Opinion (no published Durham source): ${4000 - counts.total} characters unused. LSE's expectation to fill the space (C-029) governs only the main statement.`, score_impact: 0 });
   F.filter((f) => f.text.split(/\s+/).length > 50).slice(0, 2).forEach((f) => notes.opinions.push({ text: 'Opinion (no published source): a sentence over 50 words is hard to follow on first read.', quote: verbatim(text, f.text), score_impact: 0 }));
 
   // ----- tier 2/3 advice (zero impact) -----
   const adv = (claimId, why) => { const c = ctx.claims.get(claimId); if (c && c.use === 'advice') notes.advice.push({ claim_id: claimId, tier: c.origin_tier, source_id: c.origin, text: c.text, status: c.label === 'confirmed' ? 'confirmed by tier 1' : 'not officially confirmed', why, score_impact: 0 }); };
-  if (q3Extra.length >= 3) adv('A-002', 'Q3 covers several activities briefly.');
-  if (!F.some((f) => f.named)) adv('A-003', 'No named text or concept anywhere.');
+  adv('A-007', 'Context: format for your entry year.');
   if (isMain) adv('C-026', 'Edinburgh asks for awareness of career implications; if you include it, it belongs in Q2 or Q3, never Q1.');
 
   // ----- fact-check queue (zero impact until checked) -----
@@ -457,7 +464,9 @@ function questionFor(d) {
     'C-007': 'How does this connect to what the degree actually teaches?',
     'C-020': 'How does this material bear on economics specifically?',
     'C-021': 'Where do you show independent thought rather than summary?',
-    'C-017': 'Are you using this term in the sense the subject uses it?'
+    'C-017': 'Are you using this term in the sense the subject uses it?',
+    'C-029': 'What evidence of your thinking is missing that the unused space could hold?',
+    'C-031': 'What does a selector learn from this that the qualifications section does not already show?'
   };
   return m[d.claim_id] || null;
 }

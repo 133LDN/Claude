@@ -32,16 +32,11 @@
       "origin_tier": 1,
       "label": "confirmed",
       "tier1_ids": [
-        "lse-ps"
+        "lse-ps",
+        "lse-ps-old"
       ],
       "use": "rubric",
-      "disagreement": {
-        "with": [
-          "lse-ps-old"
-        ],
-        "detail": "Older LSE material gave 75% / 'no more than 20% extra-curricular'.",
-        "governs": "lse-ps governs the 2027-entry main statement; lse-ps-old governed pre-2026 single-essay statements."
-      }
+      "note": "Full fetch: the archived LSE page also says at least 80%; the earlier 75% figure was a search error and is gone."
     },
     {
       "id": "C-004",
@@ -63,8 +58,7 @@
       "label": "confirmed",
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ],
       "use": "rubric"
     },
@@ -120,7 +114,7 @@
           "ucas-3q",
           "ed-what-you-need"
         ],
-        "detail": "UCAS suggests Q1 can cover 'future plans'; Edinburgh asks for evidence of understanding career implications.",
+        "detail": "UCAS Q1 guidance says that if you have a profession in mind you could talk about how the course will launch your career; Edinburgh asks you to show the implications for your career aspirations.",
         "governs": "lse-ps governs Q1 of the main statement (LSE is the strictest lens). ed-what-you-need is satisfied by brief career material in Q2/Q3. For the Durham substitute statement no tier 1 source bans careers in Q1, so the check is advisory there."
       }
     },
@@ -170,30 +164,24 @@
         "ed-what-you-need"
       ],
       "use": "rubric",
-      "disagreement": {
-        "with": [
-          "ucas-builder-old"
-        ],
-        "detail": "Older UCAS page says not to use AI at all; the current guide allows ideas/structure/proofreading.",
-        "governs": "ucas-ai and lse-ps govern permitted uses for 2027 entry."
-      }
+      "note": "The earlier disagreement with ucas-builder-old rested on a quote that the full fetch showed does not exist; removed."
     },
     {
       "id": "C-014",
-      "text": "Readers can often spot AI-generated statements even though software cannot reliably detect them.",
-      "origin": "durham-conf-2026",
+      "text": "No software can currently detect AI, but every statement is read by admissions staff and AI writing \"can be obvious\" (Durham).",
+      "origin": "durham-conf-2026-slides",
       "origin_tier": 1,
       "label": "confirmed",
       "tier1_ids": [
-        "durham-conf-2026"
+        "durham-conf-2026-slides"
       ],
       "use": "rubric",
       "disagreement": {
         "with": [
           "ucas-ai"
         ],
-        "detail": "UCAS says heavily AI-assisted wording becomes more detectable through similarity software.",
-        "governs": "Both apply to every statement; neither changes scoring, both support flagging AI-sounding phrasing."
+        "detail": "UCAS says its software checks for similarity and universities may be notified.",
+        "governs": "Both apply to every statement; neither changes scoring by itself, both support flagging AI-sounding phrasing."
       }
     },
     {
@@ -204,7 +192,8 @@
       "label": "confirmed",
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "use": "rubric"
     },
@@ -272,12 +261,11 @@
     },
     {
       "id": "C-021",
-      "text": "In Social Sciences, Durham selectors value independent thought and engagement with reading.",
-      "origin": "durham-conf-2026",
+      "text": "For Social Sciences, Durham selectors look for originality and independence of thought and engagement with reading and research.",
+      "origin": "durham-conf-2026-slides",
       "origin_tier": 1,
       "label": "confirmed",
       "tier1_ids": [
-        "durham-conf-2026",
         "durham-conf-2026-slides"
       ],
       "use": "rubric"
@@ -381,7 +369,7 @@
         "durham-ps"
       ],
       "use": "advice",
-      "note": "Confirmed by tier 1 (C-005, C-015); scoring uses the tier 1 claims, not this one."
+      "note": "Origin page (t3-uniguide-examples) is now missing behind a bot check, but the claim itself is confirmed by tier 1 (C-005, C-015). Scoring uses the tier 1 claims."
     },
     {
       "id": "A-002",
@@ -390,8 +378,8 @@
       "origin_tier": 3,
       "label": "unconfirmed",
       "tier1_ids": [],
-      "use": "advice",
-      "note": "Tier 3, not officially confirmed. Zero score impact."
+      "use": "dropped",
+      "note": "Origin page is unfetchable (bot check) and the claim has no tier 1 support, so it cannot be verified. Dropped and kept here as a log."
     },
     {
       "id": "A-003",
@@ -400,8 +388,8 @@
       "origin_tier": 3,
       "label": "unconfirmed",
       "tier1_ids": [],
-      "use": "advice",
-      "note": "Tier 3, not officially confirmed. durham-ps suggests books or articles as prompts but does not require them. Zero score impact."
+      "use": "dropped",
+      "note": "Origin page is unfetchable (bot check) and the claim has no tier 1 support, so it cannot be verified. Dropped and kept here as a log."
     },
     {
       "id": "A-004",
@@ -422,8 +410,8 @@
       "origin_tier": 3,
       "label": "unconfirmed",
       "tier1_ids": [],
-      "use": "advice",
-      "note": "Tier 3, not officially confirmed. The tier 1 limit is in characters (C-001), not words. Zero score impact."
+      "use": "dropped",
+      "note": "The full fetch of the cited page does not contain \"around 500 words\"; the search summary misattributed it. Dropped and logged."
     },
     {
       "id": "A-006",
@@ -437,6 +425,83 @@
       ],
       "use": "advice",
       "note": "Confirmed by C-013."
+    },
+    {
+      "id": "C-029",
+      "text": "LSE expects applicants to fully use the space available on the UCAS form.",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "use": "rubric",
+      "disagreement": {
+        "with": [
+          "ucas-3q",
+          "durham-ps"
+        ],
+        "detail": "UCAS and Durham say nothing about filling the space; Durham warns against wasting characters.",
+        "governs": "lse-ps governs the main statement only; no space-use deduction for the Durham substitute."
+      }
+    },
+    {
+      "id": "C-030",
+      "text": "LSE expects spelling, punctuation and grammar to be checked and the statement to flow in a logical order.",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-031",
+      "text": "LSE's worked poor example: 'always dreamed ... since I was young' phrasing, naming LSE, listing IB subjects, and more space on an activity than on the subject.",
+      "origin": "lse-ps",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "lse-ps",
+        "durham-ps"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "C-032",
+      "text": "There is no wrong question for a piece of information, and the 4000 characters may be split across answers in any way.",
+      "origin": "ucas-3q",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "ucas-3q",
+        "durham-ps"
+      ],
+      "use": "rubric",
+      "note": "Governs the reviewer: placement between Q2 and Q3 is never penalised; only missing content is."
+    },
+    {
+      "id": "C-033",
+      "text": "Avoid repetition, and avoid list-like writing even when it is written as a sentence (Durham).",
+      "origin": "durham-conf-2026-slides",
+      "origin_tier": 1,
+      "label": "confirmed",
+      "tier1_ids": [
+        "durham-conf-2026-slides",
+        "durham-ps"
+      ],
+      "use": "rubric"
+    },
+    {
+      "id": "A-007",
+      "text": "The three-question format is unchanged for 2027 entry.",
+      "origin": "t3-tutoring-500-words",
+      "origin_tier": 3,
+      "label": "unconfirmed",
+      "tier1_ids": [],
+      "use": "advice",
+      "note": "Tier 3, not officially confirmed. UCAS's guidance URL says '2026 entry onwards', but no tier 1 extract states it for 2027. Zero score impact."
     }
   ]
 }

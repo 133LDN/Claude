@@ -47,11 +47,14 @@
       "detail": "none found",
       "quotes": [],
       "claim_ids": [
-        "C-008"
+        "C-008",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-one-statement",
-        "ucas-multiple-courses"
+        "ucas-multiple-courses",
+        "lse-ps",
+        "durham-ps"
       ]
     },
     {
@@ -80,14 +83,16 @@
       "note": "Phrase list is a heuristic. A match is not proof of AI use; it is phrasing selectors read as generic.",
       "claim_ids": [
         "C-013",
-        "C-014"
+        "C-014",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-ai",
         "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
-        "durham-conf-2026"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ]
     }
   ],
@@ -97,9 +102,9 @@
     "subject_balance": 7,
     "degree_fit": 10,
     "question_content": 6,
-    "writing_space": 8
+    "writing_space": 5
   },
-  "average": 7.33,
+  "average": 6.83,
   "criteria": [
     {
       "id": "academic_focus",
@@ -111,6 +116,7 @@
       ],
       "tier1_ids": [
         "lse-ps",
+        "lse-ps-old",
         "ed-unsuccessful-ps",
         "ed-competition"
       ]
@@ -174,12 +180,15 @@
         "C-027",
         "C-011",
         "C-012",
-        "C-010"
+        "C-010",
+        "C-032",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-3q",
         "ed-competition",
-        "lse-ps"
+        "lse-ps",
+        "durham-ps"
       ]
     },
     {
@@ -190,18 +199,22 @@
         "C-014",
         "C-015",
         "C-001",
-        "C-002"
+        "C-002",
+        "C-029",
+        "C-030",
+        "C-031",
+        "C-033"
       ],
       "tier1_ids": [
         "ucas-ai",
         "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
-        "durham-conf-2026",
         "durham-conf-2026-slides",
+        "durham-conf-2026",
+        "durham-ps",
         "ucas-3q",
-        "durham-substitute",
-        "durham-ps"
+        "durham-substitute"
       ]
     }
   ],
@@ -225,7 +238,8 @@
       "claim_id": "C-003",
       "tier1_id": "lse-ps",
       "tier1_ids": [
-        "lse-ps"
+        "lse-ps",
+        "lse-ps-old"
       ],
       "reason": "About 71% of the statement is about the subjects; LSE asks for at least 80%.",
       "selector_care": "LSE states the 80% figure explicitly, so a selector will notice a shortfall.",
@@ -251,8 +265,7 @@
       "tier1_id": "durham-ps",
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ],
       "reason": "Only one sentence gives a view with a reason (Q1). The rest describes.",
       "selector_care": "A single view across a whole statement reads as thin engagement.",
@@ -389,7 +402,8 @@
       "tier1_id": "durham-conf-2026",
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "reason": "A list of items with nothing said about any of them.",
       "selector_care": "Durham selectors named list-like writing as a growing problem.",
@@ -412,10 +426,33 @@
       "tier1_id": "durham-conf-2026",
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "reason": "A list of items with nothing said about any of them.",
       "selector_care": "Durham selectors named list-like writing as a growing problem.",
+      "source": "engine"
+    },
+    {
+      "id": "D10",
+      "criterion": "writing_space",
+      "severity": "major",
+      "points": 3,
+      "quote": "These activities have helped me develop teamwork, leadership and communication skills which will help me at university.",
+      "anchor": {
+        "line": 8,
+        "col": 359,
+        "length": 119,
+        "offset": 2103
+      },
+      "extra_quotes": [],
+      "claim_id": "C-029",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "reason": "1794 of 4000 characters unused. LSE says it expects applicants to fully use the space.",
+      "selector_care": "A quarter or more of the space is empty: a selector sees less evidence than competitors give.",
       "source": "engine"
     }
   ],
@@ -492,17 +529,17 @@
     },
     {
       "criterion": "writing_space",
-      "before": 8,
+      "before": 5,
       "too_high": {
         "answer": "no",
-        "reasoning": "Score already reflects 2 sourced deduction(s); no further sourced problem found. Probe: 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
+        "reasoning": "Score already reflects 3 sourced deduction(s); no further sourced problem found. Probe: 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
       },
       "too_low": {
         "answer": "no",
-        "reasoning": "Each of 2 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
+        "reasoning": "Each of 3 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 0 stock phrase(s), 2 connector(s), 3 list-like sentence(s), 2206/4000 characters, shortest answer 478."
       },
       "adjustments": [],
-      "after": 8
+      "after": 5
     }
   ],
   "strengths": [
@@ -512,8 +549,7 @@
       "claim_id": "C-005",
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ]
     },
     {
@@ -547,8 +583,7 @@
       ],
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ],
       "question": "Where in this answer do you take a side? What is your reason, and what is the best objection to it?",
       "example": {
@@ -583,6 +618,30 @@
       "example": null
     },
     {
+      "id": "I-D10",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D10",
+      "criterion": "writing_space",
+      "title": "1794 of 4000 characters unused. LSE says it expects applicants to fully use the space.",
+      "detail": "A quarter or more of the space is empty: a selector sees less evidence than competitors give.",
+      "quote": "These activities have helped me develop teamwork, leadership and communication skills which will help me at university.",
+      "anchor": {
+        "line": 8,
+        "col": 359,
+        "length": 119,
+        "offset": 2103
+      },
+      "claim_ids": [
+        "C-029"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "question": "What evidence of your thinking is missing that the unused space could hold?",
+      "example": null
+    },
+    {
       "id": "I-D1",
       "importance": "medium",
       "kind": "deduction",
@@ -601,7 +660,8 @@
         "C-003"
       ],
       "tier1_ids": [
-        "lse-ps"
+        "lse-ps",
+        "lse-ps-old"
       ],
       "question": "Which of the non-academic lines here tells a selector something about how you think about the subjects? If none, what would?",
       "example": null
@@ -734,7 +794,8 @@
       ],
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "question": "Which one item on this list matters most, and why?",
       "example": {
@@ -763,7 +824,8 @@
       ],
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "question": "Which one item on this list matters most, and why?",
       "example": {
@@ -776,6 +838,7 @@
   "questions": [
     "Where in this answer do you take a side? What is your reason, and what is the best objection to it?",
     "What is the strongest thing you can say about the weaker subject, in your own terms?",
+    "What evidence of your thinking is missing that the unused space could hold?",
     "Which of the non-academic lines here tells a selector something about how you think about the subjects? If none, what would?",
     "What did you learn in that subject that your grade does not show?",
     "What did this activity change in how you think about the course?",
@@ -818,12 +881,12 @@
   ],
   "advice": [
     {
-      "claim_id": "A-002",
+      "claim_id": "A-007",
       "tier": 3,
-      "source_id": "t3-uniguide-examples",
-      "text": "Deeper reflection on fewer experiences adds more impact than many brief mentions.",
+      "source_id": "t3-tutoring-500-words",
+      "text": "The three-question format is unchanged for 2027 entry.",
       "status": "not officially confirmed",
-      "why": "Q3 covers several activities briefly.",
+      "why": "Context: format for your entry year.",
       "score_impact": 0
     },
     {
@@ -836,12 +899,7 @@
       "score_impact": 0
     }
   ],
-  "opinions": [
-    {
-      "text": "Opinion (no published source): 1794 characters unused. Space could carry more evidence of thinking.",
-      "score_impact": 0
-    }
-  ],
+  "opinions": [],
   "limitations": [
     "2 choice(s) are TODO in config/applicant.json, so fit across choices covers only the named choices. Nothing was guessed."
   ],

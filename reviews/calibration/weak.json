@@ -49,11 +49,14 @@
         "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career."
       ],
       "claim_ids": [
-        "C-008"
+        "C-008",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-one-statement",
-        "ucas-multiple-courses"
+        "ucas-multiple-courses",
+        "lse-ps",
+        "durham-ps"
       ]
     },
     {
@@ -108,14 +111,16 @@
       "note": "Phrase list is a heuristic. A match is not proof of AI use; it is phrasing selectors read as generic.",
       "claim_ids": [
         "C-013",
-        "C-014"
+        "C-014",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-ai",
         "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
-        "durham-conf-2026"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ]
     }
   ],
@@ -125,9 +130,9 @@
     "subject_balance": 5,
     "degree_fit": 5,
     "question_content": 1,
-    "writing_space": 4
+    "writing_space": 1
   },
-  "average": 3.5,
+  "average": 3,
   "criteria": [
     {
       "id": "academic_focus",
@@ -139,6 +144,7 @@
       ],
       "tier1_ids": [
         "lse-ps",
+        "lse-ps-old",
         "ed-unsuccessful-ps",
         "ed-competition"
       ]
@@ -202,12 +208,15 @@
         "C-027",
         "C-011",
         "C-012",
-        "C-010"
+        "C-010",
+        "C-032",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-3q",
         "ed-competition",
-        "lse-ps"
+        "lse-ps",
+        "durham-ps"
       ]
     },
     {
@@ -218,18 +227,22 @@
         "C-014",
         "C-015",
         "C-001",
-        "C-002"
+        "C-002",
+        "C-029",
+        "C-030",
+        "C-031",
+        "C-033"
       ],
       "tier1_ids": [
         "ucas-ai",
         "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
-        "durham-conf-2026",
         "durham-conf-2026-slides",
+        "durham-conf-2026",
+        "durham-ps",
         "ucas-3q",
-        "durham-substitute",
-        "durham-ps"
+        "durham-substitute"
       ]
     }
   ],
@@ -254,7 +267,8 @@
       "claim_id": "C-003",
       "tier1_id": "lse-ps",
       "tier1_ids": [
-        "lse-ps"
+        "lse-ps",
+        "lse-ps-old"
       ],
       "reason": "Only about 32% of the statement is about the subjects; LSE asks for at least 80%.",
       "selector_care": "A clear miss on a published LSE threshold.",
@@ -308,8 +322,7 @@
       "tier1_id": "durham-ps",
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ],
       "reason": "No sentence anywhere gives your own view with a reason or an objection.",
       "selector_care": "This is the core of what LSE and Durham say they look for.",
@@ -632,9 +645,9 @@
         "My dream is to become an investment banker in London, and studying at LSE would be the perfect first step on my journey towards this career."
       ],
       "claim_id": "C-014",
-      "tier1_id": "durham-conf-2026",
+      "tier1_id": "durham-conf-2026-slides",
       "tier1_ids": [
-        "durham-conf-2026"
+        "durham-conf-2026-slides"
       ],
       "reason": "23 stock or AI-associated phrase(s): \"From a young age\", \"I have always been fascinated\", \"deep passion\", \"delve\", \"in today's world\", \"ever-evolving\", \"the complexities of\", \"plays a vital role\", \"crucial for success\", \"honed\", \"invaluable\", \"embark\", \"journey\", \"journey\", \"well-rounded individual\", \"shaped me into\", \"would thrive\", \"My dream\", \"dream career\", \"perfect first step\", \"I believe I am a hard-working\", \"the world of\", \"big questions\".",
       "selector_care": "Durham selectors say they can often spot AI-like writing; clusters of stock phrases read that way.",
@@ -682,7 +695,8 @@
       "tier1_id": "durham-conf-2026",
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "reason": "A list of items with nothing said about any of them.",
       "selector_care": "Durham selectors named list-like writing as a growing problem.",
@@ -705,10 +719,33 @@
       "tier1_id": "durham-conf-2026",
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "reason": "A list of items with nothing said about any of them.",
       "selector_care": "Durham selectors named list-like writing as a growing problem.",
+      "source": "engine"
+    },
+    {
+      "id": "D21",
+      "criterion": "writing_space",
+      "severity": "major",
+      "points": 3,
+      "quote": "Moreover, they have given me invaluable skills that will help me to embark on my university journey and achieve my dream career in finance.",
+      "anchor": {
+        "line": 8,
+        "col": 266,
+        "length": 139,
+        "offset": 1276
+      },
+      "extra_quotes": [],
+      "claim_id": "C-029",
+      "tier1_id": "lse-ps",
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "reason": "2601 of 4000 characters unused. LSE says it expects applicants to fully use the space.",
+      "selector_care": "A quarter or more of the space is empty: a selector sees less evidence than competitors give.",
       "source": "engine"
     }
   ],
@@ -785,17 +822,17 @@
     },
     {
       "criterion": "writing_space",
-      "before": 4,
+      "before": 1,
       "too_high": {
         "answer": "no",
-        "reasoning": "Score already reflects 4 sourced deduction(s); no further sourced problem found. Probe: 23 stock phrase(s), 3 connector(s), 2 list-like sentence(s), 1399/4000 characters, shortest answer 405."
+        "reasoning": "Score already reflects 5 sourced deduction(s); no further sourced problem found. Probe: 23 stock phrase(s), 3 connector(s), 2 list-like sentence(s), 1399/4000 characters, shortest answer 405."
       },
       "too_low": {
         "answer": "no",
-        "reasoning": "Each of 4 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 23 stock phrase(s), 3 connector(s), 2 list-like sentence(s), 1399/4000 characters, shortest answer 405."
+        "reasoning": "Each of 5 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 23 stock phrase(s), 3 connector(s), 2 list-like sentence(s), 1399/4000 characters, shortest answer 405."
       },
       "adjustments": [],
-      "after": 4
+      "after": 1
     }
   ],
   "strengths": [],
@@ -814,11 +851,14 @@
         "offset": 202
       },
       "claim_ids": [
-        "C-008"
+        "C-008",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-one-statement",
-        "ucas-multiple-courses"
+        "ucas-multiple-courses",
+        "lse-ps",
+        "durham-ps"
       ]
     },
     {
@@ -856,14 +896,16 @@
       },
       "claim_ids": [
         "C-013",
-        "C-014"
+        "C-014",
+        "C-031"
       ],
       "tier1_ids": [
         "ucas-ai",
         "ucas-declaration",
         "lse-ps",
         "ed-what-you-need",
-        "durham-conf-2026"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ]
     },
     {
@@ -885,7 +927,8 @@
         "C-003"
       ],
       "tier1_ids": [
-        "lse-ps"
+        "lse-ps",
+        "lse-ps-old"
       ],
       "question": "Which of the non-academic lines here tells a selector something about how you think about the subjects? If none, what would?",
       "example": null
@@ -910,8 +953,7 @@
       ],
       "tier1_ids": [
         "durham-ps",
-        "durham-unsuccessful",
-        "durham-conf-2026-slides"
+        "durham-unsuccessful"
       ],
       "question": "Where in this answer do you take a side? What is your reason, and what is the best objection to it?",
       "example": {
@@ -1038,7 +1080,7 @@
         "C-014"
       ],
       "tier1_ids": [
-        "durham-conf-2026"
+        "durham-conf-2026-slides"
       ],
       "question": "If you said this aloud to a teacher, what would you actually say?",
       "example": {
@@ -1046,6 +1088,30 @@
         "topic": "cooking",
         "text": "Compare \"my passion for cooking\" with \"I burned the roux three times before I learned to keep the heat low.\""
       }
+    },
+    {
+      "id": "I-D21",
+      "importance": "high",
+      "kind": "deduction",
+      "deduction_id": "D21",
+      "criterion": "writing_space",
+      "title": "2601 of 4000 characters unused. LSE says it expects applicants to fully use the space.",
+      "detail": "A quarter or more of the space is empty: a selector sees less evidence than competitors give.",
+      "quote": "Moreover, they have given me invaluable skills that will help me to embark on my university journey and achieve my dream career in finance.",
+      "anchor": {
+        "line": 8,
+        "col": 266,
+        "length": 139,
+        "offset": 1276
+      },
+      "claim_ids": [
+        "C-029"
+      ],
+      "tier1_ids": [
+        "lse-ps"
+      ],
+      "question": "What evidence of your thinking is missing that the unused space could hold?",
+      "example": null
     },
     {
       "id": "I-D2",
@@ -1345,7 +1411,8 @@
       ],
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "question": "Which one item on this list matters most, and why?",
       "example": {
@@ -1374,7 +1441,8 @@
       ],
       "tier1_ids": [
         "durham-conf-2026",
-        "durham-conf-2026-slides"
+        "durham-conf-2026-slides",
+        "durham-ps"
       ],
       "question": "Which one item on this list matters most, and why?",
       "example": {
@@ -1392,6 +1460,7 @@
     "What is the strongest thing you can say about the weaker subject, in your own terms?",
     "What in the subject itself drives you, setting aside where it might lead?",
     "If you said this aloud to a teacher, what would you actually say?",
+    "What evidence of your thinking is missing that the unused space could hold?",
     "How does this connect to what the degree actually teaches?",
     "Where does a question in one subject depend on an answer from the other?",
     "What did you learn in that subject that your grade does not show?",
@@ -1403,21 +1472,12 @@
   "fact_checks": [],
   "advice": [
     {
-      "claim_id": "A-002",
+      "claim_id": "A-007",
       "tier": 3,
-      "source_id": "t3-uniguide-examples",
-      "text": "Deeper reflection on fewer experiences adds more impact than many brief mentions.",
+      "source_id": "t3-tutoring-500-words",
+      "text": "The three-question format is unchanged for 2027 entry.",
       "status": "not officially confirmed",
-      "why": "Q3 covers several activities briefly.",
-      "score_impact": 0
-    },
-    {
-      "claim_id": "A-003",
-      "tier": 3,
-      "source_id": "t3-uniguide-examples",
-      "text": "Philosophy and economics statements need a specific concept or text to show real engagement.",
-      "status": "not officially confirmed",
-      "why": "No named text or concept anywhere.",
+      "why": "Context: format for your entry year.",
       "score_impact": 0
     },
     {
@@ -1430,12 +1490,7 @@
       "score_impact": 0
     }
   ],
-  "opinions": [
-    {
-      "text": "Opinion (no published source): 2601 characters unused. Space could carry more evidence of thinking.",
-      "score_impact": 0
-    }
-  ],
+  "opinions": [],
   "limitations": [
     "2 choice(s) are TODO in config/applicant.json, so fit across choices covers only the named choices. Nothing was guessed."
   ],

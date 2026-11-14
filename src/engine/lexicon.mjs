@@ -71,7 +71,7 @@ export const GENERIC_HARD = [
   'ever-changing', 'fast-paced world', 'multifaceted', 'a testament to', 'navigate the complexities',
   'the complexities of', 'plays a vital role', 'plays a crucial role', 'crucial for success', 'honed', 'invaluable',
   'embark', 'journey', 'well-rounded individual', 'shaped me into', 'would thrive', 'unwavering', 'my dream',
-  'dream career', 'perfect first step', 'i believe i am a hard-working', 'the world of', 'big questions'
+  'dream career', 'perfect first step', 'always dreamed', 'dreamed of', 'since i was young', 'i believe i am a hard-working', 'the world of', 'big questions'
 ];
 // Soft: fine once, a tell in clusters.
 export const GENERIC_SOFT = ['furthermore', 'moreover', 'in conclusion', 'additionally', 'very interesting', 'many skills', 'teamwork, leadership and communication'];
@@ -108,3 +108,6 @@ export const STRANDS_DURHAM = {
 
 export const WORK_CLAIM = /\b(?:argues?|argued|claims?|claimed|shows?|showed|proposes?|wrote|suggests?|according to|in (?:his|her|their) (?:book|essay|paper)|which (?:was about|argues|showed|claims))\b/i;
 export const NAMED_WORK_OR_AUTHOR = /(?:"[^"]{3,80}"|\b(?:Friedman|Sen|Sandel|Rawls|Mill|Kant|Hume|Popper|Kahneman|Levitt|Dubner|Smith|Keynes|Piketty|Hayek|Marx|Nozick|Parfit|Singer|Nussbaum|Akerlof|Thaler|Arrow|Hausman)\b|\b[A-Z][a-z]+(?:,? [A-Z][a-z]+){1,4}\b by [A-Z])/;
+
+// Names of IB subjects; three or more in one sentence reads as a list of qualifications (C-031).
+export const IB_SUBJECTS = /\b(?:History|English|Economics|Mathematics|Maths|Physics|Chemistry|Biology|Philosophy|Geography|French|Spanish|German|Italian|Mandarin|Business(?: and Management)?|Psychology|Computer Science|Literature|Global Politics|Visual Arts|Music)\b/g;

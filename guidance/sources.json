@@ -1,387 +1,429 @@
 {
   "store_version": 1,
   "captured": "2026-11-14",
-  "capture_method_note": "This session's network policy blocked direct fetches of ucas.com, lse.ac.uk, durham.ac.uk and ed.ac.uk (proxy 403 / DNS refusal), and both requests to widen the allowlist were rejected by the environments service. Every 'stored' record below was therefore captured as a web_search_extract: short quoted passages that the search tool attributed to that exact URL. These are NOT full-page captures, and the wording is not verified character by character against the live page. Run /refresh-guidance once the hosts are allowed to replace them with full fetches (a diff is shown before anything is overwritten).",
+  "capture_method_note": "Captured 2026-11-14 by full page/PDF fetch after the network was opened. Every extract is verbatim and was checked by script against the fetched text (saved under guidance/pages/<id>.txt); extracts joined with ' … ' are in-order fragments from multi-column PDFs. The earlier search-extract capture contained errors that this fetch exposed and removed (see notes on ucas-builder-old, lse-ps-old, durham-conf-2026, t3-tutoring-500-words). One tier 3 page is missing (bot check).",
   "sources": [
     {
       "id": "ucas-3q",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "How to write your personal statement: 2026 entry onwards (UCAS)",
       "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement-for-2026-entry-onwards",
       "date_captured": "2026-11-14",
       "governs": "All UCAS statements (main and, by Durham's rule, the substitute)",
-      "notes": "Defines the three questions, 350 minimum per answer, 4000 total including spaces. Q1 guidance mentions future plans, which disagrees with LSE's Q1 rule (see lse-ps).",
+      "notes": "Full page fetched. Q1 guidance invites career talk, which disagrees with lse-ps (LSE governs Q1 of the main statement). Says there is no 'wrong' question for a piece of information, so the reviewer must not penalise placement between Q2 and Q3.",
       "extracts": [
-        "the personal statement will still be 4000 characters in total; this includes spaces",
-        "Each section will have a minimum character count of 350 characters",
-        "admissions staff will review the three questions as a whole",
-        "Q1: motivations, your knowledge of the subject, and your future plans ... universities and colleges want to see you've done your research",
-        "Q2: most recent and relevant study ... universities and colleges will see students' grades elsewhere on their application, so don't waste time talking about these",
-        "Q3: work, volunteering, personal experiences, hobbies ... reflecting on why each one is useful",
-        "each part of the statement should add value ... not to repeat information"
-      ]
+        "Each answer will have a minimum character count of 350 characters",
+        "Admissions staff will still review your personal statement as a whole, so remember not to repeat information",
+        "You can use the 4,000 character count limit across all answers in any way you choose",
+        "There's no 'wrong' place to include information in your answers",
+        "Universities and colleges want to see you have done your research",
+        "If you already have a particular profession in mind you could talk about how you'll use this to launch your career.",
+        "Universities and colleges will see your grades elsewhere on your application so don't waste time talking about these.",
+        "the key thing here is for you to reflect on your experiences and the skills gained relevant to your chosen course."
+      ],
+      "page_snapshot": "guidance/pages/ucas-3q.txt"
     },
     {
       "id": "ucas-ai",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "A guide to using AI and ChatGPT with your personal statement (UCAS)",
       "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/a-guide-to-using-ai-and-chatgpt-with-your-personal-statement",
       "date_captured": "2026-11-14",
       "governs": "All UCAS statements",
-      "notes": "Permits AI for ideas, structure, readability; forbids submitting AI text. Contains the declaration wording. An older UCAS builder page says not to use AI at all (ucas-builder-old); both kept, the AI guide is the current one.",
+      "notes": "Full page fetched. Permits AI for ideas, structure and readability; submitting AI-generated text could be considered cheating. Contains the declaration wording (also on ucas-declaration).",
       "extracts": [
+        "Generating (and then copying, pasting and submitting) all or a large part of your personal statement from an AI tool such as ChatGPT, and presenting it as your own words, could be considered cheating by universities and colleges and could affect your chances of an offer.",
         "When you complete your application, you now have to declare that your personal statement hasn't been copied or provided from another source, including artificial intelligence software.",
-        "could in turn mean you don't receive any offers or have offers withdrawn",
-        "Copy and paste from AI tools and use as final text. (listed as a don't)",
-        "These will then be more detectable through similarity software."
-      ]
+        "If UCAS software detects elements of a personal statement that are similar to others, the universities or colleges it is intended for may be notified."
+      ],
+      "page_snapshot": "guidance/pages/ucas-ai.txt"
     },
     {
       "id": "ucas-declaration",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "UCAS Undergraduate declaration",
       "url": "https://www.ucas.com/about-us/policies/privacy-policies-and-declarations/ucas-undergraduate-declaration",
       "date_captured": "2026-11-14",
       "governs": "All UCAS statements",
-      "notes": "Located on a second search. The search result blends this page with the AI guide, so which sentence comes from which page is not certain. The 'declare ... including artificial intelligence software' wording is also on ucas-ai.",
+      "notes": "Full page fetched. The formal applicant declaration: UCAS may notify schools and universities if material may have been provided by AI software or others.",
       "extracts": [
-        "you now have to declare that your personal statement hasn't been copied or provided from another source, including artificial intelligence software",
-        "If UCAS reasonably thinks material may have come from another source, including AI software, it may notify your school or college and the universities you applied to ... whose decision it will be to take what action they consider appropriate (search summary; page attribution uncertain)"
-      ]
+        "If your personal statement includes material that we reasonably consider may have been copied from or provided by another source, including but not limited to friends, writing service providers or artificial intelligence software, we may notify"
+      ],
+      "page_snapshot": "guidance/pages/ucas-declaration.txt"
     },
     {
       "id": "ucas-similarity",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "UCAS Similarity Detection Service - guidance for applicants (PDF)",
       "url": "https://www.ucas.com/sites/default/files/similarity-detection-applicant-guide.pdf",
       "date_captured": "2026-11-14",
       "governs": "All UCAS statements",
-      "notes": "10% threshold for human review. The older builder page (ucas-builder-old) gives 30%. Both kept; the applicant guide is treated as governing.",
+      "notes": "Full page fetched. 10% threshold for human review. The older builder page (ucas-builder-old) gives 30%. Both kept; the applicant guide is treated as governing.",
       "extracts": [
-        "Any statements showing a level of similarity of 10% or more are reviewed by members of the UCAS Similarity Detection Service Team.",
-        "If Copycatch finds two sentences in different statements which have exactly the same words, it is very likely that one is a copy of the other",
-        "A personal statement which is found to contain copied text may result in the entire application being withdrawn without a refund."
-      ]
+        "All personal statements sent to UCAS are tested for similarity.",
+        "Any statements showing a level of similarity of 10% or more are reviewed by members of the UCAS Similarity Detection Service Team."
+      ],
+      "page_snapshot": "guidance/pages/ucas-similarity.txt"
     },
     {
       "id": "ucas-one-statement",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Preparing your personal statement (UCAS mind map PDF)",
       "url": "https://www.ucas.com/sites/default/files/personal-statement-mind-map.pdf",
       "date_captured": "2026-11-14",
       "governs": "All UCAS statements",
-      "notes": "Supports the 'no university named' pass/fail check.",
+      "notes": "Full PDF fetched. Multi-column mind map; fragments joined with ' … '.",
       "extracts": [
-        "you can only write one personal statement, so don't mention a uni or college by name"
-      ]
+        "You can only write … one personal … statement, so … don't mention a … uni or college by … name."
+      ],
+      "page_snapshot": "guidance/pages/ucas-one-statement.txt"
     },
     {
       "id": "ucas-multiple-courses",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "How to write a personal statement that works for multiple courses (UCAS)",
       "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-a-personal-statement-that-works-for-multiple-courses-0",
       "date_captured": "2026-11-14",
       "governs": "Main statement (all five choices see it)",
-      "notes": "Supports 'fit across choices' and joint-degree balance.",
+      "notes": "Full page fetched. Supports 'fit across choices' and joint-degree balance.",
       "extracts": [
-        "you only write one personal statement that all of your choices see",
-        "making sure each subject in a joint degree is addressed"
-      ]
+        "No, you only write one personal statement that all of your choices see.",
+        "If you've included some joint or combined degree courses, make sure that each discipline or subject is addressed in some way."
+      ],
+      "page_snapshot": "guidance/pages/ucas-multiple-courses.txt"
     },
     {
       "id": "ucas-builder-old",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "The personal statement builder (UCAS, older page)",
       "url": "https://www.ucas.com/applying/applying-to-university/writing-personal-statement/personal-statement-builder",
       "date_captured": "2026-11-14",
       "governs": "Older guidance; kept because it disagrees with ucas-ai on AI use",
-      "notes": "Stricter than ucas-ai. Kept per the rule that disagreeing tier 1 sources are both retained. Also the source of the 30% similarity figure that disagrees with ucas-similarity (10%).",
+      "notes": "Full page fetched. The earlier search extract claiming this page says \"Don't use artificial intelligence software or writing service providers\" was FALSE: the page's don'ts say nothing about AI. Removed. The page is the source of the 30% similarity figure, which disagrees with ucas-similarity (10%).",
       "extracts": [
-        "Don't use artificial intelligence software or writing service providers.",
         "Any similarity greater than 30% will be flagged and we'll inform the universities and colleges to which you have applied."
-      ]
+      ],
+      "page_snapshot": "guidance/pages/ucas-builder-old.txt"
     },
     {
       "id": "lse-ps",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Personal statement (LSE undergraduate admissions)",
       "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply/Completing-the-UCAS-form/Personal-Statement",
       "date_captured": "2026-11-14",
       "governs": "Main statement (LSE is the priority and strictest lens)",
-      "notes": "Source of the 80% rule, the no-career-in-Q1 rule and equal weight for joint degrees. Disagrees with ucas-3q on future plans in Q1, and with ed-what-you-need on career implications: LSE governs Q1 of the main statement.",
+      "notes": "Full page fetched. Governs the main statement. New vs search capture: LSE expects the space to be fully used and spelling/grammar checked; includes a worked poor example ('dreamed of coming to LSE since I was young', naming LSE, listing IB subjects, more about football than the subject).",
       "extracts": [
-        "At least 80% of the personal statement should emphasise your interest in the programme, with evidence of critical engagement with the subject and super-curricular activity",
-        "Applicants should avoid discussing future career plans in Question 1",
-        "Question 3 ... expand on critical reflections already covered in Questions 1 and 2 ... can also hold extra super-curricular activity",
-        "Writing only the 350-character minimum for Question 3 is entirely acceptable",
-        "give equal weighting to each subject ... a statement weighted towards only one aspect of the programme will be significantly less competitive",
-        "our Admissions Selectors will look at how well your academic interests align with the LSE programme",
-        "they do not produce high-quality personal statements and may lead to rejection",
-        "reserves the right to reject applications where it has been found that a statement has significant similarities to a previous submission or has been created with the use of Artificial Intelligence",
-        "generate initial ideas, suggesting reading materials ... and proofreading your own writing (permitted AI uses)"
-      ]
+        "At least 80% of the personal statement should emphasise your interest in the programme you are applying for with evidence of your critical engagement with the subject and your super-curricular activity.",
+        "For Question 1 you should avoid discussing your future career plans.",
+        "For Question 3 applicants are encouraged to use this space to expand on critical reflections already covered in Questions 1 and 2.",
+        "Writing the minimum of 350 characters for Question 3 is entirely acceptable.",
+        "We expect that your submitted personal statement is structured and coherent and that you fully utilise the space available on your UCAS application form.",
+        "We expect that you have checked spelling, punctuation, and grammar and that your Personal Statement flows in a logical order.",
+        "We reserve the right to reject your application where it has been found that a statement has significant similarities to a previous submission or has been created with the use of Artificial Intelligence (using tools such as ChatGPT).",
+        "We do not encourage applicants to use generative Artificial Intelligence tools to create their personal statement as they do not produce high-quality personal statements and may lead to rejection.",
+        "When assessing your personal statement our Admissions Selectors will look at how well your academic interests align with the LSE programme.",
+        "If you are applying to one of these programmes, you are advised to give equal weighting to each subject in your statement.",
+        "a statement weighted towards only one aspect of the programme will be significantly less competitive.",
+        "Our Selectors look for students who can best reflect on the experiences and academic ideas they have encountered through the opportunities available to them, not those who have had the best opportunities.",
+        "I have always dreamed of coming to LSE since I was young.",
+        "This brief example of a personal statement is poor.",
+        "The applicant has specifically mentioned LSE, which is likely to be unattractive to their other choices, and has wasted space listing their International Baccalaureate subjects, which would be shown in the qualifications section.",
+        "this student has spent more time talking about football than about history."
+      ],
+      "page_snapshot": "guidance/pages/lse-ps.txt"
     },
     {
       "id": "lse-ps-old",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Personal statement (LSE, archived pre-2026 page) and Advising the Advisers decks 2017-2019",
       "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply/Completing-the-UCAS-form/Old-Personal-Statement",
       "date_captured": "2026-11-14",
       "governs": "Pre-2026 single-essay statements only; superseded for 2027 entry by lse-ps",
-      "notes": "Older LSE presentations mention a 75% minimum. Kept as a disagreeing tier 1 source; lse-ps governs this applicant.",
+      "notes": "Full page fetched. Also says at least 80%. The earlier '75%' search extract was not found and is removed; no disagreement with lse-ps on the figure.",
       "extracts": [
-        "no more than 20% of your statement spent discussing extra-curricular activities",
-        "Older LSE presentations ... mention a 75% minimum (search summary; deck wording not captured)"
-      ]
+        "the majority of your personal statement - at least 80% - should focus on your academic interest in that subject."
+      ],
+      "page_snapshot": "guidance/pages/lse-ps-old.txt"
     },
     {
       "id": "lse-phil-econ",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "BSc Philosophy and Economics (LSE programme page)",
       "url": "https://www.lse.ac.uk/study-at-lse/undergraduate/bsc-philosophy-and-economics",
       "date_captured": "2026-11-14",
       "governs": "Main statement: fit with the degree as taught at LSE",
-      "notes": "Programme overview.",
+      "notes": "Full page fetched. Programme overview.",
       "extracts": [
-        "12 units over three years, plus LSE100"
-      ]
+        "On this programme, you'll study 12 units over three years, plus LSE100.",
+        "This final year includes the Philosophy of Economics course plus one economics and one philosophy option."
+      ],
+      "page_snapshot": "guidance/pages/lse-phil-econ.txt"
     },
     {
       "id": "lse-phil-econ-structure",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "BSc in Philosophy and Economics, programme regulations 2026/27 (LSE Calendar)",
       "url": "https://www.lse.ac.uk/resources/calendar2026-2027/programmeRegulations/undergraduate/2026/BScPhilosophyAndEconomics.htm",
       "date_captured": "2026-11-14",
       "governs": "Main statement: fit with the degree as taught at LSE",
-      "notes": "Course codes as returned by search; check against the live calendar.",
+      "notes": "Full page fetched (LSE Calendar 2026/27 programme regulations). Course codes verified against the page.",
       "extracts": [
-        "Year 1: introductory micro- and macroeconomics, PH103 The Big Questions: An Introduction to Philosophy, maths and statistics (Route A: quantitative methods and logic; Route B: mathematical methods and elementary statistical theory)",
-        "Year 2: EC2A3, EC2B3 intermediate micro and macro; EC2C3, EC2C4 econometrics; philosophy options",
-        "Year 3: PH311 Philosophy of Economics (compulsory, 1.0 unit)",
-        "Options include Philosophy of Science, Epistemology, Philosophy of Language, Mind and Metaphysics, Behavioural Economics, Labour Economics, Public Economics, Game Theory-related courses"
-      ]
+        "EC1A3 Microeconomics I (0.5)",
+        "EC1B3 Macroeconomics I (0.5)",
+        "PH111 Introduction to Logic (0.5)",
+        "ST107 Quantitative Methods (Statistics) (0.5)",
+        "MA107 Quantitative Methods (Mathematics) (0.5)",
+        "PH103 The Big Questions: An Introduction to Philosophy (1.0)",
+        "EC2C3 Econometrics I (0.5)",
+        "PH311 Philosophy of Economics (1.0)"
+      ],
+      "page_snapshot": "guidance/pages/lse-phil-econ-structure.txt"
     },
     {
       "id": "durham-ps",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Writing a Personal Statement (Durham University)",
       "url": "https://www.durham.ac.uk/study/undergraduate/how-to-apply/writing-a-personal-statement/",
       "date_captured": "2026-11-14",
       "governs": "Durham substitute statement (Economics)",
-      "notes": "Own views over description; three questions; 350 min.",
+      "notes": "Full page fetched. Own views over description; three questions; 350 min.",
       "extracts": [
-        "each question will require a minimum of 350 characters",
-        "We want to hear what your thoughts are about your subject and not just a description of something you've read.",
-        "books or articles that stood out and any additional reading or research you have done (suggested prompts)"
-      ]
+        "The personal statement can be a maximum of 4000 characters in length (including spaces), and each question will require a minimum of 350 characters.",
+        "Tell us why you're interested in studying it, and identify one or two stand out areas to talk about in detail.",
+        "We want to hear what your thoughts are about your subject and not just a description of something you've read - we want to hear what you think and not just what you've been told or read.",
+        "Do you agree or disagree with particular viewpoints?",
+        "Avoid using lists - tell us why something you've read or something you've done makes us a good student, rather than providing a long list of things that doesn't spell out your strengths.",
+        "Don't waste characters!",
+        "You only have 4000 so don't include things like lists of your qualifications - we can see those in the qualifications section of your application already."
+      ],
+      "page_snapshot": "guidance/pages/durham-ps.txt"
     },
     {
       "id": "durham-substitute",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Substitute personal statement (section of Durham's personal statement guidance)",
       "url": "https://www.durham.ac.uk/study/undergraduate/how-to-apply/writing-a-personal-statement/",
       "date_captured": "2026-11-14",
       "governs": "Durham substitute statement (Economics)",
-      "notes": "Same URL as durham-ps; the substitute guidance is a section of that page. Deadline wording differs between Durham documents (3 days of acknowledgement vs 3 days of UCAS submission); check the applicant portal.",
+      "notes": "Full page fetched. Same URL as durham-ps; the substitute guidance is a section of that page. Deadline wording differs between Durham documents (3 days of acknowledgement vs 3 days of UCAS submission); check the applicant portal.",
       "extracts": [
-        "It is not necessary to write an additional personal statement, however Durham offers a tool for applicants to submit a substitute if the Durham course is very different from the one in the UCAS statement",
-        "no more than 4000 characters (including spaces) and plain text, without bold, italics, or underlining",
-        "Durham selectors read this instead of the UCAS statement (search summary)"
-      ]
+        "It is not necessary to write an additional personal statement, however we have a tool just for Durham applicants which allows you to submit a substitute personal statement if the Durham course you're applying to is very different to the one in your UCAS",
+        "Use no more than 4000 characters (including spaces) to match the UCAS personal statement length",
+        "Use plain text - don't use bold, italics, underlining",
+        "use the \"contact us\" option in your portal if you would like to submit a substitute personal statement."
+      ],
+      "page_snapshot": "guidance/pages/durham-substitute.txt"
     },
     {
       "id": "durham-conf-2026",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Teacher and Adviser Conference 2026: Admissions session notes (Durham, 26 March 2026)",
       "url": "https://www.durham.ac.uk/media/durham-university/visit-us/for-schools-and-colleges/teacher-engagement/Admissions-Session-Notes--Conference-2026-(3).pdf",
       "date_captured": "2026-11-14",
       "governs": "Durham substitute statement (Economics); general reading behaviour of Durham selectors",
-      "notes": "Says no software can detect AI but readers often can; disagrees in emphasis with ucas-ai on detectability. Both kept.",
+      "notes": "Full PDF fetched. The search capture wrongly put two claims here (AI detection, social-science criteria); both are actually in durham-conf-2026-slides.",
       "extracts": [
-        "Social Sciences values independent thought and engagement with reading (search summary of notes)",
-        "statements are becoming more list-like and less creative, and ... applicants describe what they studied rather than what they learned from it (search summary of notes)",
-        "Most competitive courses (at time of slide preparation) are Law, Biological Sciences, Economics, Politics & International Relations, Accounting, Finance & Management",
-        "no software can currently detect AI in personal statements, but readers can often spot it (search summary of notes)",
-        "Mitigating circumstances should go in the reference rather than the statement (search summary of notes)"
-      ]
+        "All personal statements are read at Durham.",
+        "What books, articles, or academic content have you engaged with?",
+        "Durham selectors look at this instead of the UCAS statement.",
+        "Increased use of lists rather than expanded points. Applicants need to focus on the impact on what they have learned.",
+        "Personal statements play a huge role in selection for these subjects due to similar grade profiles and high competition."
+      ],
+      "page_snapshot": "guidance/pages/durham-conf-2026.txt"
     },
     {
       "id": "durham-conf-2026-slides",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "References and the 2026 personal statement (Durham conference slides)",
       "url": "https://www.durham.ac.uk/media/durham-university/visit-us/for-schools-and-colleges/teacher-engagement/Admissions-Session-Slides--Teacher-Conference-2026.pdf",
       "date_captured": "2026-11-14",
       "governs": "Durham substitute statement (Economics)",
-      "notes": "Companion slides to durham-conf-2026.",
+      "notes": "Full PDF fetched. Multi-column layout: extracts joined with ' … ' are fragments that appear in order in the same slide but are interleaved with other columns.",
       "extracts": [
-        "originality and independence of thought",
-        "correct use of terminology",
-        "being very specific about what they have studied and not what they have learned or the impact it has had",
-        "Personal statements play a huge role in selection for these subjects due to similar grade profiles and high competition."
-      ]
+        "Social Sciences: … Originality and … independence of thought … Engagement with reading … & research",
+        "Correct use of terminology",
+        "Avoid lists and don't waste … Avoid Repetition",
+        "Applicants are being very … specific about what they … have studied and not what … they have learned or the … impact it has had.",
+        "Not share information in a list like manner (even if it is written as a sentence)",
+        "Include their individual reflections on learnings",
+        "Can you detect Artificial … No software out there to … currently detect AI at UCAS … All personal statements are … read by members of the … Admissions team and it can … be obvious!"
+      ],
+      "page_snapshot": "guidance/pages/durham-conf-2026-slides.txt"
     },
     {
       "id": "durham-unsuccessful",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "If You Are Unsuccessful (Durham University)",
       "url": "https://www.durham.ac.uk/study/undergraduate/how-to-apply/decisions-and-replies/if-you-are-unsuccessful/",
       "date_captured": "2026-11-14",
       "governs": "Durham substitute statement (Economics)",
-      "notes": "Most direct Durham statement on critical engagement.",
+      "notes": "Full page fetched. Most direct Durham statement on critical engagement.",
       "extracts": [
-        "what areas about the subject you enjoy and why you enjoy them",
-        "your own views on areas of the subject ... reasons for agreeing or disagreeing with theories",
-        "evidence of your critical thinking skills and independent thought",
-        "told us what you have learnt, your observations and findings"
-      ]
+        "What you understand about the course including your own views on areas of the subject, whether there are things you agree or disagree with, if there are theories you agree or disagree with and most importantly why you think this.",
+        "Research done around the subject - this might include reading, but we can only take this into account when you've told us what you have learnt, your observations and findings."
+      ],
+      "page_snapshot": "guidance/pages/durham-unsuccessful.txt"
     },
     {
       "id": "durham-econ",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
-      "title": "Economics L100 (Durham University Business School course page)",
+      "fetch_method": "full_fetch",
+      "title": "Economics, BSc (Hons), UCAS code L130 (Durham University Business School)",
       "url": "https://www.durham.ac.uk/business/courses/economics-l100/",
       "date_captured": "2026-11-14",
       "governs": "Durham substitute statement: fit with Economics as taught",
-      "notes": "Search reported the page shows code L130 / BSc while the URL says L100. Unresolved; check the live listing.",
+      "notes": "Full page fetched. Resolves the code question: the page is BSc (Hons) Economics, UCAS code L130; only the URL slug says L100.",
       "extracts": [
-        "Year 1 provides a foundation in domestic and international economics. In subsequent years you will further develop your understanding of core areas such as macroeconomics, microeconomics and data analysis.",
-        "One module familiarises you with the use of mathematical and statistical tools in solving economic problems.",
+        "Year 1 provides a foundation in domestic and international economics.",
+        "familiarises you with the use of mathematical and statistical tools in solving economic problems.",
         "The degree culminates in a final-year dissertation on an area of economics of your choice.",
-        "Optional modules have included Behavioural and Experimental Economics, Intermediate Methods for Economics, Political Economy, Microeconomic Applications and Policy, Macroeconomic Applications and Policy, A Finance Module."
-      ]
+        "L130",
+        "BSc (Hons) Economics"
+      ],
+      "page_snapshot": "guidance/pages/durham-econ.txt"
     },
     {
       "id": "ed-what-you-need",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "What you need to apply (University of Edinburgh)",
       "url": "https://study.ed.ac.uk/undergraduate/applying/making-application/what-you-need-apply",
       "date_captured": "2026-11-14",
       "governs": "Main statement (Edinburgh choice)",
-      "notes": "Asks for career implications; disagrees with lse-ps on careers in Q1. Resolution: career material may appear in Q2/Q3 only.",
+      "notes": "Full page fetched. Asks for career implications; disagrees with lse-ps on careers in Q1. Resolution: career material may appear in Q2/Q3 only.",
       "extracts": [
         "explain why you want to study the subject you have applied for",
-        "show an understanding of what it involves at degree level (search summary)",
-        "Provide evidence that you understand the career implications of your choice",
-        "you could be committing fraud (on copying or using AI tools such as ChatGPT to write it)"
-      ]
+        "demonstrate a clear understanding of what the subject involves at degree level",
+        "show that you understand the implications of your choice on your career aspirations",
+        "If you copy a personal statement from elsewhere, or ask someone else to write this for you, including the use of AI apps such as ChatGPT, you could be committing fraud."
+      ],
+      "page_snapshot": "guidance/pages/ed-what-you-need.txt"
     },
     {
       "id": "ed-how-select",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "How we select applicants (University of Edinburgh)",
       "url": "https://study.ed.ac.uk/undergraduate/applying/selection/how-select",
       "date_captured": "2026-11-14",
       "governs": "Main statement (Edinburgh choice)",
-      "notes": "Statement is one of several factors; no weighting published.",
+      "notes": "Full page fetched. Statement is one of several factors; no weighting published.",
       "extracts": [
-        "considers all the information in an application ... including academic qualifications, English language qualifications, the personal statement, the academic reference (search summary)",
-        "Applicants who have met, or are predicted to meet, all entry requirements enter the selection process (search summary)"
-      ]
+        "We consider all the information in your application before making our admissions decision, including:",
+        "your personal statement",
+        "your academic reference"
+      ],
+      "page_snapshot": "guidance/pages/ed-how-select.txt"
     },
     {
       "id": "ed-unsuccessful-ps",
       "tier": 1,
       "required": true,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Personal statement not suited to degree programme (University of Edinburgh)",
       "url": "https://study.ed.ac.uk/undergraduate/applying/after-you-apply/unsuccessful-applicants/personal-statement",
       "date_captured": "2026-11-14",
       "governs": "Main statement (Edinburgh choice)",
-      "notes": "Explicit rejection reason when subject commitment is missing.",
+      "notes": "Full page fetched. Explicit rejection reason when subject commitment is missing.",
       "extracts": [
-        "looks for an understanding and commitment to the subject applied for, and where this is missing from the statement, the application may not be considered further (search summary)",
-        "evidence of researching the course, relevant skills and experience, and awareness of career impact (search summary)"
-      ]
+        "Your personal statement must demonstrate motivation and commitment to your chosen degree programme.",
+        "We look for an understanding and commitment to the subject you have applied for. Where this is not evidenced in your personal statement, we may not consider your application any further.",
+        "provide evidence that you have researched the programme to make sure it matches your needs and expectations",
+        "show that you understand how this programme will impact your future career options"
+      ],
+      "page_snapshot": "guidance/pages/ed-unsuccessful-ps.txt"
     },
     {
       "id": "ed-competition",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Competition was very high (University of Edinburgh)",
       "url": "https://study.ed.ac.uk/undergraduate/applying/after-you-apply/unsuccessful-applicants/competition",
       "date_captured": "2026-11-14",
       "governs": "Main statement (Edinburgh choice)",
-      "notes": "Confirms statements are scored for most programmes.",
+      "notes": "Full page fetched. Confirms statements are scored for most programmes.",
       "extracts": [
         "For most programmes, we score personal statements during the selection process. Your personal statement must include detail on your motivation for the programme and your knowledge and exploration of the subject area."
-      ]
+      ],
+      "page_snapshot": "guidance/pages/ed-competition.txt"
     },
     {
       "id": "ed-phil-econ",
       "tier": 1,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Philosophy and Economics MA (Hons) programme page and DPT 2026/27 (University of Edinburgh)",
       "url": "https://www.drps.ed.ac.uk/26-27/dpt/utphiec.htm",
       "date_captured": "2026-11-14",
       "governs": "Main statement: fit with the degree as taught at Edinburgh",
-      "notes": "The 2026/27 table was reported as partly garbled; titles may be imprecise.",
+      "notes": "Full page fetched (DRPS 2026/27 degree programme table). Five compulsory Year 1 courses: three philosophy (incl. Morality and Value, Logic 1) plus Economics 1A and 1B.",
       "extracts": [
-        "Economics 1A (20 credits) and Economics 1B (20 credits) ... compulsory",
-        "pass all three of [their] compulsory Year 1 Philosophy courses",
-        "Year 1 topics cover morality and value, history of philosophy (Western and non-Western traditions), logic, and philosophy of science (search summary)"
-      ]
+        "You are expected to pass all three of your compulsory Year 1 Philosophy courses.",
+        "You must also pass Economics 1A and Economics 1B to progress to Year 2 of the Philosophy and Economics programme.",
+        "Morality and Value",
+        "Logic 1",
+        "You have the option to take Philosophy of Science 1 in Year 1 or Year 2, but it is not required."
+      ],
+      "page_snapshot": "guidance/pages/ed-phil-econ.txt"
     },
     {
       "id": "t2-none-found",
@@ -399,58 +441,58 @@
       "tier": 3,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "Tips for writing a UCAS personal statement (Students@LSE student blog, 2022)",
       "url": "https://blogs.lse.ac.uk/studentsatlse/2022/10/14/tips-for-writing-your-personal-statement/",
       "date_captured": "2026-11-14",
-      "notes": "Student-written blog on an LSE domain: tier 3, not LSE admissions policy.",
+      "notes": "Full page fetched. Student-written blog on an LSE domain: tier 3, not LSE admissions policy.",
       "extracts": [
-        "80% of the 4000 character maximum should be spent on questions 1 and 2 and really emphasise your interest in the programme."
-      ]
+        "80% of the 4000 character maximum should be spent on questions 1 and 2 and really emphasise your interest in the programme you are applying for."
+      ],
+      "page_snapshot": "guidance/pages/t3-lse-blog-2022.txt"
     },
     {
       "id": "t3-lse-blog-2026",
       "tier": 3,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
+      "fetch_method": "full_fetch",
       "title": "How to write a strong personal statement for LSE (Students@LSE, September 2026)",
       "url": "https://blogs.lse.ac.uk/studentsatlse/2026/09/08/how-to-write-a-strong-personal-statement-for-lse/",
       "date_captured": "2026-11-14",
-      "notes": "Student blog.",
+      "notes": "Full page fetched. Student blog.",
       "extracts": [
-        "don't let it write the statement for you (on AI)"
-      ]
+        "Just don't let it write the statement for you."
+      ],
+      "page_snapshot": "guidance/pages/t3-lse-blog-2026.txt"
     },
     {
       "id": "t3-uniguide-examples",
       "tier": 3,
       "required": false,
-      "status": "stored",
-      "fetch_method": "web_search_extract",
+      "status": "missing",
+      "fetch_method": null,
       "title": "PPE / Economics personal statement examples, 2026 entry (The Uni Guide, The Student Room Group)",
       "url": "https://www.theuniguide.co.uk/advice/personal-statement-examples/philosophy-politics-and-economics-(ppe)-personal-statement-examples",
       "date_captured": "2026-11-14",
       "notes": "Commercial example statements with reviewer comments; some of the feedback is itself AI-generated.",
-      "extracts": [
-        "the statement already reflects rather than describes, which is exactly what the 2026 format rewards",
-        "deeper reflection on fewer experiences would add impact",
-        "economics and philosophy in particular need a specific concept or text to show real engagement"
-      ]
+      "extracts": [],
+      "missing_reason": "Full fetch on 2026-11-14 returned HTTP 403 with a bot-check page (\"Just a moment...\"). The earlier search extracts cannot be verified, so they are withdrawn."
     },
     {
       "id": "t3-tutoring-500-words",
       "tier": 3,
       "required": false,
       "status": "stored",
-      "fetch_method": "web_search_extract",
-      "title": "Tutoring-firm guides to the 2026 format (summary of several commercial pages)",
+      "fetch_method": "full_fetch",
+      "title": "UCAS Personal Statement 2027 Guide (Leading Tuition, tutoring firm)",
       "url": "https://www.leadingtuition.co.uk/blog/ucas-personal-statement-2026-2027-three-questions-complete-guide",
       "date_captured": "2026-11-14",
-      "notes": "Search summary reported that one of these guides suggests 'around 500 words'.",
+      "notes": "Full page fetched (now titled 'UCAS Personal Statement 2027 Guide'). The search summary's 'around 500 words' does NOT appear on this page; that claim is withdrawn. The page says the format is unchanged for 2027 entry.",
       "extracts": [
-        "a third suggests around 500 words (search summary of several tutoring guides)"
-      ]
+        "the personal statement format is not changing again."
+      ],
+      "page_snapshot": "guidance/pages/t3-tutoring-500-words.txt"
     }
   ]
 }
