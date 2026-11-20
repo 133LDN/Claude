@@ -274,11 +274,11 @@
       "before": 10,
       "too_high": {
         "answer": "no",
-        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: philosophy 1836 vs economics 2415 characters of academic content; 8 connecting sentence(s)."
+        "reasoning": "No unpenalised problem that a tier 1 source supports. Probe: philosophy 1981 vs economics 2415 characters of academic content; 10 connecting sentence(s)."
       },
       "too_low": {
         "answer": "no",
-        "reasoning": "No deductions to remove. Probe: philosophy 1836 vs economics 2415 characters of academic content; 8 connecting sentence(s)."
+        "reasoning": "No deductions to remove. Probe: philosophy 1981 vs economics 2415 characters of academic content; 10 connecting sentence(s)."
       },
       "adjustments": [],
       "after": 10
@@ -514,7 +514,7 @@
     "sentences": 19,
     "critical": 10,
     "descriptive_reads": 0,
-    "bridges": 8
+    "bridges": 10
   },
   "change_since_last": {
     "previous_id": null,

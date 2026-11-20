@@ -98,13 +98,13 @@
   ],
   "scores": {
     "academic_focus": 8,
-    "critical_engagement": 5,
+    "critical_engagement": 6,
     "subject_balance": 7,
     "degree_fit": 10,
     "question_content": 6,
     "writing_space": 5
   },
-  "average": 6.83,
+  "average": 7,
   "criteria": [
     {
       "id": "academic_focus",
@@ -251,16 +251,16 @@
       "criterion": "critical_engagement",
       "severity": "major",
       "points": 3,
-      "quote": "I have also been reading The Economist every week, which has helped me keep up with topics like inflation, interest rates and the cost of living crisis.",
+      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
       "anchor": {
         "line": 2,
-        "col": 495,
-        "length": 152,
-        "offset": 499
+        "col": 123,
+        "length": 176,
+        "offset": 127
       },
       "extra_quotes": [
-        "For my internal assessments I wrote commentaries on news articles about tariffs, subsidies and price controls, which helped me apply theory to real situations.",
-        "My Extended Essay is about the effect of the sugar tax on soft drink consumption in the UK, and it has taught me how to research and use data."
+        "I have also been reading The Economist every week, which has helped me keep up with topics like inflation, interest rates and the cost of living crisis.",
+        "For my internal assessments I wrote commentaries on news articles about tariffs, subsidies and price controls, which helped me apply theory to real situations."
       ],
       "claim_id": "C-005",
       "tier1_id": "durham-ps",
@@ -274,28 +274,6 @@
     },
     {
       "id": "D3",
-      "criterion": "critical_engagement",
-      "severity": "minor",
-      "points": 1,
-      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
-      "anchor": {
-        "line": 2,
-        "col": 123,
-        "length": 176,
-        "offset": 127
-      },
-      "extra_quotes": [],
-      "claim_id": "C-016",
-      "tier1_id": "durham-unsuccessful",
-      "tier1_ids": [
-        "durham-unsuccessful"
-      ],
-      "reason": "Names a reading but says nothing about what you learnt, doubted or concluded from it.",
-      "selector_care": "Durham says reading counts only when you say what you learnt.",
-      "source": "engine"
-    },
-    {
-      "id": "D4",
       "criterion": "critical_engagement",
       "severity": "minor",
       "points": 1,
@@ -317,7 +295,7 @@
       "source": "engine"
     },
     {
-      "id": "D5",
+      "id": "D4",
       "criterion": "subject_balance",
       "severity": "major",
       "points": 3,
@@ -343,7 +321,7 @@
       "source": "engine"
     },
     {
-      "id": "D6",
+      "id": "D5",
       "criterion": "question_content",
       "severity": "moderate",
       "points": 2,
@@ -365,7 +343,7 @@
       "source": "engine"
     },
     {
-      "id": "D7",
+      "id": "D6",
       "criterion": "question_content",
       "severity": "moderate",
       "points": 2,
@@ -387,7 +365,7 @@
       "source": "engine"
     },
     {
-      "id": "D8",
+      "id": "D7",
       "criterion": "writing_space",
       "severity": "minor",
       "points": 1,
@@ -411,7 +389,7 @@
       "source": "engine"
     },
     {
-      "id": "D9",
+      "id": "D8",
       "criterion": "writing_space",
       "severity": "minor",
       "points": 1,
@@ -435,7 +413,7 @@
       "source": "engine"
     },
     {
-      "id": "D10",
+      "id": "D9",
       "criterion": "writing_space",
       "severity": "major",
       "points": 3,
@@ -474,28 +452,28 @@
     },
     {
       "criterion": "critical_engagement",
-      "before": 5,
+      "before": 6,
       "too_high": {
         "answer": "no",
-        "reasoning": "Score already reflects 3 sourced deduction(s); no further sourced problem found. Probe: 1 evaluative sentence(s) (philosophy 1, economics 1); 2 named reading(s) with nothing learned; own position stated: yes."
+        "reasoning": "Score already reflects 2 sourced deduction(s); no further sourced problem found. Probe: 1 evaluative sentence(s) (philosophy 1, economics 1); 1 named reading(s) with nothing learned; own position stated: yes."
       },
       "too_low": {
         "answer": "no",
-        "reasoning": "Each of 3 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 1 evaluative sentence(s) (philosophy 1, economics 1); 2 named reading(s) with nothing learned; own position stated: yes."
+        "reasoning": "Each of 2 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: 1 evaluative sentence(s) (philosophy 1, economics 1); 1 named reading(s) with nothing learned; own position stated: yes."
       },
       "adjustments": [],
-      "after": 5
+      "after": 6
     },
     {
       "criterion": "subject_balance",
       "before": 7,
       "too_high": {
         "answer": "no",
-        "reasoning": "Score already reflects 1 sourced deduction(s); no further sourced problem found. Probe: philosophy 447 vs economics 1554 characters of academic content; 1 connecting sentence(s)."
+        "reasoning": "Score already reflects 1 sourced deduction(s); no further sourced problem found. Probe: philosophy 447 vs economics 1554 characters of academic content; 3 connecting sentence(s)."
       },
       "too_low": {
         "answer": "no",
-        "reasoning": "Each of 1 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: philosophy 447 vs economics 1554 characters of academic content; 1 connecting sentence(s)."
+        "reasoning": "Each of 1 deduction(s) quotes a distinct line against a confirmed tier 1 claim and none double-counts another criterion. Probe: philosophy 447 vs economics 1554 characters of academic content; 3 connecting sentence(s)."
       },
       "adjustments": [],
       "after": 7
@@ -555,7 +533,7 @@
     },
     {
       "text": "Connects philosophy and economics.",
-      "quote": "In philosophy I have read some of Mill's Utilitarianism, and I think the idea of the greatest happiness for the greatest number is a useful way of thinking about government policy because it focuses on outcomes.",
+      "quote": "I want to study Philosophy and Economics because I am interested in how societies make decisions about money and fairness.",
       "claim_id": "C-023",
       "tier1_ids": [
         "lse-phil-econ-structure",
@@ -572,12 +550,12 @@
       "criterion": "critical_engagement",
       "title": "Only one sentence gives a view with a reason (Q1). The rest describes.",
       "detail": "A single view across a whole statement reads as thin engagement.",
-      "quote": "I have also been reading The Economist every week, which has helped me keep up with topics like inflation, interest rates and the cost of living crisis.",
+      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
       "anchor": {
         "line": 2,
-        "col": 495,
-        "length": 152,
-        "offset": 499
+        "col": 123,
+        "length": 176,
+        "offset": 127
       },
       "claim_ids": [
         "C-005"
@@ -594,10 +572,10 @@
       }
     },
     {
-      "id": "I-D5",
+      "id": "I-D4",
       "importance": "high",
       "kind": "deduction",
-      "deduction_id": "D5",
+      "deduction_id": "D4",
       "criterion": "subject_balance",
       "title": "Philosophy gets about 29% as much space as the other subject.",
       "detail": "LSE: a statement weighted to one side is \"significantly less competitive\".",
@@ -619,10 +597,10 @@
       "example": null
     },
     {
-      "id": "I-D10",
+      "id": "I-D9",
       "importance": "high",
       "kind": "deduction",
-      "deduction_id": "D10",
+      "deduction_id": "D9",
       "criterion": "writing_space",
       "title": "1794 of 4000 characters unused. LSE says it expects applicants to fully use the space.",
       "detail": "A quarter or more of the space is empty: a selector sees less evidence than competitors give.",
@@ -668,10 +646,10 @@
       "example": null
     },
     {
-      "id": "I-D6",
+      "id": "I-D5",
       "importance": "medium",
       "kind": "deduction",
-      "deduction_id": "D6",
+      "deduction_id": "D5",
       "criterion": "question_content",
       "title": "Restates grades or predictions; selectors already see these elsewhere.",
       "detail": "Wastes space UCAS explicitly says not to spend.",
@@ -692,10 +670,10 @@
       "example": null
     },
     {
-      "id": "I-D7",
+      "id": "I-D6",
       "importance": "medium",
       "kind": "deduction",
-      "deduction_id": "D7",
+      "deduction_id": "D6",
       "criterion": "question_content",
       "title": "Q3 lists activities without reflecting on why any of them is useful for the course.",
       "detail": "UCAS asks for reflection, not a list; Durham notes list-like statements as a concern.",
@@ -727,34 +705,6 @@
       "criterion": "critical_engagement",
       "title": "Names a reading but says nothing about what you learnt, doubted or concluded from it.",
       "detail": "Durham says reading counts only when you say what you learnt.",
-      "quote": "My interest in economics began when I read Freakonomics by Steven Levitt and Stephen Dubner, which showed me that economics can explain many surprising things in everyday life.",
-      "anchor": {
-        "line": 2,
-        "col": 123,
-        "length": 176,
-        "offset": 127
-      },
-      "claim_ids": [
-        "C-016"
-      ],
-      "tier1_ids": [
-        "durham-unsuccessful"
-      ],
-      "question": "What did this reading change in your thinking? Is there a claim in it you doubt?",
-      "example": {
-        "label": "not for use",
-        "topic": "architecture",
-        "text": "Reading Jacobs on city streets made me notice that the busiest pavements near my home are the ones with the most doorways."
-      }
-    },
-    {
-      "id": "I-D4",
-      "importance": "low",
-      "kind": "deduction",
-      "deduction_id": "D4",
-      "criterion": "critical_engagement",
-      "title": "Names a reading but says nothing about what you learnt, doubted or concluded from it.",
-      "detail": "Durham says reading counts only when you say what you learnt.",
       "quote": "I then read Thinking, Fast and Slow by Daniel Kahneman, which was about the two systems of thinking and how people make mistakes.",
       "anchor": {
         "line": 2,
@@ -776,10 +726,10 @@
       }
     },
     {
-      "id": "I-D8",
+      "id": "I-D7",
       "importance": "low",
       "kind": "deduction",
-      "deduction_id": "D8",
+      "deduction_id": "D7",
       "criterion": "writing_space",
       "title": "A list of items with nothing said about any of them.",
       "detail": "Durham selectors named list-like writing as a growing problem.",
@@ -806,10 +756,10 @@
       }
     },
     {
-      "id": "I-D9",
+      "id": "I-D8",
       "importance": "low",
       "kind": "deduction",
-      "deduction_id": "D9",
+      "deduction_id": "D8",
       "criterion": "writing_space",
       "title": "A list of items with nothing said about any of them.",
       "detail": "Durham selectors named list-like writing as a growing problem.",
@@ -925,8 +875,8 @@
   "sentence_stats": {
     "sentences": 17,
     "critical": 1,
-    "descriptive_reads": 2,
-    "bridges": 1
+    "descriptive_reads": 1,
+    "bridges": 3
   },
   "change_since_last": {
     "previous_id": null,

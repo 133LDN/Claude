@@ -10,7 +10,8 @@ export const PHIL = w([
   'rawls', 'nozick', 'hume', 'aristotle', 'plato', 'socrat', 'nussbaum', 'singer', 'parfit', 'popper', 'kuhn',
   'sandel', 'sen\\b', 'sen\'s', 'rational fools', 'theory of knowledge', 'tok\\b', 'falsifi', 'induction',
   'knowledge', 'truth', 'value judg', 'preferences? (?:deserve|ought)', 'ought', 'consequential', 'objection',
-  'reconstruct an argument', 'egalitarian', 'libertarian', 'well-being', 'wellbeing', 'capabilit'
+  'reconstruct an argument', 'egalitarian', 'libertarian', 'well-being', 'wellbeing', 'capabilit',
+  'kierkegaard', 'gjentagelsen', 'nietzsche', 'hegel', 'sartre', 'camus', 'wittgenstein', 'locke', 'hobbes', 'rousseau', 'spinoza', 'descartes'
 ]);
 
 export const ECON = w([
@@ -21,7 +22,8 @@ export const ECON = w([
   'subsid', 'trade', 'interest rate', 'elasticit', 'marginal', 'cost', 'econometric', 'regression', 'identification',
   'comparison group', 'optimis', 'optimiz', 'model', 'firm', 'consumption', 'policy', 'money', 'financ', 'bank',
   'recession', 'productivity', 'minimum wage', 'defection', 'rational choice', 'self-interest', 'selfish agents',
-  'freakonomics', 'the economist'
+  'freakonomics', 'the economist', 'brexit', 'eu\\b', 'european union', 'referend', 'austerity', 'bailout', 'sovereign debt',
+  'aid\\b', 'nudge', 'choice theory', 'sunk.cost', 'government', 'moyo', 'dead aid', 'thaler', 'sunstein'
 ]);
 
 // Terms that sit across the two subjects (philosophy of economics).
@@ -47,7 +49,7 @@ export const EXTRACURRICULAR = w([
   'captain', 'team\\b', 'football', 'rugby', 'hockey', 'netball', 'basketball', 'tennis', 'swimming', 'gym',
   'orchestra', 'choir', 'piano', 'violin', 'guitar', 'band\\b', 'drama', 'theatre', 'volunteer', 'charity',
   'fundrais', 'bake sale', 'duke of edinburgh', 'dofe', 'part-time job', 'prefect', 'student council',
-  'travelling', 'traveling', 'cooking', 'scouts?', 'hobby', 'hobbies', 'work experience', 'shadowed', 'café', 'cafe'
+  'travelling', 'traveling', 'cooking', 'scouts?', 'intern(?:ing|ship|ed)?\\b', 'hobby', 'hobbies', 'work experience', 'shadowed', 'café', 'cafe'
 ]);
 
 export const CAREER = /\b(?:career|careers|profession(?:al)? (?:goal|path)|become an? (?:economist|investment banker|banker|consultant|lawyer|analyst|policymaker|civil servant|trader|accountant)|work (?:in|at|for) (?:finance|banking|consulting|the city|government|the treasury|the imf|the world bank)|future job|my future (?:career|plans|job)|aspire to (?:be|become|work)|i (?:want|hope|plan|intend|aim) to (?:work|become|pursue))/i;
@@ -93,7 +95,7 @@ export const UNIVERSITIES = [
 
 // Strands of the programmes as taught (C-023, C-025, C-022).
 export const STRANDS_MAIN = {
-  'economic theory': /\b(?:micro|macro|supply|demand|market|incentive|price|equilibri|game theory|marginal|wage|employment|inflation)/i,
+  'economic theory': /\b(?:micro|macro|supply|demand|market|incentive|price|equilibri|game theory|marginal|wage|employment|inflation|behavioural|behavioral|nudge|choice theory|sunk.cost|austerity)/i,
   'quantitative methods': /\b(?:econometric|statistic|regression|data|mathematic|maths|optimis|optimiz|estimate|identification|comparison group|formal model)/i,
   'logic and argument': /\b(?:logic|argument|reconstruct|premise|fallacy|valid)/i,
   'ethics and value': /\b(?:ethic|moral|justice|fair|utilitarian|rawls|veil of ignorance|maximin|ought|deserve|well-being|welfare)/i,
@@ -107,7 +109,7 @@ export const STRANDS_DURHAM = {
 };
 
 export const WORK_CLAIM = /\b(?:argues?|argued|claims?|claimed|shows?|showed|proposes?|wrote|suggests?|according to|in (?:his|her|their) (?:book|essay|paper)|which (?:was about|argues|showed|claims))\b/i;
-export const NAMED_WORK_OR_AUTHOR = /(?:"[^"]{3,80}"|\b(?:Friedman|Sen|Sandel|Rawls|Mill|Kant|Hume|Popper|Kahneman|Levitt|Dubner|Smith|Keynes|Piketty|Hayek|Marx|Nozick|Parfit|Singer|Nussbaum|Akerlof|Thaler|Arrow|Hausman)\b|\b[A-Z][a-z]+(?:,? [A-Z][a-z]+){1,4}\b by [A-Z])/;
+export const NAMED_WORK_OR_AUTHOR = /(?:\b(?:Kierkegaard|Moyo|Thaler|Sunstein|Nietzsche|Hegel|Sartre|Camus|Wittgenstein|Locke|Hobbes|Rousseau|Madhavan)\b|\b[A-Z][a-z]+(?:’|')s [A-Z][a-zæøå]+|\b(?:[Hh]aving read|[Rr]eading|I read) [A-Z][a-z]+|"[^"]{3,80}"|\b(?:Friedman|Sen|Sandel|Rawls|Mill|Kant|Hume|Popper|Kahneman|Levitt|Dubner|Smith|Keynes|Piketty|Hayek|Marx|Nozick|Parfit|Singer|Nussbaum|Akerlof|Thaler|Arrow|Hausman)\b|\b[A-Z][a-z]+(?:,? [A-Z][a-z]+){1,4}\b by [A-Z])/;
 
 // Names of IB subjects; three or more in one sentence reads as a list of qualifications (C-031).
 export const IB_SUBJECTS = /\b(?:History|English|Economics|Mathematics|Maths|Physics|Chemistry|Biology|Philosophy|Geography|French|Spanish|German|Italian|Mandarin|Business(?: and Management)?|Psychology|Computer Science|Literature|Global Politics|Visual Arts|Music)\b/g;

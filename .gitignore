@@ -3,3 +3,7 @@ viewer/node_modules/
 viewer/dist/
 guidance/sources.next.json
 fixtures/real/*.txt
+# applicant drafts and reviews: private writing, never in a public repo (UCAS similarity checks compare against web sources)
+drafts/*.txt
+reviews/*.json
+viewer/src/data.json

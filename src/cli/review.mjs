@@ -15,13 +15,14 @@ if (!['main', 'durham'].includes(type) || !args.input) { console.error('Usage: -
 const bytes = fs.readFileSync(path.resolve(args.input));
 const id = `${type}-${stamp()}`;
 const draftRel = `drafts/${id}.txt`;
-fs.mkdirSync(path.join(ROOT, 'drafts'), { recursive: true });
-fs.writeFileSync(path.join(ROOT, draftRel), bytes); // verbatim
 const text = bytes.toString('utf8');
 
 const ctx = loadContext();
 const prev = listReviews('reviews').map((r) => r.data).filter((r) => r.type === type).sort((a, b) => a.created_at.localeCompare(b.created_at)).pop() || null;
+// review first, so a draft that cannot be parsed leaves no orphan files behind
 const r = review({ text, type, ctx, draftPath: draftRel, id, createdAt: new Date().toISOString(), previous: prev });
+fs.mkdirSync(path.join(ROOT, 'drafts'), { recursive: true });
+fs.writeFileSync(path.join(ROOT, draftRel), bytes); // verbatim
 fs.mkdirSync(path.join(ROOT, 'reviews'), { recursive: true });
 const out = `reviews/${id}.json`;
 fs.writeFileSync(path.join(ROOT, out), JSON.stringify(r, null, 2));

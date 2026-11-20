@@ -12,7 +12,7 @@ const SEV = { minor: 1, moderate: 2, major: 3 };
 const STYLE_CLAIMS = new Set(['C-013', 'C-014', 'C-015', 'C-033']);
 
 // ---------- parsing ----------
-const HEADER = /^\s*(?:#+\s*)?(?:\*\*)?\s*(?:Q(?:uestion)?\s*([123])|([123])\s*[.)])\s*(?:\*\*)?\s*[:.\-–—]?\s*(.*)$/i;
+const HEADER = /^\s*(?:#+\s*)?(?:[*\-•]\s+)?(?:\*\*)?\s*(?:Q(?:uestion)?\s*([123])|([123])\s*[.)])\s*(?:\*\*)?\s*[:.\-–—]?\s*(.*)$/i;
 
 export function parseDraft(text) {
   const lines = text.split('\n');
@@ -92,6 +92,8 @@ export function isList(t) {
   const masked = t.replace(/\b[A-Z][a-z]+(?:, [A-Z][a-z]+)+(?: and [A-Z][a-z]+)?/g, 'TITLE');
   if ((masked.match(/,/g) || []).length < 2) return false;
   if (!/,[^,]+,?\s(?:and|or)\s/.test(masked)) return false; // needs the "X, Y and Z" shape
+  const tail = masked.split(/\s(?:and|or)\s/).pop().split(',')[0].trim().split(/\s+/).length;
+  if (tail > 10) return false; // 'X, Y and <long clause>' is a sentence, not a list
   const segs = masked.split(/,|\band\b/).map((x) => x.trim().split(/\s+/).filter(Boolean).length).filter((n) => n > 0);
   let run = 0, best = 0;
   for (const n of segs) { run = n <= 8 ? run + 1 : 0; best = Math.max(best, run); }
@@ -147,8 +149,9 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
   // a named reading is engaged with if it, or the next sentence in the same answer, is critical/learned
   F.forEach((f, k) => {
     const next = F[k + 1] && F[k + 1].q === f.q ? F[k + 1] : null;
-    f.descriptiveRead = f.named && /\bread\b|\breading\b/i.test(f.text) && !f.critical && !f.learned && !(next && (next.critical || next.learned));
-    f.bridge = L.BRIDGE.test(f.text) || (f.phil && f.econ && f.critical);
+    // engaged if this or the next sentence argues, says what was learned, or goes on to discuss/apply a named work or author
+    f.descriptiveRead = f.named && /\bread\b|\breading\b/i.test(f.text) && !f.critical && !f.learned && !(next && (next.critical || next.learned || next.named));
+    f.bridge = L.BRIDGE.test(f.text) || (f.phil && f.econ);
     if (f.bridge) f.lead = 'both'; // philosophy-of-economics sentences belong to both subjects
   });
 
@@ -226,7 +229,9 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
     const anchor = desc[0] || motivation;
     if (crit.length === 0) {
       ded('critical_engagement', 'major', anchor.text, 'C-005', 'No sentence anywhere gives your own view with a reason or an objection.', 'This is the core of what LSE and Durham say they look for.', desc.slice(1, 3).map((f) => f.text));
-      ded('critical_engagement', 'major', (desc[1] || anchor).text, 'C-004', 'No critical engagement with any idea, text or argument.', 'Selectors cannot see how you think.', []);
+      const unargued = F.filter((f) => f.subject && (/\b(?:realis|realiz)ed that\b|\bconclude[sd]? that\b/i.test(f.text) || f.objection));
+      if (unargued.length) ded('critical_engagement', 'moderate', unargued[0].text, 'C-004', `You make ${unargued.length} interpretive claim(s) but never argue for them: no reason, evidence or objection is given.`, 'Selectors see a claim, but cannot see how you reached it.', unargued.slice(1, 3).map((f) => f.text));
+      else ded('critical_engagement', 'major', (desc[1] || anchor).text, 'C-004', 'No critical engagement with any idea, text or argument.', 'Selectors cannot see how you think.', []);
     } else if (crit.length === 1) {
       ded('critical_engagement', 'major', anchor.text, 'C-005', `Only one sentence gives a view with a reason (${crit[0].q.toUpperCase()}). The rest describes.`, 'A single view across a whole statement reads as thin engagement.', desc.slice(1, 3).map((f) => f.text));
     } else if (crit.length <= 3) {
@@ -298,6 +303,11 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
   const q3 = F.filter((f) => f.q === 'q3');
   const q3Extra = q3.filter((f) => f.extra || !f.academic);
   if (q3Extra.length && !q3.some((f) => f.learned || (f.reflection && f.subject))) ded('question_content', 'moderate', longest(q3Extra).text, 'C-012', 'Q3 lists activities without reflecting on why any of them is useful for the course.', 'UCAS asks for reflection, not a list; Durham notes list-like statements as a concern.');
+  // an activity named with nothing said about what it taught (UCAS: reflect on why it is useful)
+  // only when the whole-answer C-012 deduction above has not already penalised this failure
+  // one deduction per activity: only the first sentence of a run of consecutive activity sentences counts
+  if (!deductions.some((d) => d.claim_id === 'C-012')) F.filter((f, k) => f.extra && !(F[k - 1] && F[k - 1].extra && F[k - 1].q === f.q) && !f.learned && !f.reason && !(f.reflection && f.subject) && !f.critical).slice(0, 2)
+    .forEach((f) => ded('question_content', 'minor', f.text, 'C-012', 'Names an activity but says nothing specific about what it taught you or why it matters for the course.', 'Selectors cannot credit an activity they are only told about.'));
   // repetition across questions: identical 5-word sequences or the same aim restated
   const grams = {};
   for (const f of F) { const ws = f.text.toLowerCase().replace(/[^a-z' ]/g, ' ').split(/\s+/).filter(Boolean); for (let i = 0; i + 5 <= ws.length; i++) { const g = ws.slice(i, i + 5).join(' '); (grams[g] ||= new Set()).add(f.q + ':' + f.idx); } }
@@ -405,7 +415,7 @@ function moderate({ F, deductions, criteria, type, share, crit, text, ded, probe
 
     // TOO LOW? 1) double counting: same quote + same claim in two criteria -> refund the later one
     for (const d of mine()) {
-      const twin = deductions.find((o) => o !== d && !o.refunded && o.criterion !== c.id && o.quote === d.quote && o.claim_id === d.claim_id && o.id < d.id);
+      const twin = deductions.find((o) => o !== d && !o.refunded && o.criterion !== c.id && o.quote === d.quote && o.claim_id === d.claim_id && o.reason === d.reason && o.id < d.id);
       if (twin) { d.refunded = true; d.refund_reason = `Same line and same claim already penalised in ${twin.criterion} (${twin.id}).`; adj.push({ action: 'refund', deduction_id: d.id, points: +d.points, reason: d.refund_reason }); }
     }
     // 2) criterion-specific over-penalty tests

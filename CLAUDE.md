@@ -41,6 +41,10 @@ UCAS requires the applicant to declare the statement is their own and not produc
 - Fetched once. Reuse it, and never answer guidance questions from memory. Refetch only through `/refresh-guidance`, which shows a diff before anything is replaced.
 - Captured 2026-11-14 by full page/PDF fetch. Page text snapshots are in `guidance/pages/`, and every extract is verbatim and checked against them. Superseded stores are kept in `guidance/history/`. One tier 3 page is missing (bot check). Tier 2: an FOI decision on Edinburgh, a HEPI research article, and a college adviser guide.
 
+## Privacy
+
+- The GitHub repository is **public**. Drafts, reviews and `viewer/src/data.json` (which embeds draft text) are git-ignored and must never be committed: a statement published on the web can be matched by UCAS similarity checks (`ucas-similarity`) against the applicant's own application.
+
 ## Layout
 
 | Path | What |
@@ -48,6 +52,7 @@ UCAS requires the applicant to declare the statement is their own and not produc
 | `src/engine/` | Deterministic review engine (`review.mjs`), lexicon, examples |
 | `src/cli/review.mjs` | `--type main\|durham --input <file>`: saves the draft verbatim to `drafts/`, the review to `reviews/` |
 | `src/cli/factcheck.mjs` | Records a fact-check verdict with its source URL |
+| `src/cli/deduct.mjs` | Adds a deduction the engine cannot detect (spelling, misused terms); refuses unless the quote is verbatim and the claim is confirmed tier 1 |
 | `scripts/calibrate.mjs` | Runs the engine on `fixtures/{weak,middling,strong}.txt` |
 | `scripts/verify.mjs` | `npm run verify`: 8 PASS/FAIL checks. Never edit checks or thresholds to pass |
 | `scripts/refresh-guidance.mjs` | Diffs `guidance/sources.next.json` against the store; `--apply` replaces it |
