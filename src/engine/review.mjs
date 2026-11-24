@@ -228,10 +228,14 @@ export function review({ text, type, ctx, draftPath = null, id = null, createdAt
     const desc = F.filter((f) => f.subject && !f.critical).sort((a, b) => (a.descriptiveRead - b.descriptiveRead) || (L.DESCRIPTIVE.test(b.text) - L.DESCRIPTIVE.test(a.text)) || b.chars - a.chars);
     const anchor = desc[0] || motivation;
     if (crit.length === 0) {
-      ded('critical_engagement', 'major', anchor.text, 'C-005', 'No sentence anywhere gives your own view with a reason or an objection.', 'This is the core of what LSE and Durham say they look for.', desc.slice(1, 3).map((f) => f.text));
       const unargued = F.filter((f) => f.subject && (/\b(?:realis|realiz)ed that\b|\bconclude[sd]? that\b/i.test(f.text) || f.objection));
-      if (unargued.length) ded('critical_engagement', 'moderate', unargued[0].text, 'C-004', `You make ${unargued.length} interpretive claim(s) but never argue for them: no reason, evidence or objection is given.`, 'Selectors see a claim, but cannot see how you reached it.', unargued.slice(1, 3).map((f) => f.text));
-      else ded('critical_engagement', 'major', (desc[1] || anchor).text, 'C-004', 'No critical engagement with any idea, text or argument.', 'Selectors cannot see how you think.', []);
+      if (unargued.length) {
+        // claims without reasons are ONE failure: penalise it once, not as 'no views' plus 'no argument'
+        ded('critical_engagement', 'major', unargued[0].text, 'C-005', `You make ${unargued.length} interpretive claim(s) but give a reason, evidence or objection for none of them.`, 'LSE and Durham ask why you think it; selectors see the claim but not how you reached it.', unargued.slice(1, 3).map((f) => f.text));
+      } else {
+        ded('critical_engagement', 'major', anchor.text, 'C-005', 'No sentence anywhere gives your own view with a reason or an objection.', 'This is the core of what LSE and Durham say they look for.', desc.slice(1, 3).map((f) => f.text));
+        ded('critical_engagement', 'major', (desc[1] || anchor).text, 'C-004', 'No critical engagement with any idea, text or argument.', 'Selectors cannot see how you think.', []);
+      }
     } else if (crit.length === 1) {
       ded('critical_engagement', 'major', anchor.text, 'C-005', `Only one sentence gives a view with a reason (${crit[0].q.toUpperCase()}). The rest describes.`, 'A single view across a whole statement reads as thin engagement.', desc.slice(1, 3).map((f) => f.text));
     } else if (crit.length <= 3) {
